@@ -44,8 +44,21 @@ class Srcs(object):
 
     # Patch the sources
     def patch(self):
-        gtkdir = glob.glob(path.join(self.BuildDir, "gtk+-*"))[0]
-        glibdir = glob.glob(path.join(self.BuildDir, "glib-*"))[0]
+        gtkdir = None
+        glibdir = None
+        gtkglob = glob.glob(path.join(self.BuildDir, "gtk+-*"))
+        for item in gtkglob:
+            if os.path.isdir(item) == True:
+                gtkdir = item
+
+        glibglob = glob.glob(path.join(self.BuildDir, "glib-*"))
+        for item in glibglob:
+            if os.path.isdir(item) == True:
+                glibdir = item
+
+
+        #gtkdir = glob.glob(path.join(self.BuildDir, "gtk+-*"))[0]
+        #glibdir = glob.glob(path.join(self.BuildDir, "glib-*"))[0]
 
         patch.logger.setLevel(logging.DEBUG)
         streamhandler = logging.StreamHandler()
