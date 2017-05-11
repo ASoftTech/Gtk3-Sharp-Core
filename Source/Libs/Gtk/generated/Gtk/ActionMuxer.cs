@@ -317,13 +317,13 @@ namespace Gtk {
 			return ret;
 		}
 
-		[GLib.Signal("action-removed")]
-		public event GLib.ActionRemovedHandler ActionRemoved {
+		[GLib.Signal("action-enabled-changed")]
+		public event GLib.ActionEnabledChangedHandler ActionEnabledChanged {
 			add {
-				this.AddSignalHandler ("action-removed", value, typeof (GLib.ActionRemovedArgs));
+				this.AddSignalHandler ("action-enabled-changed", value, typeof (GLib.ActionEnabledChangedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("action-removed", value);
+				this.RemoveSignalHandler ("action-enabled-changed", value);
 			}
 		}
 
@@ -347,13 +347,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("action-enabled-changed")]
-		public event GLib.ActionEnabledChangedHandler ActionEnabledChanged {
+		[GLib.Signal("action-removed")]
+		public event GLib.ActionRemovedHandler ActionRemoved {
 			add {
-				this.AddSignalHandler ("action-enabled-changed", value, typeof (GLib.ActionEnabledChangedArgs));
+				this.AddSignalHandler ("action-removed", value, typeof (GLib.ActionRemovedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("action-enabled-changed", value);
+				this.RemoveSignalHandler ("action-removed", value);
 			}
 		}
 

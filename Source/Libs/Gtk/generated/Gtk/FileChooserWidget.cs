@@ -52,6 +52,36 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("show-hidden")]
+		public event System.EventHandler ShowedHidden {
+			add {
+				this.AddSignalHandler ("show-hidden", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("show-hidden", value);
+			}
+		}
+
+		[GLib.Signal("places-shortcut")]
+		public event System.EventHandler PlacesShortcut {
+			add {
+				this.AddSignalHandler ("places-shortcut", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("places-shortcut", value);
+			}
+		}
+
+		[GLib.Signal("search-shortcut")]
+		public event System.EventHandler SearchShortcut {
+			add {
+				this.AddSignalHandler ("search-shortcut", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("search-shortcut", value);
+			}
+		}
+
 		[GLib.Signal("quick-bookmark")]
 		public event Gtk.QuickBookmarkHandler QuickBookmark {
 			add {
@@ -59,6 +89,46 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("quick-bookmark", value);
+			}
+		}
+
+		[GLib.Signal("location-popup")]
+		public event Gtk.LocationPopupHandler LocationPopup {
+			add {
+				this.AddSignalHandler ("location-popup", value, typeof (Gtk.LocationPopupArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("location-popup", value);
+			}
+		}
+
+		[GLib.Signal("recent-shortcut")]
+		public event System.EventHandler RecentShortcut {
+			add {
+				this.AddSignalHandler ("recent-shortcut", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("recent-shortcut", value);
+			}
+		}
+
+		[GLib.Signal("location-popup-on-paste")]
+		public event System.EventHandler LocationPopupOnPaste {
+			add {
+				this.AddSignalHandler ("location-popup-on-paste", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("location-popup-on-paste", value);
+			}
+		}
+
+		[GLib.Signal("home-folder")]
+		public event System.EventHandler HomeFolder {
+			add {
+				this.AddSignalHandler ("home-folder", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("home-folder", value);
 			}
 		}
 
@@ -82,56 +152,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("search-shortcut")]
-		public event System.EventHandler SearchShortcut {
-			add {
-				this.AddSignalHandler ("search-shortcut", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("search-shortcut", value);
-			}
-		}
-
-		[GLib.Signal("places-shortcut")]
-		public event System.EventHandler PlacesShortcut {
-			add {
-				this.AddSignalHandler ("places-shortcut", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("places-shortcut", value);
-			}
-		}
-
-		[GLib.Signal("location-popup")]
-		public event Gtk.LocationPopupHandler LocationPopup {
-			add {
-				this.AddSignalHandler ("location-popup", value, typeof (Gtk.LocationPopupArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("location-popup", value);
-			}
-		}
-
-		[GLib.Signal("desktop-folder")]
-		public event System.EventHandler DesktopFolder {
-			add {
-				this.AddSignalHandler ("desktop-folder", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("desktop-folder", value);
-			}
-		}
-
-		[GLib.Signal("show-hidden")]
-		public event System.EventHandler ShowedHidden {
-			add {
-				this.AddSignalHandler ("show-hidden", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("show-hidden", value);
-			}
-		}
-
 		[GLib.Signal("location-toggle-popup")]
 		public event System.EventHandler LocationTogglePopup {
 			add {
@@ -142,33 +162,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("home-folder")]
-		public event System.EventHandler HomeFolder {
+		[GLib.Signal("desktop-folder")]
+		public event System.EventHandler DesktopFolder {
 			add {
-				this.AddSignalHandler ("home-folder", value);
+				this.AddSignalHandler ("desktop-folder", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("home-folder", value);
-			}
-		}
-
-		[GLib.Signal("location-popup-on-paste")]
-		public event System.EventHandler LocationPopupOnPaste {
-			add {
-				this.AddSignalHandler ("location-popup-on-paste", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("location-popup-on-paste", value);
-			}
-		}
-
-		[GLib.Signal("recent-shortcut")]
-		public event System.EventHandler RecentShortcut {
-			add {
-				this.AddSignalHandler ("recent-shortcut", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("recent-shortcut", value);
+				this.RemoveSignalHandler ("desktop-folder", value);
 			}
 		}
 

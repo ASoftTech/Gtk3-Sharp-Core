@@ -36,13 +36,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("move-selected")]
-		public event Gtk.MoveSelectedHandler MoveSelected {
+		[GLib.Signal("deactivate")]
+		public event System.EventHandler Deactivated {
 			add {
-				this.AddSignalHandler ("move-selected", value, typeof (Gtk.MoveSelectedArgs));
+				this.AddSignalHandler ("deactivate", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("move-selected", value);
+				this.RemoveSignalHandler ("deactivate", value);
 			}
 		}
 
@@ -56,6 +56,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("move-selected")]
+		public event Gtk.MoveSelectedHandler MoveSelected {
+			add {
+				this.AddSignalHandler ("move-selected", value, typeof (Gtk.MoveSelectedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-selected", value);
+			}
+		}
+
 		[GLib.Signal("insert")]
 		public event Gtk.InsertedHandler Inserted {
 			add {
@@ -63,6 +73,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("insert", value);
+			}
+		}
+
+		[GLib.Signal("cycle-focus")]
+		public event Gtk.CycleFocusHandler CycleFocus {
+			add {
+				this.AddSignalHandler ("cycle-focus", value, typeof (Gtk.CycleFocusArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("cycle-focus", value);
+			}
+		}
+
+		[GLib.Signal("activate-current")]
+		public event Gtk.ActivateCurrentHandler ActivateCurrent {
+			add {
+				this.AddSignalHandler ("activate-current", value, typeof (Gtk.ActivateCurrentArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("activate-current", value);
 			}
 		}
 
@@ -83,36 +113,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("move-current", value);
-			}
-		}
-
-		[GLib.Signal("activate-current")]
-		public event Gtk.ActivateCurrentHandler ActivateCurrent {
-			add {
-				this.AddSignalHandler ("activate-current", value, typeof (Gtk.ActivateCurrentArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("activate-current", value);
-			}
-		}
-
-		[GLib.Signal("deactivate")]
-		public event System.EventHandler Deactivated {
-			add {
-				this.AddSignalHandler ("deactivate", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("deactivate", value);
-			}
-		}
-
-		[GLib.Signal("cycle-focus")]
-		public event Gtk.CycleFocusHandler CycleFocus {
-			add {
-				this.AddSignalHandler ("cycle-focus", value, typeof (Gtk.CycleFocusArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("cycle-focus", value);
 			}
 		}
 

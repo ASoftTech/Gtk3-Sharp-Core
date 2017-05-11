@@ -56,6 +56,26 @@ namespace Gdk {
 			return result;
 		}
 
+		[GLib.Signal("area-prepared")]
+		public event System.EventHandler AreaPrepared {
+			add {
+				this.AddSignalHandler ("area-prepared", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("area-prepared", value);
+			}
+		}
+
+		[GLib.Signal("area-updated")]
+		public event Gdk.AreaUpdatedHandler AreaUpdated {
+			add {
+				this.AddSignalHandler ("area-updated", value, typeof (Gdk.AreaUpdatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("area-updated", value);
+			}
+		}
+
 		[GLib.Signal("size-prepared")]
 		public event Gdk.SizePreparedHandler SizePrepared {
 			add {
@@ -73,26 +93,6 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("closed", value);
-			}
-		}
-
-		[GLib.Signal("area-updated")]
-		public event Gdk.AreaUpdatedHandler AreaUpdated {
-			add {
-				this.AddSignalHandler ("area-updated", value, typeof (Gdk.AreaUpdatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("area-updated", value);
-			}
-		}
-
-		[GLib.Signal("area-prepared")]
-		public event System.EventHandler AreaPrepared {
-			add {
-				this.AddSignalHandler ("area-prepared", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("area-prepared", value);
 			}
 		}
 

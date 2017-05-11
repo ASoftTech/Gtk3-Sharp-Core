@@ -473,16 +473,6 @@ namespace Gtk {
 			Marshal.FreeHGlobal (native_iter);
 		}
 
-		[GLib.Signal("row-inserted")]
-		public event Gtk.RowInsertedHandler RowInserted {
-			add {
-				this.AddSignalHandler ("row-inserted", value, typeof (Gtk.RowInsertedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("row-inserted", value);
-			}
-		}
-
 		[GLib.Signal("row-changed")]
 		public event Gtk.RowChangedHandler RowChanged {
 			add {
@@ -500,6 +490,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("row-has-child-toggled", value);
+			}
+		}
+
+		[GLib.Signal("row-inserted")]
+		public event Gtk.RowInsertedHandler RowInserted {
+			add {
+				this.AddSignalHandler ("row-inserted", value, typeof (Gtk.RowInsertedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("row-inserted", value);
 			}
 		}
 

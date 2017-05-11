@@ -166,13 +166,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("cancel")]
-		public event System.EventHandler Cancel {
+		[GLib.Signal("close")]
+		public event System.EventHandler Close {
 			add {
-				this.AddSignalHandler ("cancel", value);
+				this.AddSignalHandler ("close", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("cancel", value);
+				this.RemoveSignalHandler ("close", value);
 			}
 		}
 
@@ -186,13 +186,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("close")]
-		public event System.EventHandler Close {
+		[GLib.Signal("cancel")]
+		public event System.EventHandler Cancel {
 			add {
-				this.AddSignalHandler ("close", value);
+				this.AddSignalHandler ("cancel", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("close", value);
+				this.RemoveSignalHandler ("cancel", value);
 			}
 		}
 

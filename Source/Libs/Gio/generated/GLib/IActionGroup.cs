@@ -10,8 +10,8 @@ namespace GLib {
 
 		event GLib.ActionRemovedHandler ActionRemoved;
 		event GLib.ActionAddedHandler ActionAdded;
-		event GLib.ActionStateChangedHandler ActionStateChanged;
 		event GLib.ActionEnabledChangedHandler ActionEnabledChanged;
+		event GLib.ActionStateChangedHandler ActionStateChanged;
 		void EmitActionAdded(string action_name);
 		void EmitActionEnabledChanged(string action_name, bool enabled);
 		void EmitActionRemoved(string action_name);

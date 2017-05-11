@@ -41,16 +41,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("released")]
-		public event Gtk.ReleasedHandler Released {
-			add {
-				this.AddSignalHandler ("released", value, typeof (Gtk.ReleasedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("released", value);
-			}
-		}
-
 		[GLib.Signal("pressed")]
 		public event Gtk.PressedHandler Pressed {
 			add {
@@ -58,6 +48,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("pressed", value);
+			}
+		}
+
+		[GLib.Signal("released")]
+		public event Gtk.ReleasedHandler Released {
+			add {
+				this.AddSignalHandler ("released", value, typeof (Gtk.ReleasedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("released", value);
 			}
 		}
 

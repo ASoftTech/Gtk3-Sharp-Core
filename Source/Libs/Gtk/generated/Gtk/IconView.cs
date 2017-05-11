@@ -365,46 +365,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("select-all")]
-		public event System.EventHandler AllSelected {
-			add {
-				this.AddSignalHandler ("select-all", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("select-all", value);
-			}
-		}
-
-		[GLib.Signal("unselect-all")]
-		public event System.EventHandler AllUnselected {
-			add {
-				this.AddSignalHandler ("unselect-all", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("unselect-all", value);
-			}
-		}
-
-		[GLib.Signal("select-cursor-item")]
-		public event System.EventHandler SelectCursorItem {
-			add {
-				this.AddSignalHandler ("select-cursor-item", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("select-cursor-item", value);
-			}
-		}
-
-		[GLib.Signal("item-activated")]
-		public event Gtk.ItemActivatedHandler ItemActivated {
-			add {
-				this.AddSignalHandler ("item-activated", value, typeof (Gtk.ItemActivatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("item-activated", value);
-			}
-		}
-
 		[GLib.Signal("move-cursor")]
 		public event Gtk.MoveCursorHandler MoveCursor {
 			add {
@@ -412,6 +372,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("move-cursor", value);
+			}
+		}
+
+		[GLib.Signal("selection-changed")]
+		public event System.EventHandler SelectionChanged {
+			add {
+				this.AddSignalHandler ("selection-changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("selection-changed", value);
 			}
 		}
 
@@ -425,13 +395,43 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("selection-changed")]
-		public event System.EventHandler SelectionChanged {
+		[GLib.Signal("unselect-all")]
+		public event System.EventHandler AllUnselected {
 			add {
-				this.AddSignalHandler ("selection-changed", value);
+				this.AddSignalHandler ("unselect-all", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("selection-changed", value);
+				this.RemoveSignalHandler ("unselect-all", value);
+			}
+		}
+
+		[GLib.Signal("select-all")]
+		public event System.EventHandler AllSelected {
+			add {
+				this.AddSignalHandler ("select-all", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("select-all", value);
+			}
+		}
+
+		[GLib.Signal("item-activated")]
+		public event Gtk.ItemActivatedHandler ItemActivated {
+			add {
+				this.AddSignalHandler ("item-activated", value, typeof (Gtk.ItemActivatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("item-activated", value);
+			}
+		}
+
+		[GLib.Signal("select-cursor-item")]
+		public event System.EventHandler SelectCursorItem {
+			add {
+				this.AddSignalHandler ("select-cursor-item", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("select-cursor-item", value);
 			}
 		}
 

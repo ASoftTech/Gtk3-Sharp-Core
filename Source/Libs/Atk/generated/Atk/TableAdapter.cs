@@ -668,16 +668,6 @@ namespace Atk {
 			}
 		}
 
-		[GLib.Signal("column_reordered")]
-		public event System.EventHandler ColumnReordered {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("column_reordered", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("column_reordered", value);
-			}
-		}
-
 		[GLib.Signal("column_deleted")]
 		public event Atk.ColumnDeletedHandler ColumnDeleted {
 			add {
@@ -685,26 +675,6 @@ namespace Atk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("column_deleted", value);
-			}
-		}
-
-		[GLib.Signal("column_inserted")]
-		public event Atk.ColumnInsertedHandler ColumnInserted {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("column_inserted", value, typeof (Atk.ColumnInsertedArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("column_inserted", value);
-			}
-		}
-
-		[GLib.Signal("row_deleted")]
-		public event Atk.RowDeletedHandler RowDeleted {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("row_deleted", value, typeof (Atk.RowDeletedArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row_deleted", value);
 			}
 		}
 
@@ -718,6 +688,16 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("column_inserted")]
+		public event Atk.ColumnInsertedHandler ColumnInserted {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("column_inserted", value, typeof (Atk.ColumnInsertedArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("column_inserted", value);
+			}
+		}
+
 		[GLib.Signal("model_changed")]
 		public event System.EventHandler ModelChanged {
 			add {
@@ -728,6 +708,16 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("row_deleted")]
+		public event Atk.RowDeletedHandler RowDeleted {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("row_deleted", value, typeof (Atk.RowDeletedArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row_deleted", value);
+			}
+		}
+
 		[GLib.Signal("row_inserted")]
 		public event Atk.RowInsertedHandler RowInserted {
 			add {
@@ -735,6 +725,16 @@ namespace Atk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row_inserted", value);
+			}
+		}
+
+		[GLib.Signal("column_reordered")]
+		public event System.EventHandler ColumnReordered {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("column_reordered", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("column_reordered", value);
 			}
 		}
 

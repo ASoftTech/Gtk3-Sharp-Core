@@ -390,26 +390,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("move-active")]
-		public event Gtk.MoveActiveHandler MoveActive {
-			add {
-				this.AddSignalHandler ("move-active", value, typeof (Gtk.MoveActiveArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("move-active", value);
-			}
-		}
-
-		[GLib.Signal("popup")]
-		public event System.EventHandler PoppedUp {
-			add {
-				this.AddSignalHandler ("popup", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("popup", value);
-			}
-		}
-
 		[GLib.Signal("popdown")]
 		public event Gtk.PoppedDownHandler PoppedDown {
 			add {
@@ -417,6 +397,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("popdown", value);
+			}
+		}
+
+		[GLib.Signal("format-entry-text")]
+		public event Gtk.FormatEntryTextHandler FormatEntryText {
+			add {
+				this.AddSignalHandler ("format-entry-text", value, typeof (Gtk.FormatEntryTextArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("format-entry-text", value);
+			}
+		}
+
+		[GLib.Signal("move-active")]
+		public event Gtk.MoveActiveHandler MoveActive {
+			add {
+				this.AddSignalHandler ("move-active", value, typeof (Gtk.MoveActiveArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-active", value);
 			}
 		}
 
@@ -430,13 +430,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("format-entry-text")]
-		public event Gtk.FormatEntryTextHandler FormatEntryText {
+		[GLib.Signal("popup")]
+		public event System.EventHandler PoppedUp {
 			add {
-				this.AddSignalHandler ("format-entry-text", value, typeof (Gtk.FormatEntryTextArgs));
+				this.AddSignalHandler ("popup", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("format-entry-text", value);
+				this.RemoveSignalHandler ("popup", value);
 			}
 		}
 

@@ -25,26 +25,6 @@ namespace Gtk {
 			Raw = gtk_search_entry_new();
 		}
 
-		[GLib.Signal("previous-match")]
-		public event System.EventHandler PreviousMatch {
-			add {
-				this.AddSignalHandler ("previous-match", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("previous-match", value);
-			}
-		}
-
-		[GLib.Signal("next-match")]
-		public event System.EventHandler NextMatch {
-			add {
-				this.AddSignalHandler ("next-match", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("next-match", value);
-			}
-		}
-
 		[GLib.Signal("search-changed")]
 		public event System.EventHandler SearchChanged {
 			add {
@@ -62,6 +42,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("stop-search", value);
+			}
+		}
+
+		[GLib.Signal("next-match")]
+		public event System.EventHandler NextMatch {
+			add {
+				this.AddSignalHandler ("next-match", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("next-match", value);
+			}
+		}
+
+		[GLib.Signal("previous-match")]
+		public event System.EventHandler PreviousMatch {
+			add {
+				this.AddSignalHandler ("previous-match", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("previous-match", value);
 			}
 		}
 

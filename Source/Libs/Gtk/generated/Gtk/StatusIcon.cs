@@ -368,23 +368,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("popup-menu")]
-		public event Gtk.PopupMenuHandler PopupMenu {
+		[GLib.Signal("button_release_event")]
+		public event Gtk.ButtonReleaseEventHandler ButtonReleaseEvent {
 			add {
-				this.AddSignalHandler ("popup-menu", value, typeof (Gtk.PopupMenuArgs));
+				this.AddSignalHandler ("button_release_event", value, typeof (Gtk.ButtonReleaseEventArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("popup-menu", value);
-			}
-		}
-
-		[GLib.Signal("activate")]
-		public event System.EventHandler Activate {
-			add {
-				this.AddSignalHandler ("activate", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("activate", value);
+				this.RemoveSignalHandler ("button_release_event", value);
 			}
 		}
 
@@ -408,13 +398,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("button_release_event")]
-		public event Gtk.ButtonReleaseEventHandler ButtonReleaseEvent {
+		[GLib.Signal("popup-menu")]
+		public event Gtk.PopupMenuHandler PopupMenu {
 			add {
-				this.AddSignalHandler ("button_release_event", value, typeof (Gtk.ButtonReleaseEventArgs));
+				this.AddSignalHandler ("popup-menu", value, typeof (Gtk.PopupMenuArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("button_release_event", value);
+				this.RemoveSignalHandler ("popup-menu", value);
 			}
 		}
 
@@ -425,6 +415,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("button_press_event", value);
+			}
+		}
+
+		[GLib.Signal("activate")]
+		public event System.EventHandler Activate {
+			add {
+				this.AddSignalHandler ("activate", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("activate", value);
 			}
 		}
 

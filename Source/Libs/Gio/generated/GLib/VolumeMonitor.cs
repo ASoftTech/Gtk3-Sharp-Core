@@ -18,6 +18,56 @@ namespace GLib {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
+		[GLib.Signal("volume-changed")]
+		public event GLib.VolumeChangedHandler VolumeChanged {
+			add {
+				this.AddSignalHandler ("volume-changed", value, typeof (GLib.VolumeChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("volume-changed", value);
+			}
+		}
+
+		[GLib.Signal("mount-pre-unmount")]
+		public event GLib.MountPreUnmountHandler MountPreUnmount {
+			add {
+				this.AddSignalHandler ("mount-pre-unmount", value, typeof (GLib.MountPreUnmountArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("mount-pre-unmount", value);
+			}
+		}
+
+		[GLib.Signal("volume-removed")]
+		public event GLib.VolumeRemovedHandler VolumeRemoved {
+			add {
+				this.AddSignalHandler ("volume-removed", value, typeof (GLib.VolumeRemovedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("volume-removed", value);
+			}
+		}
+
+		[GLib.Signal("mount-added")]
+		public event GLib.MountAddedHandler MountAdded {
+			add {
+				this.AddSignalHandler ("mount-added", value, typeof (GLib.MountAddedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("mount-added", value);
+			}
+		}
+
+		[GLib.Signal("mount-changed")]
+		public event GLib.MountChangedHandler MountChanged {
+			add {
+				this.AddSignalHandler ("mount-changed", value, typeof (GLib.MountChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("mount-changed", value);
+			}
+		}
+
 		[GLib.Signal("drive-disconnected")]
 		public event GLib.DriveDisconnectedHandler DriveDisconnected {
 			add {
@@ -48,23 +98,13 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("volume-changed")]
-		public event GLib.VolumeChangedHandler VolumeChanged {
+		[GLib.Signal("drive-stop-button")]
+		public event GLib.DriveStopButtonHandler DriveStopButton {
 			add {
-				this.AddSignalHandler ("volume-changed", value, typeof (GLib.VolumeChangedArgs));
+				this.AddSignalHandler ("drive-stop-button", value, typeof (GLib.DriveStopButtonArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("volume-changed", value);
-			}
-		}
-
-		[GLib.Signal("drive-eject-button")]
-		public event GLib.DriveEjectButtonHandler DriveEjectButton {
-			add {
-				this.AddSignalHandler ("drive-eject-button", value, typeof (GLib.DriveEjectButtonArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drive-eject-button", value);
+				this.RemoveSignalHandler ("drive-stop-button", value);
 			}
 		}
 
@@ -78,13 +118,13 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("drive-stop-button")]
-		public event GLib.DriveStopButtonHandler DriveStopButton {
+		[GLib.Signal("drive-eject-button")]
+		public event GLib.DriveEjectButtonHandler DriveEjectButton {
 			add {
-				this.AddSignalHandler ("drive-stop-button", value, typeof (GLib.DriveStopButtonArgs));
+				this.AddSignalHandler ("drive-eject-button", value, typeof (GLib.DriveEjectButtonArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("drive-stop-button", value);
+				this.RemoveSignalHandler ("drive-eject-button", value);
 			}
 		}
 
@@ -95,46 +135,6 @@ namespace GLib {
 			}
 			remove {
 				this.RemoveSignalHandler ("drive-changed", value);
-			}
-		}
-
-		[GLib.Signal("volume-removed")]
-		public event GLib.VolumeRemovedHandler VolumeRemoved {
-			add {
-				this.AddSignalHandler ("volume-removed", value, typeof (GLib.VolumeRemovedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("volume-removed", value);
-			}
-		}
-
-		[GLib.Signal("mount-changed")]
-		public event GLib.MountChangedHandler MountChanged {
-			add {
-				this.AddSignalHandler ("mount-changed", value, typeof (GLib.MountChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("mount-changed", value);
-			}
-		}
-
-		[GLib.Signal("mount-added")]
-		public event GLib.MountAddedHandler MountAdded {
-			add {
-				this.AddSignalHandler ("mount-added", value, typeof (GLib.MountAddedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("mount-added", value);
-			}
-		}
-
-		[GLib.Signal("mount-pre-unmount")]
-		public event GLib.MountPreUnmountHandler MountPreUnmount {
-			add {
-				this.AddSignalHandler ("mount-pre-unmount", value, typeof (GLib.MountPreUnmountArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("mount-pre-unmount", value);
 			}
 		}
 

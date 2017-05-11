@@ -265,26 +265,6 @@ namespace Atk {
 			}
 		}
 
-		[GLib.Signal("load_stopped")]
-		public event System.EventHandler LoadStopped {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("load_stopped", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("load_stopped", value);
-			}
-		}
-
-		[GLib.Signal("load_complete")]
-		public event System.EventHandler LoadComplete {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("load_complete", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("load_complete", value);
-			}
-		}
-
 		[GLib.Signal("reload")]
 		public event System.EventHandler Reload {
 			add {
@@ -302,6 +282,26 @@ namespace Atk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("page_changed", value);
+			}
+		}
+
+		[GLib.Signal("load_stopped")]
+		public event System.EventHandler LoadStopped {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("load_stopped", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("load_stopped", value);
+			}
+		}
+
+		[GLib.Signal("load_complete")]
+		public event System.EventHandler LoadComplete {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("load_complete", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("load_complete", value);
 			}
 		}
 

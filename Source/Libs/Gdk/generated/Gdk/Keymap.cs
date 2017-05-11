@@ -18,13 +18,13 @@ namespace Gdk {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[GLib.Signal("keys-changed")]
-		public event System.EventHandler KeysChanged {
+		[GLib.Signal("state_changed")]
+		public event System.EventHandler StateChanged {
 			add {
-				this.AddSignalHandler ("keys-changed", value);
+				this.AddSignalHandler ("state_changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("keys-changed", value);
+				this.RemoveSignalHandler ("state_changed", value);
 			}
 		}
 
@@ -38,13 +38,13 @@ namespace Gdk {
 			}
 		}
 
-		[GLib.Signal("state_changed")]
-		public event System.EventHandler StateChanged {
+		[GLib.Signal("keys-changed")]
+		public event System.EventHandler KeysChanged {
 			add {
-				this.AddSignalHandler ("state_changed", value);
+				this.AddSignalHandler ("keys-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("state_changed", value);
+				this.RemoveSignalHandler ("keys-changed", value);
 			}
 		}
 

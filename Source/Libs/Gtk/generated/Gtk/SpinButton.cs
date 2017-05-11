@@ -186,26 +186,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("value-changed")]
-		public event System.EventHandler ValueChanged {
-			add {
-				this.AddSignalHandler ("value-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("value-changed", value);
-			}
-		}
-
-		[GLib.Signal("change-value")]
-		public event Gtk.ChangeValueHandler ChangeValue {
-			add {
-				this.AddSignalHandler ("change-value", value, typeof (Gtk.ChangeValueArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("change-value", value);
-			}
-		}
-
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate int InputSignalDelegate (IntPtr inst, out double arg0, IntPtr gch);
 
@@ -245,13 +225,23 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("wrapped")]
-		public event System.EventHandler Wrapped {
+		[GLib.Signal("value-changed")]
+		public event System.EventHandler ValueChanged {
 			add {
-				this.AddSignalHandler ("wrapped", value);
+				this.AddSignalHandler ("value-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("wrapped", value);
+				this.RemoveSignalHandler ("value-changed", value);
+			}
+		}
+
+		[GLib.Signal("change-value")]
+		public event Gtk.ChangeValueHandler ChangeValue {
+			add {
+				this.AddSignalHandler ("change-value", value, typeof (Gtk.ChangeValueArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("change-value", value);
 			}
 		}
 
@@ -289,6 +279,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("output", value);
+			}
+		}
+
+		[GLib.Signal("wrapped")]
+		public event System.EventHandler Wrapped {
+			add {
+				this.AddSignalHandler ("wrapped", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("wrapped", value);
 			}
 		}
 

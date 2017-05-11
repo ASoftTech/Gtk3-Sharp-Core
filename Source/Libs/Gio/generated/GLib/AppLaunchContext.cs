@@ -25,16 +25,6 @@ namespace GLib {
 			Raw = g_app_launch_context_new();
 		}
 
-		[GLib.Signal("launched")]
-		public event GLib.LaunchedHandler Launched {
-			add {
-				this.AddSignalHandler ("launched", value, typeof (GLib.LaunchedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("launched", value);
-			}
-		}
-
 		[GLib.Signal("launch-failed")]
 		public event GLib.LaunchedFailedHandler LaunchedFailed {
 			add {
@@ -42,6 +32,16 @@ namespace GLib {
 			}
 			remove {
 				this.RemoveSignalHandler ("launch-failed", value);
+			}
+		}
+
+		[GLib.Signal("launched")]
+		public event GLib.LaunchedHandler Launched {
+			add {
+				this.AddSignalHandler ("launched", value, typeof (GLib.LaunchedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("launched", value);
 			}
 		}
 

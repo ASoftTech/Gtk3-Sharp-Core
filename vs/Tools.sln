@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{F69CBFF8-311F-4298-8DC9-1751B442C272}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Parser", "Tools\Parser\Parser.pyproj", "{63D73D10-95B7-4122-9CA0-564340F0A899}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Sources", "Tools\Sources\Sources.pyproj", "{307AEECC-C511-46B9-879E-5F5C9D90BA2A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Generator", "Tools\Generator\Generator.pyproj", "{2B156476-6932-4498-9B2D-0F0D3E66162B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generatorcs", "Generatorcs", "{FEC0F86C-11A0-4170-9FB6-DAE37DC4760E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GtkSharp.CodeFixup", "..\Tools\generator\GtkSharp.CodeFixup\GtkSharp.CodeFixup.csproj", "{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GtkSharp.CodeGen", "..\Tools\generator\GtkSharp.CodeGen\GtkSharp.CodeGen.csproj", "{CDFD304B-42C0-4506-897A-0D32B6BBC8CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63D73D10-95B7-4122-9CA0-564340F0A899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D73D10-95B7-4122-9CA0-564340F0A899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307AEECC-C511-46B9-879E-5F5C9D90BA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307AEECC-C511-46B9-879E-5F5C9D90BA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B156476-6932-4498-9B2D-0F0D3E66162B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B156476-6932-4498-9B2D-0F0D3E66162B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDFD304B-42C0-4506-897A-0D32B6BBC8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFD304B-42C0-4506-897A-0D32B6BBC8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFD304B-42C0-4506-897A-0D32B6BBC8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFD304B-42C0-4506-897A-0D32B6BBC8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63D73D10-95B7-4122-9CA0-564340F0A899} = {F69CBFF8-311F-4298-8DC9-1751B442C272}
+		{307AEECC-C511-46B9-879E-5F5C9D90BA2A} = {F69CBFF8-311F-4298-8DC9-1751B442C272}
+		{2B156476-6932-4498-9B2D-0F0D3E66162B} = {F69CBFF8-311F-4298-8DC9-1751B442C272}
+		{FEC0F86C-11A0-4170-9FB6-DAE37DC4760E} = {F69CBFF8-311F-4298-8DC9-1751B442C272}
+		{C28E5E72-6C8F-42E0-8F8B-AC0EBBCBF587} = {FEC0F86C-11A0-4170-9FB6-DAE37DC4760E}
+		{CDFD304B-42C0-4506-897A-0D32B6BBC8CE} = {FEC0F86C-11A0-4170-9FB6-DAE37DC4760E}
+	EndGlobalSection
+EndGlobal

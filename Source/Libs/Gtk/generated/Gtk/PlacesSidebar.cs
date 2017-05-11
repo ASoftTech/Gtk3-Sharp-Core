@@ -213,36 +213,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("open-location")]
-		public event Gtk.OpenLocationHandler OpenLocation {
-			add {
-				this.AddSignalHandler ("open-location", value, typeof (Gtk.OpenLocationArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("open-location", value);
-			}
-		}
-
-		[GLib.Signal("show-connect-to-server")]
-		public event System.EventHandler ShowedConnectToServer {
-			add {
-				this.AddSignalHandler ("show-connect-to-server", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("show-connect-to-server", value);
-			}
-		}
-
-		[GLib.Signal("show-enter-location")]
-		public event System.EventHandler ShowEnteredLocation {
-			add {
-				this.AddSignalHandler ("show-enter-location", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("show-enter-location", value);
-			}
-		}
-
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate int DragActionRequestedSignalDelegate (IntPtr inst, IntPtr arg0, IntPtr arg1, IntPtr arg2, IntPtr gch);
 
@@ -298,6 +268,46 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("open-location")]
+		public event Gtk.OpenLocationHandler OpenLocation {
+			add {
+				this.AddSignalHandler ("open-location", value, typeof (Gtk.OpenLocationArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("open-location", value);
+			}
+		}
+
+		[GLib.Signal("show-error-message")]
+		public event Gtk.ShowErrorMessageHandler ShowErrorMessage {
+			add {
+				this.AddSignalHandler ("show-error-message", value, typeof (Gtk.ShowErrorMessageArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("show-error-message", value);
+			}
+		}
+
+		[GLib.Signal("show-enter-location")]
+		public event System.EventHandler ShowEnteredLocation {
+			add {
+				this.AddSignalHandler ("show-enter-location", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("show-enter-location", value);
+			}
+		}
+
+		[GLib.Signal("show-connect-to-server")]
+		public event System.EventHandler ShowedConnectToServer {
+			add {
+				this.AddSignalHandler ("show-connect-to-server", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("show-connect-to-server", value);
+			}
+		}
+
 		[GLib.Signal("unmount")]
 		public event Gtk.UnmountHandler Unmount {
 			add {
@@ -305,6 +315,36 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("unmount", value);
+			}
+		}
+
+		[GLib.Signal("mount")]
+		public event Gtk.MountHandler Mount {
+			add {
+				this.AddSignalHandler ("mount", value, typeof (Gtk.MountArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("mount", value);
+			}
+		}
+
+		[GLib.Signal("show-other-locations")]
+		public event System.EventHandler ShowedOtherLocations {
+			add {
+				this.AddSignalHandler ("show-other-locations", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("show-other-locations", value);
+			}
+		}
+
+		[GLib.Signal("drag-action-ask")]
+		public event Gtk.DragActionAskHandler DragActionAsk {
+			add {
+				this.AddSignalHandler ("drag-action-ask", value, typeof (Gtk.DragActionAskArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-action-ask", value);
 			}
 		}
 
@@ -341,46 +381,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("drag-perform-drop", value);
-			}
-		}
-
-		[GLib.Signal("drag-action-ask")]
-		public event Gtk.DragActionAskHandler DragActionAsk {
-			add {
-				this.AddSignalHandler ("drag-action-ask", value, typeof (Gtk.DragActionAskArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-action-ask", value);
-			}
-		}
-
-		[GLib.Signal("mount")]
-		public event Gtk.MountHandler Mount {
-			add {
-				this.AddSignalHandler ("mount", value, typeof (Gtk.MountArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("mount", value);
-			}
-		}
-
-		[GLib.Signal("show-error-message")]
-		public event Gtk.ShowErrorMessageHandler ShowErrorMessage {
-			add {
-				this.AddSignalHandler ("show-error-message", value, typeof (Gtk.ShowErrorMessageArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("show-error-message", value);
-			}
-		}
-
-		[GLib.Signal("show-other-locations")]
-		public event System.EventHandler ShowedOtherLocations {
-			add {
-				this.AddSignalHandler ("show-other-locations", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("show-other-locations", value);
 			}
 		}
 

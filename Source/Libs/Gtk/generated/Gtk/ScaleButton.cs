@@ -126,16 +126,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("popup")]
-		public event System.EventHandler PoppedUp {
-			add {
-				this.AddSignalHandler ("popup", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("popup", value);
-			}
-		}
-
 		[GLib.Signal("popdown")]
 		public event System.EventHandler Popdown {
 			add {
@@ -143,6 +133,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("popdown", value);
+			}
+		}
+
+		[GLib.Signal("popup")]
+		public event System.EventHandler PoppedUp {
+			add {
+				this.AddSignalHandler ("popup", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("popup", value);
 			}
 		}
 

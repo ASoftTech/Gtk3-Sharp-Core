@@ -75,16 +75,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("response")]
-		public event Gtk.ResponseHandler Response {
-			add {
-				this.AddSignalHandler ("response", value, typeof (Gtk.ResponseArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("response", value);
-			}
-		}
-
 		[GLib.Signal("close")]
 		public event System.EventHandler Close {
 			add {
@@ -92,6 +82,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("close", value);
+			}
+		}
+
+		[GLib.Signal("response")]
+		public event Gtk.ResponseHandler Response {
+			add {
+				this.AddSignalHandler ("response", value, typeof (Gtk.ResponseArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("response", value);
 			}
 		}
 

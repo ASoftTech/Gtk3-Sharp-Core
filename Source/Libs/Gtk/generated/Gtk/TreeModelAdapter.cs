@@ -412,16 +412,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("row-inserted")]
-		public event Gtk.RowInsertedHandler RowInserted {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("row-inserted", value, typeof (Gtk.RowInsertedArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row-inserted", value);
-			}
-		}
-
 		[GLib.Signal("row-changed")]
 		public event Gtk.RowChangedHandler RowChanged {
 			add {
@@ -439,6 +429,16 @@ namespace Gtk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row-has-child-toggled", value);
+			}
+		}
+
+		[GLib.Signal("row-inserted")]
+		public event Gtk.RowInsertedHandler RowInserted {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("row-inserted", value, typeof (Gtk.RowInsertedArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("row-inserted", value);
 			}
 		}
 

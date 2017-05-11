@@ -404,16 +404,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("activate-current-link")]
-		public event System.EventHandler ActivateCurrentLink {
-			add {
-				this.AddSignalHandler ("activate-current-link", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("activate-current-link", value);
-			}
-		}
-
 		[GLib.Signal("activate-link")]
 		public event Gtk.ActivateLinkHandler ActivateLink {
 			add {
@@ -421,6 +411,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("activate-link", value);
+			}
+		}
+
+		[GLib.Signal("activate-current-link")]
+		public event System.EventHandler ActivateCurrentLink {
+			add {
+				this.AddSignalHandler ("activate-current-link", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("activate-current-link", value);
 			}
 		}
 
@@ -434,16 +434,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("populate-popup")]
-		public event Gtk.PopulatePopupHandler PopulatePopup {
-			add {
-				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("populate-popup", value);
-			}
-		}
-
 		[GLib.Signal("move-cursor")]
 		public event Gtk.MoveCursorHandler MoveCursor {
 			add {
@@ -451,6 +441,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("move-cursor", value);
+			}
+		}
+
+		[GLib.Signal("populate-popup")]
+		public event Gtk.PopulatePopupHandler PopulatePopup {
+			add {
+				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("populate-popup", value);
 			}
 		}
 

@@ -156,6 +156,26 @@ namespace GLib {
 			}
 		}
 
+		[GLib.Signal("command-line")]
+		public event GLib.CommandLineHandler CommandLine {
+			add {
+				this.AddSignalHandler ("command-line", value, typeof (GLib.CommandLineArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("command-line", value);
+			}
+		}
+
+		[GLib.Signal("startup")]
+		public event System.EventHandler Startup {
+			add {
+				this.AddSignalHandler ("startup", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("startup", value);
+			}
+		}
+
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void OpenedSignalDelegate (IntPtr inst, IntPtr arg0, int arg1, IntPtr arg2, IntPtr gch);
 
@@ -188,16 +208,6 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("activate")]
-		public event System.EventHandler Activated {
-			add {
-				this.AddSignalHandler ("activate", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("activate", value);
-			}
-		}
-
 		[GLib.Signal("shutdown")]
 		public event System.EventHandler Shutdown {
 			add {
@@ -208,23 +218,13 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("startup")]
-		public event System.EventHandler Startup {
+		[GLib.Signal("activate")]
+		public event System.EventHandler Activated {
 			add {
-				this.AddSignalHandler ("startup", value);
+				this.AddSignalHandler ("activate", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("startup", value);
-			}
-		}
-
-		[GLib.Signal("command-line")]
-		public event GLib.CommandLineHandler CommandLine {
-			add {
-				this.AddSignalHandler ("command-line", value, typeof (GLib.CommandLineArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("command-line", value);
+				this.RemoveSignalHandler ("activate", value);
 			}
 		}
 
@@ -1193,16 +1193,6 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("action-state-changed")]
-		public event GLib.ActionStateChangedHandler ActionStateChanged {
-			add {
-				this.AddSignalHandler ("action-state-changed", value, typeof (GLib.ActionStateChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("action-state-changed", value);
-			}
-		}
-
 		[GLib.Signal("action-enabled-changed")]
 		public event GLib.ActionEnabledChangedHandler ActionEnabledChanged {
 			add {
@@ -1210,6 +1200,16 @@ namespace GLib {
 			}
 			remove {
 				this.RemoveSignalHandler ("action-enabled-changed", value);
+			}
+		}
+
+		[GLib.Signal("action-state-changed")]
+		public event GLib.ActionStateChangedHandler ActionStateChanged {
+			add {
+				this.AddSignalHandler ("action-state-changed", value, typeof (GLib.ActionStateChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("action-state-changed", value);
 			}
 		}
 

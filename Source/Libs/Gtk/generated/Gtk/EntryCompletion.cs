@@ -193,16 +193,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("match-selected")]
-		public event Gtk.MatchSelectedHandler MatchSelected {
-			add {
-				this.AddSignalHandler ("match-selected", value, typeof (Gtk.MatchSelectedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("match-selected", value);
-			}
-		}
-
 		[GLib.Signal("action-activated")]
 		public event Gtk.ActionActivatedHandler ActionActivated {
 			add {
@@ -223,6 +213,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("insert-prefix")]
+		public event Gtk.PrefixInsertedHandler PrefixInserted {
+			add {
+				this.AddSignalHandler ("insert-prefix", value, typeof (Gtk.PrefixInsertedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("insert-prefix", value);
+			}
+		}
+
 		[GLib.Signal("cursor-on-match")]
 		public event Gtk.CursorOnMatchHandler CursorOnMatch {
 			add {
@@ -233,13 +233,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("insert-prefix")]
-		public event Gtk.PrefixInsertedHandler PrefixInserted {
+		[GLib.Signal("match-selected")]
+		public event Gtk.MatchSelectedHandler MatchSelected {
 			add {
-				this.AddSignalHandler ("insert-prefix", value, typeof (Gtk.PrefixInsertedArgs));
+				this.AddSignalHandler ("match-selected", value, typeof (Gtk.MatchSelectedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("insert-prefix", value);
+				this.RemoveSignalHandler ("match-selected", value);
 			}
 		}
 

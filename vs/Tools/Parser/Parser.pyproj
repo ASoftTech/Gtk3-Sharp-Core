@@ -28,7 +28,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\..\Tools\virtualenv\gtksharp_build_py3\">
+    <Interpreter Include="..\..\..\Build\PythonVirtual\gtksharp_build_py3\">
       <Id>{121a598b-f61e-4aa6-ac12-53769057eb4e}</Id>
       <Version>3.5</Version>
       <Description>gtksharp_build_py3 (Python 64-bit 3.5)</Description>

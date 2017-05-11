@@ -18,6 +18,16 @@ namespace Gdk {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
+		[GLib.Signal("opened")]
+		public event System.EventHandler Opened {
+			add {
+				this.AddSignalHandler ("opened", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("opened", value);
+			}
+		}
+
 		[GLib.Signal("monitor-added")]
 		public event Gdk.MonitorAddedHandler MonitorAdded {
 			add {
@@ -28,13 +38,13 @@ namespace Gdk {
 			}
 		}
 
-		[GLib.Signal("opened")]
-		public event System.EventHandler Opened {
+		[GLib.Signal("monitor-removed")]
+		public event Gdk.MonitorRemovedHandler MonitorRemoved {
 			add {
-				this.AddSignalHandler ("opened", value);
+				this.AddSignalHandler ("monitor-removed", value, typeof (Gdk.MonitorRemovedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("opened", value);
+				this.RemoveSignalHandler ("monitor-removed", value);
 			}
 		}
 
@@ -55,16 +65,6 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("seat-added", value);
-			}
-		}
-
-		[GLib.Signal("monitor-removed")]
-		public event Gdk.MonitorRemovedHandler MonitorRemoved {
-			add {
-				this.AddSignalHandler ("monitor-removed", value, typeof (Gdk.MonitorRemovedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("monitor-removed", value);
 			}
 		}
 

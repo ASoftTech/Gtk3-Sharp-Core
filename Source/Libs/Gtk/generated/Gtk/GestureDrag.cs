@@ -41,16 +41,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("drag-update")]
-		public event Gtk.DragUpdateHandler DragUpdate {
-			add {
-				this.AddSignalHandler ("drag-update", value, typeof (Gtk.DragUpdateArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-update", value);
-			}
-		}
-
 		[GLib.Signal("drag-begin")]
 		public event Gtk.DragBeginHandler DragBegin {
 			add {
@@ -58,6 +48,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("drag-begin", value);
+			}
+		}
+
+		[GLib.Signal("drag-update")]
+		public event Gtk.DragUpdateHandler DragUpdate {
+			add {
+				this.AddSignalHandler ("drag-update", value, typeof (Gtk.DragUpdateArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-update", value);
 			}
 		}
 

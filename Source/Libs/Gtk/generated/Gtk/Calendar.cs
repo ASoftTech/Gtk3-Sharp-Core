@@ -211,6 +211,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("next-month")]
+		public event System.EventHandler NextMonth {
+			add {
+				this.AddSignalHandler ("next-month", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("next-month", value);
+			}
+		}
+
 		[GLib.Signal("prev-year")]
 		public event System.EventHandler PrevYear {
 			add {
@@ -218,26 +228,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("prev-year", value);
-			}
-		}
-
-		[GLib.Signal("month-changed")]
-		public event System.EventHandler MonthChanged {
-			add {
-				this.AddSignalHandler ("month-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("month-changed", value);
-			}
-		}
-
-		[GLib.Signal("prev-month")]
-		public event System.EventHandler PrevMonth {
-			add {
-				this.AddSignalHandler ("prev-month", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("prev-month", value);
 			}
 		}
 
@@ -261,13 +251,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("next-month")]
-		public event System.EventHandler NextMonth {
+		[GLib.Signal("prev-month")]
+		public event System.EventHandler PrevMonth {
 			add {
-				this.AddSignalHandler ("next-month", value);
+				this.AddSignalHandler ("prev-month", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("next-month", value);
+				this.RemoveSignalHandler ("prev-month", value);
 			}
 		}
 
@@ -278,6 +268,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("next-year", value);
+			}
+		}
+
+		[GLib.Signal("month-changed")]
+		public event System.EventHandler MonthChanged {
+			add {
+				this.AddSignalHandler ("month-changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("month-changed", value);
 			}
 		}
 

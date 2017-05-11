@@ -353,6 +353,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("page-removed")]
+		public event Gtk.PageRemovedHandler PageRemoved {
+			add {
+				this.AddSignalHandler ("page-removed", value, typeof (Gtk.PageRemovedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("page-removed", value);
+			}
+		}
+
 		[GLib.Signal("reorder-tab")]
 		public event Gtk.ReorderTabHandler ReorderTab {
 			add {
@@ -363,16 +373,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("page-reordered")]
-		public event Gtk.PageReorderedHandler PageReordered {
-			add {
-				this.AddSignalHandler ("page-reordered", value, typeof (Gtk.PageReorderedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("page-reordered", value);
-			}
-		}
-
 		[GLib.Signal("change-current-page")]
 		public event Gtk.ChangeCurrentPageHandler ChangeCurrentPage {
 			add {
@@ -380,46 +380,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("change-current-page", value);
-			}
-		}
-
-		[GLib.Signal("create-window")]
-		public event Gtk.CreateWindowHandler CreateWindow {
-			add {
-				this.AddSignalHandler ("create-window", value, typeof (Gtk.CreateWindowArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("create-window", value);
-			}
-		}
-
-		[GLib.Signal("switch-page")]
-		public event Gtk.SwitchPageHandler SwitchPage {
-			add {
-				this.AddSignalHandler ("switch-page", value, typeof (Gtk.SwitchPageArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("switch-page", value);
-			}
-		}
-
-		[GLib.Signal("focus-tab")]
-		public event Gtk.FocusTabHandler FocusTab {
-			add {
-				this.AddSignalHandler ("focus-tab", value, typeof (Gtk.FocusTabArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("focus-tab", value);
-			}
-		}
-
-		[GLib.Signal("page-added")]
-		public event Gtk.PageAddedHandler PageAdded {
-			add {
-				this.AddSignalHandler ("page-added", value, typeof (Gtk.PageAddedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("page-added", value);
 			}
 		}
 
@@ -443,13 +403,53 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("page-removed")]
-		public event Gtk.PageRemovedHandler PageRemoved {
+		[GLib.Signal("page-added")]
+		public event Gtk.PageAddedHandler PageAdded {
 			add {
-				this.AddSignalHandler ("page-removed", value, typeof (Gtk.PageRemovedArgs));
+				this.AddSignalHandler ("page-added", value, typeof (Gtk.PageAddedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("page-removed", value);
+				this.RemoveSignalHandler ("page-added", value);
+			}
+		}
+
+		[GLib.Signal("focus-tab")]
+		public event Gtk.FocusTabHandler FocusTab {
+			add {
+				this.AddSignalHandler ("focus-tab", value, typeof (Gtk.FocusTabArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("focus-tab", value);
+			}
+		}
+
+		[GLib.Signal("page-reordered")]
+		public event Gtk.PageReorderedHandler PageReordered {
+			add {
+				this.AddSignalHandler ("page-reordered", value, typeof (Gtk.PageReorderedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("page-reordered", value);
+			}
+		}
+
+		[GLib.Signal("create-window")]
+		public event Gtk.CreateWindowHandler CreateWindow {
+			add {
+				this.AddSignalHandler ("create-window", value, typeof (Gtk.CreateWindowArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("create-window", value);
+			}
+		}
+
+		[GLib.Signal("switch-page")]
+		public event Gtk.SwitchPageHandler SwitchPage {
+			add {
+				this.AddSignalHandler ("switch-page", value, typeof (Gtk.SwitchPageArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("switch-page", value);
 			}
 		}
 

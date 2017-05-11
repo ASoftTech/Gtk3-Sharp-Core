@@ -283,26 +283,6 @@ namespace Atk {
 			}
 		}
 
-		[GLib.Signal("focus_event")]
-		public event Atk.FocusEventHandler FocusEvent {
-			add {
-				this.AddSignalHandler ("focus_event", value, typeof (Atk.FocusEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("focus_event", value);
-			}
-		}
-
-		[GLib.Signal("state_change")]
-		public event Atk.StateChangeHandler StateChange {
-			add {
-				this.AddSignalHandler ("state_change", value, typeof (Atk.StateChangeArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("state_change", value);
-			}
-		}
-
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void ActiveDescendantChangedSignalDelegate (IntPtr inst, IntPtr arg0, IntPtr gch);
 
@@ -330,16 +310,6 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("active_descendant_changed", value);
-			}
-		}
-
-		[GLib.Signal("visible_data_changed")]
-		public event System.EventHandler VisibleDataChanged {
-			add {
-				this.AddSignalHandler ("visible_data_changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("visible_data_changed", value);
 			}
 		}
 
@@ -374,6 +344,26 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("focus_event")]
+		public event Atk.FocusEventHandler FocusEvent {
+			add {
+				this.AddSignalHandler ("focus_event", value, typeof (Atk.FocusEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("focus_event", value);
+			}
+		}
+
+		[GLib.Signal("visible_data_changed")]
+		public event System.EventHandler VisibleDataChanged {
+			add {
+				this.AddSignalHandler ("visible_data_changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("visible_data_changed", value);
+			}
+		}
+
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void PropertyChangeSignalDelegate (IntPtr inst, IntPtr arg0, IntPtr gch);
 
@@ -401,6 +391,16 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("property_change", value);
+			}
+		}
+
+		[GLib.Signal("state_change")]
+		public event Atk.StateChangeHandler StateChange {
+			add {
+				this.AddSignalHandler ("state_change", value, typeof (Atk.StateChangeArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("state_change", value);
 			}
 		}
 

@@ -139,16 +139,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("populate-popup")]
-		public event Gtk.PopulatePopupHandler PopulatePopup {
-			add {
-				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("populate-popup", value);
-			}
-		}
-
 		[GLib.Signal("application-activated")]
 		public event Gtk.ApplicationActivatedHandler ApplicationActivated {
 			add {
@@ -166,6 +156,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("application-selected", value);
+			}
+		}
+
+		[GLib.Signal("populate-popup")]
+		public event Gtk.PopulatePopupHandler PopulatePopup {
+			add {
+				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("populate-popup", value);
 			}
 		}
 

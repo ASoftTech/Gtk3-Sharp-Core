@@ -196,16 +196,6 @@ namespace Gdk {
 			}
 		}
 
-		[GLib.Signal("changed")]
-		public event System.EventHandler Changed {
-			add {
-				this.AddSignalHandler ("changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("changed", value);
-			}
-		}
-
 		[GLib.Signal("tool-changed")]
 		public event Gdk.ToolChangedHandler ToolChanged {
 			add {
@@ -213,6 +203,16 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("tool-changed", value);
+			}
+		}
+
+		[GLib.Signal("changed")]
+		public event System.EventHandler Changed {
+			add {
+				this.AddSignalHandler ("changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("changed", value);
 			}
 		}
 

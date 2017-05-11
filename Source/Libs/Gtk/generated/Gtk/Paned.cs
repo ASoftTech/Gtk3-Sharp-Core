@@ -151,23 +151,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("move-handle")]
-		public event Gtk.MoveHandleHandler MoveHandle {
+		[GLib.Signal("accept-position")]
+		public event Gtk.AcceptPositionHandler AcceptPosition {
 			add {
-				this.AddSignalHandler ("move-handle", value, typeof (Gtk.MoveHandleArgs));
+				this.AddSignalHandler ("accept-position", value, typeof (Gtk.AcceptPositionArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("move-handle", value);
-			}
-		}
-
-		[GLib.Signal("cancel-position")]
-		public event Gtk.CancelPositionHandler CancelPosition {
-			add {
-				this.AddSignalHandler ("cancel-position", value, typeof (Gtk.CancelPositionArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("cancel-position", value);
+				this.RemoveSignalHandler ("accept-position", value);
 			}
 		}
 
@@ -181,16 +171,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("toggle-handle-focus")]
-		public event Gtk.ToggleHandleFocusHandler ToggleHandleFocus {
-			add {
-				this.AddSignalHandler ("toggle-handle-focus", value, typeof (Gtk.ToggleHandleFocusArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("toggle-handle-focus", value);
-			}
-		}
-
 		[GLib.Signal("cycle-handle-focus")]
 		public event Gtk.CycleHandleFocusHandler CycleHandleFocus {
 			add {
@@ -201,13 +181,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("accept-position")]
-		public event Gtk.AcceptPositionHandler AcceptPosition {
+		[GLib.Signal("toggle-handle-focus")]
+		public event Gtk.ToggleHandleFocusHandler ToggleHandleFocus {
 			add {
-				this.AddSignalHandler ("accept-position", value, typeof (Gtk.AcceptPositionArgs));
+				this.AddSignalHandler ("toggle-handle-focus", value, typeof (Gtk.ToggleHandleFocusArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("accept-position", value);
+				this.RemoveSignalHandler ("toggle-handle-focus", value);
+			}
+		}
+
+		[GLib.Signal("cancel-position")]
+		public event Gtk.CancelPositionHandler CancelPosition {
+			add {
+				this.AddSignalHandler ("cancel-position", value, typeof (Gtk.CancelPositionArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("cancel-position", value);
+			}
+		}
+
+		[GLib.Signal("move-handle")]
+		public event Gtk.MoveHandleHandler MoveHandle {
+			add {
+				this.AddSignalHandler ("move-handle", value, typeof (Gtk.MoveHandleArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-handle", value);
 			}
 		}
 

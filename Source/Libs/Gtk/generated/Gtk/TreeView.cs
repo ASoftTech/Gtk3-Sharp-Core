@@ -478,33 +478,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("columns-changed")]
-		public event System.EventHandler ColumnsChanged {
+		[GLib.Signal("toggle-cursor-row")]
+		public event Gtk.ToggleCursorRowHandler ToggleCursorRow {
 			add {
-				this.AddSignalHandler ("columns-changed", value);
+				this.AddSignalHandler ("toggle-cursor-row", value, typeof (Gtk.ToggleCursorRowArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("columns-changed", value);
+				this.RemoveSignalHandler ("toggle-cursor-row", value);
 			}
 		}
 
-		[GLib.Signal("select-cursor-parent")]
-		public event Gtk.SelectCursorParentHandler SelectCursorParent {
+		[GLib.Signal("cursor-changed")]
+		public event System.EventHandler CursorChanged {
 			add {
-				this.AddSignalHandler ("select-cursor-parent", value, typeof (Gtk.SelectCursorParentArgs));
+				this.AddSignalHandler ("cursor-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("select-cursor-parent", value);
+				this.RemoveSignalHandler ("cursor-changed", value);
 			}
 		}
 
-		[GLib.Signal("row-collapsed")]
-		public event Gtk.RowCollapsedHandler RowCollapsed {
+		[GLib.Signal("expand-collapse-cursor-row")]
+		public event Gtk.ExpandCollapseCursorRowHandler ExpandCollapseCursorRow {
 			add {
-				this.AddSignalHandler ("row-collapsed", value, typeof (Gtk.RowCollapsedArgs));
+				this.AddSignalHandler ("expand-collapse-cursor-row", value, typeof (Gtk.ExpandCollapseCursorRowArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("row-collapsed", value);
+				this.RemoveSignalHandler ("expand-collapse-cursor-row", value);
 			}
 		}
 
@@ -515,6 +515,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("test-collapse-row", value);
+			}
+		}
+
+		[GLib.Signal("columns-changed")]
+		public event System.EventHandler ColumnsChanged {
+			add {
+				this.AddSignalHandler ("columns-changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("columns-changed", value);
 			}
 		}
 
@@ -538,26 +548,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("unselect-all")]
-		public event Gtk.UnselectAllHandler UnselectAll {
-			add {
-				this.AddSignalHandler ("unselect-all", value, typeof (Gtk.UnselectAllArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("unselect-all", value);
-			}
-		}
-
-		[GLib.Signal("expand-collapse-cursor-row")]
-		public event Gtk.ExpandCollapseCursorRowHandler ExpandCollapseCursorRow {
-			add {
-				this.AddSignalHandler ("expand-collapse-cursor-row", value, typeof (Gtk.ExpandCollapseCursorRowArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("expand-collapse-cursor-row", value);
-			}
-		}
-
 		[GLib.Signal("move-cursor")]
 		public event Gtk.MoveCursorHandler MoveCursor {
 			add {
@@ -568,33 +558,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("toggle-cursor-row")]
-		public event Gtk.ToggleCursorRowHandler ToggleCursorRow {
+		[GLib.Signal("row-collapsed")]
+		public event Gtk.RowCollapsedHandler RowCollapsed {
 			add {
-				this.AddSignalHandler ("toggle-cursor-row", value, typeof (Gtk.ToggleCursorRowArgs));
+				this.AddSignalHandler ("row-collapsed", value, typeof (Gtk.RowCollapsedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("toggle-cursor-row", value);
-			}
-		}
-
-		[GLib.Signal("row-activated")]
-		public event Gtk.RowActivatedHandler RowActivated {
-			add {
-				this.AddSignalHandler ("row-activated", value, typeof (Gtk.RowActivatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("row-activated", value);
-			}
-		}
-
-		[GLib.Signal("cursor-changed")]
-		public event System.EventHandler CursorChanged {
-			add {
-				this.AddSignalHandler ("cursor-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("cursor-changed", value);
+				this.RemoveSignalHandler ("row-collapsed", value);
 			}
 		}
 
@@ -618,6 +588,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("unselect-all")]
+		public event Gtk.UnselectAllHandler UnselectAll {
+			add {
+				this.AddSignalHandler ("unselect-all", value, typeof (Gtk.UnselectAllArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("unselect-all", value);
+			}
+		}
+
 		[GLib.Signal("select-all")]
 		public event Gtk.SelectAllHandler SelectAll {
 			add {
@@ -625,6 +605,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("select-all", value);
+			}
+		}
+
+		[GLib.Signal("select-cursor-parent")]
+		public event Gtk.SelectCursorParentHandler SelectCursorParent {
+			add {
+				this.AddSignalHandler ("select-cursor-parent", value, typeof (Gtk.SelectCursorParentArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("select-cursor-parent", value);
+			}
+		}
+
+		[GLib.Signal("row-activated")]
+		public event Gtk.RowActivatedHandler RowActivated {
+			add {
+				this.AddSignalHandler ("row-activated", value, typeof (Gtk.RowActivatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("row-activated", value);
 			}
 		}
 

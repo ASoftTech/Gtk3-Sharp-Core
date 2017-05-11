@@ -507,6 +507,46 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("text_caret_moved")]
+		public event Atk.TextCaretMovedHandler TextCaretMoved {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("text_caret_moved", value, typeof (Atk.TextCaretMovedArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_caret_moved", value);
+			}
+		}
+
+		[GLib.Signal("text_remove")]
+		public event Atk.TextRemoveHandler TextRemove {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("text_remove", value, typeof (Atk.TextRemoveArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_remove", value);
+			}
+		}
+
+		[GLib.Signal("text_selection_changed")]
+		public event System.EventHandler TextSelectionChanged {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("text_selection_changed", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_selection_changed", value);
+			}
+		}
+
+		[GLib.Signal("text_attributes_changed")]
+		public event System.EventHandler TextAttributesChanged {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("text_attributes_changed", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_attributes_changed", value);
+			}
+		}
+
 		[GLib.Signal("text_insert")]
 		public event Atk.TextInsertHandler TextInsert {
 			add {
@@ -524,46 +564,6 @@ namespace Atk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_changed", value);
-			}
-		}
-
-		[GLib.Signal("text_remove")]
-		public event Atk.TextRemoveHandler TextRemove {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("text_remove", value, typeof (Atk.TextRemoveArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_remove", value);
-			}
-		}
-
-		[GLib.Signal("text_caret_moved")]
-		public event Atk.TextCaretMovedHandler TextCaretMoved {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("text_caret_moved", value, typeof (Atk.TextCaretMovedArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_caret_moved", value);
-			}
-		}
-
-		[GLib.Signal("text_attributes_changed")]
-		public event System.EventHandler TextAttributesChanged {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("text_attributes_changed", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_attributes_changed", value);
-			}
-		}
-
-		[GLib.Signal("text_selection_changed")]
-		public event System.EventHandler TextSelectionChanged {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("text_selection_changed", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("text_selection_changed", value);
 			}
 		}
 

@@ -46,6 +46,26 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("end")]
+		public event Gtk.EndHandler End {
+			add {
+				this.AddSignalHandler ("end", value, typeof (Gtk.EndArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("end", value);
+			}
+		}
+
+		[GLib.Signal("sequence-state-changed")]
+		public event Gtk.SequenceStateChangedHandler SequenceStateChanged {
+			add {
+				this.AddSignalHandler ("sequence-state-changed", value, typeof (Gtk.SequenceStateChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("sequence-state-changed", value);
+			}
+		}
+
 		[GLib.Signal("update")]
 		public event Gtk.UpdateHandler Update {
 			add {
@@ -63,26 +83,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("cancel", value);
-			}
-		}
-
-		[GLib.Signal("sequence-state-changed")]
-		public event Gtk.SequenceStateChangedHandler SequenceStateChanged {
-			add {
-				this.AddSignalHandler ("sequence-state-changed", value, typeof (Gtk.SequenceStateChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("sequence-state-changed", value);
-			}
-		}
-
-		[GLib.Signal("end")]
-		public event Gtk.EndHandler End {
-			add {
-				this.AddSignalHandler ("end", value, typeof (Gtk.EndArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("end", value);
 			}
 		}
 

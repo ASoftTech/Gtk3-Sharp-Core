@@ -18,23 +18,23 @@ namespace Gdk {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[GLib.Signal("update")]
-		public event System.EventHandler Update {
+		[GLib.Signal("flush-events")]
+		public event System.EventHandler FlushEvents {
 			add {
-				this.AddSignalHandler ("update", value);
+				this.AddSignalHandler ("flush-events", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("update", value);
+				this.RemoveSignalHandler ("flush-events", value);
 			}
 		}
 
-		[GLib.Signal("layout")]
-		public event System.EventHandler Layout {
+		[GLib.Signal("paint")]
+		public event System.EventHandler Paint {
 			add {
-				this.AddSignalHandler ("layout", value);
+				this.AddSignalHandler ("paint", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("layout", value);
+				this.RemoveSignalHandler ("paint", value);
 			}
 		}
 
@@ -58,23 +58,13 @@ namespace Gdk {
 			}
 		}
 
-		[GLib.Signal("flush-events")]
-		public event System.EventHandler FlushEvents {
+		[GLib.Signal("layout")]
+		public event System.EventHandler Layout {
 			add {
-				this.AddSignalHandler ("flush-events", value);
+				this.AddSignalHandler ("layout", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("flush-events", value);
-			}
-		}
-
-		[GLib.Signal("paint")]
-		public event System.EventHandler Paint {
-			add {
-				this.AddSignalHandler ("paint", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("paint", value);
+				this.RemoveSignalHandler ("layout", value);
 			}
 		}
 
@@ -85,6 +75,16 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("resume-events", value);
+			}
+		}
+
+		[GLib.Signal("update")]
+		public event System.EventHandler Update {
+			add {
+				this.AddSignalHandler ("update", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("update", value);
 			}
 		}
 

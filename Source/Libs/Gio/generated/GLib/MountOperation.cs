@@ -139,6 +139,16 @@ namespace GLib {
 			}
 		}
 
+		[GLib.Signal("show-unmount-progress")]
+		public event GLib.ShowUnmountProgressHandler ShowUnmountProgress {
+			add {
+				this.AddSignalHandler ("show-unmount-progress", value, typeof (GLib.ShowUnmountProgressArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("show-unmount-progress", value);
+			}
+		}
+
 		[GLib.Signal("reply")]
 		public event GLib.ReplyHandler Reply {
 			add {
@@ -159,13 +169,13 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("aborted")]
-		public event System.EventHandler Aborted {
+		[GLib.Signal("show-processes")]
+		public event GLib.ShowProcessesHandler ShowProcesses {
 			add {
-				this.AddSignalHandler ("aborted", value);
+				this.AddSignalHandler ("show-processes", value, typeof (GLib.ShowProcessesArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("aborted", value);
+				this.RemoveSignalHandler ("show-processes", value);
 			}
 		}
 
@@ -179,23 +189,13 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("show-unmount-progress")]
-		public event GLib.ShowUnmountProgressHandler ShowUnmountProgress {
+		[GLib.Signal("aborted")]
+		public event System.EventHandler Aborted {
 			add {
-				this.AddSignalHandler ("show-unmount-progress", value, typeof (GLib.ShowUnmountProgressArgs));
+				this.AddSignalHandler ("aborted", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("show-unmount-progress", value);
-			}
-		}
-
-		[GLib.Signal("show-processes")]
-		public event GLib.ShowProcessesHandler ShowProcesses {
-			add {
-				this.AddSignalHandler ("show-processes", value, typeof (GLib.ShowProcessesArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("show-processes", value);
+				this.RemoveSignalHandler ("aborted", value);
 			}
 		}
 

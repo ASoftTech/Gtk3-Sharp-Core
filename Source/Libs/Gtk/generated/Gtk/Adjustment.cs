@@ -126,16 +126,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("value-changed")]
-		public event System.EventHandler ValueChanged {
-			add {
-				this.AddSignalHandler ("value-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("value-changed", value);
-			}
-		}
-
 		[GLib.Signal("changed")]
 		public event System.EventHandler Changed {
 			add {
@@ -143,6 +133,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("changed", value);
+			}
+		}
+
+		[GLib.Signal("value-changed")]
+		public event System.EventHandler ValueChanged {
+			add {
+				this.AddSignalHandler ("value-changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("value-changed", value);
 			}
 		}
 

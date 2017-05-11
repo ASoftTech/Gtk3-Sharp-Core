@@ -232,16 +232,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("delete-text")]
-		public event Gtk.TextDeletedHandler TextDeleted {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("delete-text", value, typeof (Gtk.TextDeletedArgs));
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("delete-text", value);
-			}
-		}
-
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void TextInsertedSignalDelegate (IntPtr inst, IntPtr arg0, int arg1, ref int arg2, IntPtr gch);
 
@@ -280,6 +270,16 @@ namespace Gtk {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("insert-text", value);
+			}
+		}
+
+		[GLib.Signal("delete-text")]
+		public event Gtk.TextDeletedHandler TextDeleted {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("delete-text", value, typeof (Gtk.TextDeletedArgs));
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("delete-text", value);
 			}
 		}
 

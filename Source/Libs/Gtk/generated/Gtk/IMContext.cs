@@ -48,13 +48,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("commit")]
-		public event Gtk.CommitHandler Commit {
+		[GLib.Signal("preedit-changed")]
+		public event System.EventHandler PreeditChanged {
 			add {
-				this.AddSignalHandler ("commit", value, typeof (Gtk.CommitArgs));
+				this.AddSignalHandler ("preedit-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("commit", value);
+				this.RemoveSignalHandler ("preedit-changed", value);
 			}
 		}
 
@@ -78,13 +78,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("preedit-end")]
-		public event System.EventHandler PreeditEnd {
+		[GLib.Signal("commit")]
+		public event Gtk.CommitHandler Commit {
 			add {
-				this.AddSignalHandler ("preedit-end", value);
+				this.AddSignalHandler ("commit", value, typeof (Gtk.CommitArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("preedit-end", value);
+				this.RemoveSignalHandler ("commit", value);
 			}
 		}
 
@@ -98,13 +98,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("preedit-changed")]
-		public event System.EventHandler PreeditChanged {
+		[GLib.Signal("preedit-end")]
+		public event System.EventHandler PreeditEnd {
 			add {
-				this.AddSignalHandler ("preedit-changed", value);
+				this.AddSignalHandler ("preedit-end", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("preedit-changed", value);
+				this.RemoveSignalHandler ("preedit-end", value);
 			}
 		}
 

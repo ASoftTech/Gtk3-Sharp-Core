@@ -218,13 +218,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("activate-item")]
-		public event System.EventHandler ActivateItem {
+		[GLib.Signal("select")]
+		public event System.EventHandler Selected {
 			add {
-				this.AddSignalHandler ("activate-item", value);
+				this.AddSignalHandler ("select", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("activate-item", value);
+				this.RemoveSignalHandler ("select", value);
 			}
 		}
 
@@ -238,16 +238,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("toggle-size-allocate")]
-		public event Gtk.ToggleSizeAllocatedHandler ToggleSizeAllocated {
-			add {
-				this.AddSignalHandler ("toggle-size-allocate", value, typeof (Gtk.ToggleSizeAllocatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("toggle-size-allocate", value);
-			}
-		}
-
 		[GLib.Signal("deselect")]
 		public event System.EventHandler Deselected {
 			add {
@@ -258,13 +248,23 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("select")]
-		public event System.EventHandler Selected {
+		[GLib.Signal("toggle-size-allocate")]
+		public event Gtk.ToggleSizeAllocatedHandler ToggleSizeAllocated {
 			add {
-				this.AddSignalHandler ("select", value);
+				this.AddSignalHandler ("toggle-size-allocate", value, typeof (Gtk.ToggleSizeAllocatedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("select", value);
+				this.RemoveSignalHandler ("toggle-size-allocate", value);
+			}
+		}
+
+		[GLib.Signal("activate-item")]
+		public event System.EventHandler ActivateItem {
+			add {
+				this.AddSignalHandler ("activate-item", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("activate-item", value);
 			}
 		}
 

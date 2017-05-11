@@ -317,13 +317,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("done")]
-		public event Gtk.DoneHandler Done {
+		[GLib.Signal("draw-page")]
+		public event Gtk.DrawPageHandler DrawPage {
 			add {
-				this.AddSignalHandler ("done", value, typeof (Gtk.DoneArgs));
+				this.AddSignalHandler ("draw-page", value, typeof (Gtk.DrawPageArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("done", value);
+				this.RemoveSignalHandler ("draw-page", value);
+			}
+		}
+
+		[GLib.Signal("paginate")]
+		public event Gtk.PaginateHandler Paginate {
+			add {
+				this.AddSignalHandler ("paginate", value, typeof (Gtk.PaginateArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("paginate", value);
+			}
+		}
+
+		[GLib.Signal("request-page-setup")]
+		public event Gtk.RequestPageSetupHandler RequestPageSetup {
+			add {
+				this.AddSignalHandler ("request-page-setup", value, typeof (Gtk.RequestPageSetupArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("request-page-setup", value);
 			}
 		}
 
@@ -347,53 +367,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("paginate")]
-		public event Gtk.PaginateHandler Paginate {
+		[GLib.Signal("status-changed")]
+		public event System.EventHandler StatusChanged {
 			add {
-				this.AddSignalHandler ("paginate", value, typeof (Gtk.PaginateArgs));
+				this.AddSignalHandler ("status-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("paginate", value);
-			}
-		}
-
-		[GLib.Signal("draw-page")]
-		public event Gtk.DrawPageHandler DrawPage {
-			add {
-				this.AddSignalHandler ("draw-page", value, typeof (Gtk.DrawPageArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("draw-page", value);
-			}
-		}
-
-		[GLib.Signal("request-page-setup")]
-		public event Gtk.RequestPageSetupHandler RequestPageSetup {
-			add {
-				this.AddSignalHandler ("request-page-setup", value, typeof (Gtk.RequestPageSetupArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("request-page-setup", value);
-			}
-		}
-
-		[GLib.Signal("update-custom-widget")]
-		public event Gtk.UpdateCustomWidgetHandler UpdateCustomWidget {
-			add {
-				this.AddSignalHandler ("update-custom-widget", value, typeof (Gtk.UpdateCustomWidgetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("update-custom-widget", value);
-			}
-		}
-
-		[GLib.Signal("create-custom-widget")]
-		public event Gtk.CreateCustomWidgetHandler CreateCustomWidget {
-			add {
-				this.AddSignalHandler ("create-custom-widget", value, typeof (Gtk.CreateCustomWidgetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("create-custom-widget", value);
+				this.RemoveSignalHandler ("status-changed", value);
 			}
 		}
 
@@ -407,13 +387,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("status-changed")]
-		public event System.EventHandler StatusChanged {
+		[GLib.Signal("create-custom-widget")]
+		public event Gtk.CreateCustomWidgetHandler CreateCustomWidget {
 			add {
-				this.AddSignalHandler ("status-changed", value);
+				this.AddSignalHandler ("create-custom-widget", value, typeof (Gtk.CreateCustomWidgetArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("status-changed", value);
+				this.RemoveSignalHandler ("create-custom-widget", value);
+			}
+		}
+
+		[GLib.Signal("done")]
+		public event Gtk.DoneHandler Done {
+			add {
+				this.AddSignalHandler ("done", value, typeof (Gtk.DoneArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("done", value);
+			}
+		}
+
+		[GLib.Signal("update-custom-widget")]
+		public event Gtk.UpdateCustomWidgetHandler UpdateCustomWidget {
+			add {
+				this.AddSignalHandler ("update-custom-widget", value, typeof (Gtk.UpdateCustomWidgetArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("update-custom-widget", value);
 			}
 		}
 

@@ -76,16 +76,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("deleted-text")]
-		public event Gtk.DeletedTextHandler DeletedText {
-			add {
-				this.AddSignalHandler ("deleted-text", value, typeof (Gtk.DeletedTextArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("deleted-text", value);
-			}
-		}
-
 		[GLib.Signal("inserted-text")]
 		public event Gtk.InsertedTextHandler InsertedText {
 			add {
@@ -93,6 +83,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("inserted-text", value);
+			}
+		}
+
+		[GLib.Signal("deleted-text")]
+		public event Gtk.DeletedTextHandler DeletedText {
+			add {
+				this.AddSignalHandler ("deleted-text", value, typeof (Gtk.DeletedTextArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("deleted-text", value);
 			}
 		}
 

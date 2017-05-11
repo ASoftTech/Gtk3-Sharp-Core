@@ -63,6 +63,16 @@ namespace GLib {
 				return obj as IMount;
 		}
 
+		[GLib.Signal("pre-unmount")]
+		public event System.EventHandler PreUnmount {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("pre-unmount", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("pre-unmount", value);
+			}
+		}
+
 		[GLib.Signal("changed")]
 		public event System.EventHandler Changed {
 			add {
@@ -80,16 +90,6 @@ namespace GLib {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("unmounted", value);
-			}
-		}
-
-		[GLib.Signal("pre-unmount")]
-		public event System.EventHandler PreUnmount {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("pre-unmount", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("pre-unmount", value);
 			}
 		}
 

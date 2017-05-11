@@ -104,13 +104,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("end-user-action")]
-		public event System.EventHandler UserActionEnded {
+		[GLib.Signal("paste-done")]
+		public event Gtk.PasteDoneHandler PasteDone {
 			add {
-				this.AddSignalHandler ("end-user-action", value);
+				this.AddSignalHandler ("paste-done", value, typeof (Gtk.PasteDoneArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("end-user-action", value);
+				this.RemoveSignalHandler ("paste-done", value);
 			}
 		}
 
@@ -134,13 +134,43 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("apply-tag")]
-		public event Gtk.TagAppliedHandler TagApplied {
+		[GLib.Signal("insert-child-anchor")]
+		public event Gtk.ChildAnchorInsertedHandler ChildAnchorInserted {
 			add {
-				this.AddSignalHandler ("apply-tag", value, typeof (Gtk.TagAppliedArgs));
+				this.AddSignalHandler ("insert-child-anchor", value, typeof (Gtk.ChildAnchorInsertedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("apply-tag", value);
+				this.RemoveSignalHandler ("insert-child-anchor", value);
+			}
+		}
+
+		[GLib.Signal("begin-user-action")]
+		public event System.EventHandler UserActionBegun {
+			add {
+				this.AddSignalHandler ("begin-user-action", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("begin-user-action", value);
+			}
+		}
+
+		[GLib.Signal("remove-tag")]
+		public event Gtk.TagRemovedHandler TagRemoved {
+			add {
+				this.AddSignalHandler ("remove-tag", value, typeof (Gtk.TagRemovedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("remove-tag", value);
+			}
+		}
+
+		[GLib.Signal("end-user-action")]
+		public event System.EventHandler UserActionEnded {
+			add {
+				this.AddSignalHandler ("end-user-action", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("end-user-action", value);
 			}
 		}
 
@@ -151,26 +181,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("changed", value);
-			}
-		}
-
-		[GLib.Signal("paste-done")]
-		public event Gtk.PasteDoneHandler PasteDone {
-			add {
-				this.AddSignalHandler ("paste-done", value, typeof (Gtk.PasteDoneArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("paste-done", value);
-			}
-		}
-
-		[GLib.Signal("insert-child-anchor")]
-		public event Gtk.ChildAnchorInsertedHandler ChildAnchorInserted {
-			add {
-				this.AddSignalHandler ("insert-child-anchor", value, typeof (Gtk.ChildAnchorInsertedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("insert-child-anchor", value);
 			}
 		}
 
@@ -204,26 +214,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("begin-user-action")]
-		public event System.EventHandler UserActionBegun {
-			add {
-				this.AddSignalHandler ("begin-user-action", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("begin-user-action", value);
-			}
-		}
-
-		[GLib.Signal("remove-tag")]
-		public event Gtk.TagRemovedHandler TagRemoved {
-			add {
-				this.AddSignalHandler ("remove-tag", value, typeof (Gtk.TagRemovedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("remove-tag", value);
-			}
-		}
-
 		[GLib.Signal("insert-pixbuf")]
 		public event Gtk.PixbufInsertedHandler PixbufInserted {
 			add {
@@ -231,6 +221,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("insert-pixbuf", value);
+			}
+		}
+
+		[GLib.Signal("apply-tag")]
+		public event Gtk.TagAppliedHandler TagApplied {
+			add {
+				this.AddSignalHandler ("apply-tag", value, typeof (Gtk.TagAppliedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("apply-tag", value);
 			}
 		}
 

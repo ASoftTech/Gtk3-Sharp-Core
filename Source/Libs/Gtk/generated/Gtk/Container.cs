@@ -64,13 +64,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("add")]
-		public event Gtk.AddedHandler Added {
+		[GLib.Signal("set-focus-child")]
+		public event Gtk.FocusChildSetHandler FocusChildSet {
 			add {
-				this.AddSignalHandler ("add", value, typeof (Gtk.AddedArgs));
+				this.AddSignalHandler ("set-focus-child", value, typeof (Gtk.FocusChildSetArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("add", value);
+				this.RemoveSignalHandler ("set-focus-child", value);
 			}
 		}
 
@@ -84,13 +84,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("set-focus-child")]
-		public event Gtk.FocusChildSetHandler FocusChildSet {
+		[GLib.Signal("add")]
+		public event Gtk.AddedHandler Added {
 			add {
-				this.AddSignalHandler ("set-focus-child", value, typeof (Gtk.FocusChildSetArgs));
+				this.AddSignalHandler ("add", value, typeof (Gtk.AddedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("set-focus-child", value);
+				this.RemoveSignalHandler ("add", value);
 			}
 		}
 

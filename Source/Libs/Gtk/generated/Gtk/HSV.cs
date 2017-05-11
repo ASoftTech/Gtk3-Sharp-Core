@@ -25,16 +25,6 @@ namespace Gtk {
 			Raw = gtk_hsv_new();
 		}
 
-		[GLib.Signal("move")]
-		public event Gtk.MoveHandler Move {
-			add {
-				this.AddSignalHandler ("move", value, typeof (Gtk.MoveArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("move", value);
-			}
-		}
-
 		[GLib.Signal("changed")]
 		public event System.EventHandler Changed {
 			add {
@@ -42,6 +32,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("changed", value);
+			}
+		}
+
+		[GLib.Signal("move")]
+		public event Gtk.MoveHandler Move {
+			add {
+				this.AddSignalHandler ("move", value, typeof (Gtk.MoveArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move", value);
 			}
 		}
 

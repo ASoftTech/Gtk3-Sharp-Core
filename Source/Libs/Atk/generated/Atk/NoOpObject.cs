@@ -814,16 +814,6 @@ namespace Atk {
 			atk_table_set_row_header(Handle, row, header == null ? IntPtr.Zero : header.Handle);
 		}
 
-		[GLib.Signal("column_reordered")]
-		public event System.EventHandler ColumnReordered {
-			add {
-				this.AddSignalHandler ("column_reordered", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("column_reordered", value);
-			}
-		}
-
 		[GLib.Signal("column_deleted")]
 		public event Atk.ColumnDeletedHandler ColumnDeleted {
 			add {
@@ -831,26 +821,6 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("column_deleted", value);
-			}
-		}
-
-		[GLib.Signal("column_inserted")]
-		public event Atk.ColumnInsertedHandler ColumnInserted {
-			add {
-				this.AddSignalHandler ("column_inserted", value, typeof (Atk.ColumnInsertedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("column_inserted", value);
-			}
-		}
-
-		[GLib.Signal("row_deleted")]
-		public event Atk.RowDeletedHandler RowDeleted {
-			add {
-				this.AddSignalHandler ("row_deleted", value, typeof (Atk.RowDeletedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("row_deleted", value);
 			}
 		}
 
@@ -864,6 +834,16 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("column_inserted")]
+		public event Atk.ColumnInsertedHandler ColumnInserted {
+			add {
+				this.AddSignalHandler ("column_inserted", value, typeof (Atk.ColumnInsertedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("column_inserted", value);
+			}
+		}
+
 		[GLib.Signal("model_changed")]
 		public event System.EventHandler ModelChanged {
 			add {
@@ -874,6 +854,16 @@ namespace Atk {
 			}
 		}
 
+		[GLib.Signal("row_deleted")]
+		public event Atk.RowDeletedHandler RowDeleted {
+			add {
+				this.AddSignalHandler ("row_deleted", value, typeof (Atk.RowDeletedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("row_deleted", value);
+			}
+		}
+
 		[GLib.Signal("row_inserted")]
 		public event Atk.RowInsertedHandler RowInserted {
 			add {
@@ -881,6 +871,16 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("row_inserted", value);
+			}
+		}
+
+		[GLib.Signal("column_reordered")]
+		public event System.EventHandler ColumnReordered {
+			add {
+				this.AddSignalHandler ("column_reordered", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("column_reordered", value);
 			}
 		}
 
@@ -1510,6 +1510,46 @@ namespace Atk {
 			return ret;
 		}
 
+		[GLib.Signal("text_caret_moved")]
+		public event Atk.TextCaretMovedHandler TextCaretMoved {
+			add {
+				this.AddSignalHandler ("text_caret_moved", value, typeof (Atk.TextCaretMovedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("text_caret_moved", value);
+			}
+		}
+
+		[GLib.Signal("text_remove")]
+		public event Atk.TextRemoveHandler TextRemove {
+			add {
+				this.AddSignalHandler ("text_remove", value, typeof (Atk.TextRemoveArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("text_remove", value);
+			}
+		}
+
+		[GLib.Signal("text_selection_changed")]
+		public event System.EventHandler TextSelectionChanged {
+			add {
+				this.AddSignalHandler ("text_selection_changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("text_selection_changed", value);
+			}
+		}
+
+		[GLib.Signal("text_attributes_changed")]
+		public event System.EventHandler TextAttributesChanged {
+			add {
+				this.AddSignalHandler ("text_attributes_changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("text_attributes_changed", value);
+			}
+		}
+
 		[GLib.Signal("text_insert")]
 		public event Atk.TextInsertHandler TextInsert {
 			add {
@@ -1527,46 +1567,6 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("text_changed", value);
-			}
-		}
-
-		[GLib.Signal("text_remove")]
-		public event Atk.TextRemoveHandler TextRemove {
-			add {
-				this.AddSignalHandler ("text_remove", value, typeof (Atk.TextRemoveArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("text_remove", value);
-			}
-		}
-
-		[GLib.Signal("text_caret_moved")]
-		public event Atk.TextCaretMovedHandler TextCaretMoved {
-			add {
-				this.AddSignalHandler ("text_caret_moved", value, typeof (Atk.TextCaretMovedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("text_caret_moved", value);
-			}
-		}
-
-		[GLib.Signal("text_attributes_changed")]
-		public event System.EventHandler TextAttributesChanged {
-			add {
-				this.AddSignalHandler ("text_attributes_changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("text_attributes_changed", value);
-			}
-		}
-
-		[GLib.Signal("text_selection_changed")]
-		public event System.EventHandler TextSelectionChanged {
-			add {
-				this.AddSignalHandler ("text_selection_changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("text_selection_changed", value);
 			}
 		}
 
@@ -2235,26 +2235,6 @@ namespace Atk {
 			return ret;
 		}
 
-		[GLib.Signal("load_stopped")]
-		public event System.EventHandler LoadStopped {
-			add {
-				this.AddSignalHandler ("load_stopped", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("load_stopped", value);
-			}
-		}
-
-		[GLib.Signal("load_complete")]
-		public event System.EventHandler LoadComplete {
-			add {
-				this.AddSignalHandler ("load_complete", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("load_complete", value);
-			}
-		}
-
 		[GLib.Signal("reload")]
 		public event System.EventHandler Reload {
 			add {
@@ -2272,6 +2252,26 @@ namespace Atk {
 			}
 			remove {
 				this.RemoveSignalHandler ("page_changed", value);
+			}
+		}
+
+		[GLib.Signal("load_stopped")]
+		public event System.EventHandler LoadStopped {
+			add {
+				this.AddSignalHandler ("load_stopped", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("load_stopped", value);
+			}
+		}
+
+		[GLib.Signal("load_complete")]
+		public event System.EventHandler LoadComplete {
+			add {
+				this.AddSignalHandler ("load_complete", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("load_complete", value);
 			}
 		}
 

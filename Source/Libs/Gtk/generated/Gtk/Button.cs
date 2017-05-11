@@ -302,16 +302,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("clicked")]
-		public event System.EventHandler Clicked {
-			add {
-				this.AddSignalHandler ("clicked", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("clicked", value);
-			}
-		}
-
 		[GLib.Signal("pressed")]
 		public event System.EventHandler Pressed {
 			add {
@@ -319,6 +309,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("pressed", value);
+			}
+		}
+
+		[GLib.Signal("enter")]
+		public event System.EventHandler Entered {
+			add {
+				this.AddSignalHandler ("enter", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("enter", value);
 			}
 		}
 
@@ -342,13 +342,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("enter")]
-		public event System.EventHandler Entered {
+		[GLib.Signal("clicked")]
+		public event System.EventHandler Clicked {
 			add {
-				this.AddSignalHandler ("enter", value);
+				this.AddSignalHandler ("clicked", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("enter", value);
+				this.RemoveSignalHandler ("clicked", value);
 			}
 		}
 

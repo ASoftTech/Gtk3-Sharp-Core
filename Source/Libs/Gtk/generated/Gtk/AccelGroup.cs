@@ -49,16 +49,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("accel-changed")]
-		public event Gtk.AccelChangedHandler AccelChanged {
-			add {
-				this.AddSignalHandler ("accel-changed", value, typeof (Gtk.AccelChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("accel-changed", value);
-			}
-		}
-
 		[GLib.Signal("accel-activate")]
 		public event Gtk.AccelActivateHandler AccelActivate {
 			add {
@@ -66,6 +56,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("accel-activate", value);
+			}
+		}
+
+		[GLib.Signal("accel-changed")]
+		public event Gtk.AccelChangedHandler AccelChanged {
+			add {
+				this.AddSignalHandler ("accel-changed", value, typeof (Gtk.AccelChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("accel-changed", value);
 			}
 		}
 

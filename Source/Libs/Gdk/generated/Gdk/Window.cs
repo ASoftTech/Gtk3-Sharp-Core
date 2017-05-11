@@ -48,49 +48,6 @@ namespace Gdk {
 		}
 
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
-		delegate void MovedToRectSignalDelegate (IntPtr inst, IntPtr arg0, IntPtr arg1, bool arg2, bool arg3, IntPtr gch);
-
-		static void MovedToRectSignalCallback (IntPtr inst, IntPtr arg0, IntPtr arg1, bool arg2, bool arg3, IntPtr gch)
-		{
-			Gdk.MovedToRectArgs args = new Gdk.MovedToRectArgs ();
-			try {
-				GLib.Signal sig = ((GCHandle) gch).Target as GLib.Signal;
-				if (sig == null)
-					throw new Exception("Unknown signal GC handle received " + gch);
-
-				args.Args = new object[4];
-				args.Args[0] = arg0;
-				args.Args[1] = arg1;
-				args.Args[2] = arg2;
-				args.Args[3] = arg3;
-				Gdk.MovedToRectHandler handler = (Gdk.MovedToRectHandler) sig.Handler;
-				handler (GLib.Object.GetObject (inst), args);
-			} catch (Exception e) {
-				GLib.ExceptionManager.RaiseUnhandledException (e, false);
-			}
-		}
-
-		[GLib.Signal("moved-to-rect")]
-		public event Gdk.MovedToRectHandler MovedToRect {
-			add {
-				this.AddSignalHandler ("moved-to-rect", value, new MovedToRectSignalDelegate(MovedToRectSignalCallback));
-			}
-			remove {
-				this.RemoveSignalHandler ("moved-to-rect", value);
-			}
-		}
-
-		[GLib.Signal("pick-embedded-child")]
-		public event Gdk.PickEmbeddedChildHandler PickEmbeddedChild {
-			add {
-				this.AddSignalHandler ("pick-embedded-child", value, typeof (Gdk.PickEmbeddedChildArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("pick-embedded-child", value);
-			}
-		}
-
-		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void FromEmbedderSignalDelegate (IntPtr inst, double arg0, double arg1, out double arg2, out double arg3, IntPtr gch);
 
 		static void FromEmbedderSignalCallback (IntPtr inst, double arg0, double arg1, out double arg2, out double arg3, IntPtr gch)
@@ -128,6 +85,49 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("from-embedder", value);
+			}
+		}
+
+		[GLib.Signal("pick-embedded-child")]
+		public event Gdk.PickEmbeddedChildHandler PickEmbeddedChild {
+			add {
+				this.AddSignalHandler ("pick-embedded-child", value, typeof (Gdk.PickEmbeddedChildArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("pick-embedded-child", value);
+			}
+		}
+
+		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
+		delegate void MovedToRectSignalDelegate (IntPtr inst, IntPtr arg0, IntPtr arg1, bool arg2, bool arg3, IntPtr gch);
+
+		static void MovedToRectSignalCallback (IntPtr inst, IntPtr arg0, IntPtr arg1, bool arg2, bool arg3, IntPtr gch)
+		{
+			Gdk.MovedToRectArgs args = new Gdk.MovedToRectArgs ();
+			try {
+				GLib.Signal sig = ((GCHandle) gch).Target as GLib.Signal;
+				if (sig == null)
+					throw new Exception("Unknown signal GC handle received " + gch);
+
+				args.Args = new object[4];
+				args.Args[0] = arg0;
+				args.Args[1] = arg1;
+				args.Args[2] = arg2;
+				args.Args[3] = arg3;
+				Gdk.MovedToRectHandler handler = (Gdk.MovedToRectHandler) sig.Handler;
+				handler (GLib.Object.GetObject (inst), args);
+			} catch (Exception e) {
+				GLib.ExceptionManager.RaiseUnhandledException (e, false);
+			}
+		}
+
+		[GLib.Signal("moved-to-rect")]
+		public event Gdk.MovedToRectHandler MovedToRect {
+			add {
+				this.AddSignalHandler ("moved-to-rect", value, new MovedToRectSignalDelegate(MovedToRectSignalCallback));
+			}
+			remove {
+				this.RemoveSignalHandler ("moved-to-rect", value);
 			}
 		}
 

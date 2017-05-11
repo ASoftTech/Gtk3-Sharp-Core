@@ -227,16 +227,6 @@ namespace GLib {
 			}
 		}
 
-		[GLib.Signal("action-state-changed")]
-		public event GLib.ActionStateChangedHandler ActionStateChanged {
-			add {
-				this.AddSignalHandler ("action-state-changed", value, typeof (GLib.ActionStateChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("action-state-changed", value);
-			}
-		}
-
 		[GLib.Signal("action-enabled-changed")]
 		public event GLib.ActionEnabledChangedHandler ActionEnabledChanged {
 			add {
@@ -244,6 +234,16 @@ namespace GLib {
 			}
 			remove {
 				this.RemoveSignalHandler ("action-enabled-changed", value);
+			}
+		}
+
+		[GLib.Signal("action-state-changed")]
+		public event GLib.ActionStateChangedHandler ActionStateChanged {
+			add {
+				this.AddSignalHandler ("action-state-changed", value, typeof (GLib.ActionStateChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("action-state-changed", value);
 			}
 		}
 

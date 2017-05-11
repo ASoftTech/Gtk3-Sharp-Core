@@ -162,10 +162,6 @@ $RECYCLE.BIN/
 dist
 *.suo
 
-# Python virtual environment
-/Tools/virtualenv/gtksharp_build_py3/
-/Tools/virtualenv/gtksharp_build_py2/
-
 # Build directories
 /Build/
 .sconsign.dblite

@@ -63,16 +63,6 @@ namespace GLib {
 				return obj as IVolume;
 		}
 
-		[GLib.Signal("removed")]
-		public event System.EventHandler Removed {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("removed", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("removed", value);
-			}
-		}
-
 		[GLib.Signal("changed")]
 		public event System.EventHandler Changed {
 			add {
@@ -80,6 +70,16 @@ namespace GLib {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("changed", value);
+			}
+		}
+
+		[GLib.Signal("removed")]
+		public event System.EventHandler Removed {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("removed", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("removed", value);
 			}
 		}
 

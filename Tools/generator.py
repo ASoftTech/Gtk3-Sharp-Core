@@ -29,10 +29,17 @@ class Generator(object):
 
     def buildgen(self):
         print("Building the .Net Generator")
-        buildir = path.join(self.BaseDir, 'generator')
-        cmdargs = ['dotnet', 'restore', 'GtkSharp.Generator.sln']
+
+        buildir = path.join(self.BaseDir, 'generator', 'GtkSharp.CodeFixup')
+        cmdargs = ['dotnet', 'restore', 'GtkSharp.CodeFixup.csproj']
         Common.run_cmd(cmdargs, buildir)
-        cmdargs = ['dotnet', 'build', 'GtkSharp.Generator.sln']
+        cmdargs = ['dotnet', 'build', 'GtkSharp.CodeFixup.csproj']
+        Common.run_cmd(cmdargs, buildir)
+
+        buildir = path.join(self.BaseDir, 'generator', 'GtkSharp.CodeGen')
+        cmdargs = ['dotnet', 'restore', 'GtkSharp.CodeGen.csproj']
+        Common.run_cmd(cmdargs, buildir)
+        cmdargs = ['dotnet', 'build', 'GtkSharp.CodeGen.csproj']
         Common.run_cmd(cmdargs, buildir)
 
     # Fixup the .raw files output from the parser

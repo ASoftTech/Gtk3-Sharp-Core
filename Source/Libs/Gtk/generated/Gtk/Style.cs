@@ -100,16 +100,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("unrealize")]
-		public event System.EventHandler Unrealize {
-			add {
-				this.AddSignalHandler ("unrealize", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("unrealize", value);
-			}
-		}
-
 		[GLib.Signal("realize")]
 		public event System.EventHandler Realize {
 			add {
@@ -117,6 +107,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("realize", value);
+			}
+		}
+
+		[GLib.Signal("unrealize")]
+		public event System.EventHandler Unrealize {
+			add {
+				this.AddSignalHandler ("unrealize", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("unrealize", value);
 			}
 		}
 

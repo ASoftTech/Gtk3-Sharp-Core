@@ -182,13 +182,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("orientation-changed")]
-		public event Gtk.OrientationChangedHandler OrientationChanged {
+		[GLib.Signal("focus-home-or-end")]
+		public event Gtk.FocusHomeOrEndHandler FocusHomeOrEnd {
 			add {
-				this.AddSignalHandler ("orientation-changed", value, typeof (Gtk.OrientationChangedArgs));
+				this.AddSignalHandler ("focus-home-or-end", value, typeof (Gtk.FocusHomeOrEndArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("orientation-changed", value);
+				this.RemoveSignalHandler ("focus-home-or-end", value);
 			}
 		}
 
@@ -212,13 +212,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("focus-home-or-end")]
-		public event Gtk.FocusHomeOrEndHandler FocusHomeOrEnd {
+		[GLib.Signal("orientation-changed")]
+		public event Gtk.OrientationChangedHandler OrientationChanged {
 			add {
-				this.AddSignalHandler ("focus-home-or-end", value, typeof (Gtk.FocusHomeOrEndArgs));
+				this.AddSignalHandler ("orientation-changed", value, typeof (Gtk.OrientationChangedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("focus-home-or-end", value);
+				this.RemoveSignalHandler ("orientation-changed", value);
 			}
 		}
 

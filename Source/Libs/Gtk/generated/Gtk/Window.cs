@@ -600,13 +600,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("enable-debugging")]
-		public event Gtk.EnableDebuggingHandler EnableDebugging {
+		[GLib.Signal("set-focus")]
+		public event Gtk.SetFocusHandler SetFocus {
 			add {
-				this.AddSignalHandler ("enable-debugging", value, typeof (Gtk.EnableDebuggingArgs));
+				this.AddSignalHandler ("set-focus", value, typeof (Gtk.SetFocusArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("enable-debugging", value);
+				this.RemoveSignalHandler ("set-focus", value);
 			}
 		}
 
@@ -620,26 +620,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("activate-focus")]
-		public event System.EventHandler FocusActivated {
-			add {
-				this.AddSignalHandler ("activate-focus", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("activate-focus", value);
-			}
-		}
-
-		[GLib.Signal("set-focus")]
-		public event Gtk.SetFocusHandler SetFocus {
-			add {
-				this.AddSignalHandler ("set-focus", value, typeof (Gtk.SetFocusArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("set-focus", value);
-			}
-		}
-
 		[GLib.Signal("keys-changed")]
 		public event System.EventHandler KeysChanged {
 			add {
@@ -647,6 +627,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("keys-changed", value);
+			}
+		}
+
+		[GLib.Signal("enable-debugging")]
+		public event Gtk.EnableDebuggingHandler EnableDebugging {
+			add {
+				this.AddSignalHandler ("enable-debugging", value, typeof (Gtk.EnableDebuggingArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("enable-debugging", value);
+			}
+		}
+
+		[GLib.Signal("activate-focus")]
+		public event System.EventHandler FocusActivated {
+			add {
+				this.AddSignalHandler ("activate-focus", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("activate-focus", value);
 			}
 		}
 

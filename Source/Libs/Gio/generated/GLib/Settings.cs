@@ -163,6 +163,16 @@ namespace GLib {
 			}
 		}
 
+		[GLib.Signal("writable-change-event")]
+		public event GLib.WritableChangeEventHandler WritableChangeEvent {
+			add {
+				this.AddSignalHandler ("writable-change-event", value, typeof (GLib.WritableChangeEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("writable-change-event", value);
+			}
+		}
+
 		[GLib.Signal("changed")]
 		public event GLib.ChangedHandler Changed {
 			add {
@@ -212,16 +222,6 @@ namespace GLib {
 			}
 			remove {
 				this.RemoveSignalHandler ("change-event", value);
-			}
-		}
-
-		[GLib.Signal("writable-change-event")]
-		public event GLib.WritableChangeEventHandler WritableChangeEvent {
-			add {
-				this.AddSignalHandler ("writable-change-event", value, typeof (GLib.WritableChangeEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("writable-change-event", value);
 			}
 		}
 

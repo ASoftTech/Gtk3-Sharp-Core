@@ -242,6 +242,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("adjust-bounds")]
+		public event Gtk.AdjustBoundsHandler AdjustBounds {
+			add {
+				this.AddSignalHandler ("adjust-bounds", value, typeof (Gtk.AdjustBoundsArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("adjust-bounds", value);
+			}
+		}
+
 		[GLib.Signal("value-changed")]
 		public event System.EventHandler ValueChanged {
 			add {
@@ -269,16 +279,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("change-value", value);
-			}
-		}
-
-		[GLib.Signal("adjust-bounds")]
-		public event Gtk.AdjustBoundsHandler AdjustBounds {
-			add {
-				this.AddSignalHandler ("adjust-bounds", value, typeof (Gtk.AdjustBoundsArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("adjust-bounds", value);
 			}
 		}
 

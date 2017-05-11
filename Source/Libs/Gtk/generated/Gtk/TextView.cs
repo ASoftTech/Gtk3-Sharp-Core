@@ -407,13 +407,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("preedit-changed")]
-		public event Gtk.PreeditChangedHandler PreeditChanged {
+		[GLib.Signal("select-all")]
+		public event Gtk.SelectAllHandler SelectAll {
 			add {
-				this.AddSignalHandler ("preedit-changed", value, typeof (Gtk.PreeditChangedArgs));
+				this.AddSignalHandler ("select-all", value, typeof (Gtk.SelectAllArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("preedit-changed", value);
+				this.RemoveSignalHandler ("select-all", value);
 			}
 		}
 
@@ -427,6 +427,46 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("move-cursor")]
+		public event Gtk.MoveCursorHandler MoveCursor {
+			add {
+				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-cursor", value);
+			}
+		}
+
+		[GLib.Signal("preedit-changed")]
+		public event Gtk.PreeditChangedHandler PreeditChanged {
+			add {
+				this.AddSignalHandler ("preedit-changed", value, typeof (Gtk.PreeditChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("preedit-changed", value);
+			}
+		}
+
+		[GLib.Signal("populate-popup")]
+		public event Gtk.PopulatePopupHandler PopulatePopup {
+			add {
+				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("populate-popup", value);
+			}
+		}
+
+		[GLib.Signal("delete-from-cursor")]
+		public event Gtk.DeleteFromCursorHandler DeleteFromCursor {
+			add {
+				this.AddSignalHandler ("delete-from-cursor", value, typeof (Gtk.DeleteFromCursorArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("delete-from-cursor", value);
+			}
+		}
+
 		[GLib.Signal("set-anchor")]
 		public event System.EventHandler SetAnchor {
 			add {
@@ -437,6 +477,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("cut-clipboard")]
+		public event System.EventHandler CutClipboard {
+			add {
+				this.AddSignalHandler ("cut-clipboard", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("cut-clipboard", value);
+			}
+		}
+
 		[GLib.Signal("move-viewport")]
 		public event Gtk.MoveViewportHandler MoveViewport {
 			add {
@@ -444,6 +494,26 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("move-viewport", value);
+			}
+		}
+
+		[GLib.Signal("toggle-cursor-visible")]
+		public event System.EventHandler ToggleCursorVisible {
+			add {
+				this.AddSignalHandler ("toggle-cursor-visible", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("toggle-cursor-visible", value);
+			}
+		}
+
+		[GLib.Signal("paste-clipboard")]
+		public event System.EventHandler PasteClipboard {
+			add {
+				this.AddSignalHandler ("paste-clipboard", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("paste-clipboard", value);
 			}
 		}
 
@@ -467,76 +537,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("paste-clipboard")]
-		public event System.EventHandler PasteClipboard {
-			add {
-				this.AddSignalHandler ("paste-clipboard", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("paste-clipboard", value);
-			}
-		}
-
-		[GLib.Signal("toggle-cursor-visible")]
-		public event System.EventHandler ToggleCursorVisible {
-			add {
-				this.AddSignalHandler ("toggle-cursor-visible", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("toggle-cursor-visible", value);
-			}
-		}
-
-		[GLib.Signal("populate-popup")]
-		public event Gtk.PopulatePopupHandler PopulatePopup {
-			add {
-				this.AddSignalHandler ("populate-popup", value, typeof (Gtk.PopulatePopupArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("populate-popup", value);
-			}
-		}
-
-		[GLib.Signal("cut-clipboard")]
-		public event System.EventHandler CutClipboard {
-			add {
-				this.AddSignalHandler ("cut-clipboard", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("cut-clipboard", value);
-			}
-		}
-
-		[GLib.Signal("move-cursor")]
-		public event Gtk.MoveCursorHandler MoveCursor {
-			add {
-				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("move-cursor", value);
-			}
-		}
-
-		[GLib.Signal("extend-selection")]
-		public event Gtk.ExtendSelectionHandler ExtendSelection {
-			add {
-				this.AddSignalHandler ("extend-selection", value, typeof (Gtk.ExtendSelectionArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("extend-selection", value);
-			}
-		}
-
-		[GLib.Signal("delete-from-cursor")]
-		public event Gtk.DeleteFromCursorHandler DeleteFromCursor {
-			add {
-				this.AddSignalHandler ("delete-from-cursor", value, typeof (Gtk.DeleteFromCursorArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("delete-from-cursor", value);
-			}
-		}
-
 		[GLib.Signal("backspace")]
 		public event System.EventHandler Backspace {
 			add {
@@ -547,13 +547,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("select-all")]
-		public event Gtk.SelectAllHandler SelectAll {
+		[GLib.Signal("extend-selection")]
+		public event Gtk.ExtendSelectionHandler ExtendSelection {
 			add {
-				this.AddSignalHandler ("select-all", value, typeof (Gtk.SelectAllArgs));
+				this.AddSignalHandler ("extend-selection", value, typeof (Gtk.ExtendSelectionArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("select-all", value);
+				this.RemoveSignalHandler ("extend-selection", value);
 			}
 		}
 

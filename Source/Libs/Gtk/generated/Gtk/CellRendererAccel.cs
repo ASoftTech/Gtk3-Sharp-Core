@@ -85,16 +85,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("accel-cleared")]
-		public event Gtk.AccelClearedHandler AccelCleared {
-			add {
-				this.AddSignalHandler ("accel-cleared", value, typeof (Gtk.AccelClearedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("accel-cleared", value);
-			}
-		}
-
 		[GLib.Signal("accel-edited")]
 		public event Gtk.AccelEditedHandler AccelEdited {
 			add {
@@ -102,6 +92,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("accel-edited", value);
+			}
+		}
+
+		[GLib.Signal("accel-cleared")]
+		public event Gtk.AccelClearedHandler AccelCleared {
+			add {
+				this.AddSignalHandler ("accel-cleared", value, typeof (Gtk.AccelClearedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("accel-cleared", value);
 			}
 		}
 

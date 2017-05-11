@@ -63,26 +63,6 @@ namespace GLib {
 				return obj as IDrive;
 		}
 
-		[GLib.Signal("changed")]
-		public event System.EventHandler Changed {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("changed", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("changed", value);
-			}
-		}
-
-		[GLib.Signal("stop-button")]
-		public event System.EventHandler StopButton {
-			add {
-				GLib.Object.GetObject (Handle).AddSignalHandler ("stop-button", value);
-			}
-			remove {
-				GLib.Object.GetObject (Handle).RemoveSignalHandler ("stop-button", value);
-			}
-		}
-
 		[GLib.Signal("disconnected")]
 		public event System.EventHandler Disconnected {
 			add {
@@ -93,6 +73,16 @@ namespace GLib {
 			}
 		}
 
+		[GLib.Signal("changed")]
+		public event System.EventHandler Changed {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("changed", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("changed", value);
+			}
+		}
+
 		[GLib.Signal("eject-button")]
 		public event System.EventHandler EjectButton {
 			add {
@@ -100,6 +90,16 @@ namespace GLib {
 			}
 			remove {
 				GLib.Object.GetObject (Handle).RemoveSignalHandler ("eject-button", value);
+			}
+		}
+
+		[GLib.Signal("stop-button")]
+		public event System.EventHandler StopButton {
+			add {
+				GLib.Object.GetObject (Handle).AddSignalHandler ("stop-button", value);
+			}
+			remove {
+				GLib.Object.GetObject (Handle).RemoveSignalHandler ("stop-button", value);
 			}
 		}
 

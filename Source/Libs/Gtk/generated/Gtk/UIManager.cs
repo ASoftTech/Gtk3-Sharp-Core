@@ -57,16 +57,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("pre-activate")]
-		public event Gtk.PreActivateHandler PreActivate {
-			add {
-				this.AddSignalHandler ("pre-activate", value, typeof (Gtk.PreActivateArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("pre-activate", value);
-			}
-		}
-
 		[GLib.Signal("add-widget")]
 		public event Gtk.AddWidgetHandler AddWidget {
 			add {
@@ -74,26 +64,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("add-widget", value);
-			}
-		}
-
-		[GLib.Signal("connect-proxy")]
-		public event Gtk.ConnectProxyHandler ConnectProxy {
-			add {
-				this.AddSignalHandler ("connect-proxy", value, typeof (Gtk.ConnectProxyArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("connect-proxy", value);
-			}
-		}
-
-		[GLib.Signal("post-activate")]
-		public event Gtk.PostActivateHandler PostActivate {
-			add {
-				this.AddSignalHandler ("post-activate", value, typeof (Gtk.PostActivateArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("post-activate", value);
 			}
 		}
 
@@ -114,6 +84,36 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("actions-changed", value);
+			}
+		}
+
+		[GLib.Signal("post-activate")]
+		public event Gtk.PostActivateHandler PostActivate {
+			add {
+				this.AddSignalHandler ("post-activate", value, typeof (Gtk.PostActivateArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("post-activate", value);
+			}
+		}
+
+		[GLib.Signal("pre-activate")]
+		public event Gtk.PreActivateHandler PreActivate {
+			add {
+				this.AddSignalHandler ("pre-activate", value, typeof (Gtk.PreActivateArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("pre-activate", value);
+			}
+		}
+
+		[GLib.Signal("connect-proxy")]
+		public event Gtk.ConnectProxyHandler ConnectProxy {
+			add {
+				this.AddSignalHandler ("connect-proxy", value, typeof (Gtk.ConnectProxyArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("connect-proxy", value);
 			}
 		}
 

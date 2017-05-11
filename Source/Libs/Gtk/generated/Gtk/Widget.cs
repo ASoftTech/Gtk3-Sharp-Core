@@ -872,93 +872,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("event")]
-		public event Gtk.WidgetEventHandler WidgetEvent {
+		[GLib.Signal("window-state-event")]
+		public event Gtk.WindowStateEventHandler WindowStateEvent {
 			add {
-				this.AddSignalHandler ("event", value, typeof (Gtk.WidgetEventArgs));
+				this.AddSignalHandler ("window-state-event", value, typeof (Gtk.WindowStateEventArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("event", value);
-			}
-		}
-
-		[GLib.Signal("hide")]
-		public event System.EventHandler Hidden {
-			add {
-				this.AddSignalHandler ("hide", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("hide", value);
-			}
-		}
-
-		[GLib.Signal("drag-data-received")]
-		public event Gtk.DragDataReceivedHandler DragDataReceived {
-			add {
-				this.AddSignalHandler ("drag-data-received", value, typeof (Gtk.DragDataReceivedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-data-received", value);
-			}
-		}
-
-		[GLib.Signal("unmap")]
-		public event System.EventHandler Unmapped {
-			add {
-				this.AddSignalHandler ("unmap", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("unmap", value);
-			}
-		}
-
-		[GLib.Signal("drag-drop")]
-		public event Gtk.DragDropHandler DragDrop {
-			add {
-				this.AddSignalHandler ("drag-drop", value, typeof (Gtk.DragDropArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-drop", value);
-			}
-		}
-
-		[GLib.Signal("parent-set")]
-		public event Gtk.ParentSetHandler ParentSet {
-			add {
-				this.AddSignalHandler ("parent-set", value, typeof (Gtk.ParentSetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("parent-set", value);
-			}
-		}
-
-		[GLib.Signal("accel-closures-changed")]
-		public event System.EventHandler AccelClosuresChanged {
-			add {
-				this.AddSignalHandler ("accel-closures-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("accel-closures-changed", value);
-			}
-		}
-
-		[GLib.Signal("motion-notify-event")]
-		public event Gtk.MotionNotifyEventHandler MotionNotifyEvent {
-			add {
-				this.AddSignalHandler ("motion-notify-event", value, typeof (Gtk.MotionNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("motion-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("key-release-event")]
-		public event Gtk.KeyReleaseEventHandler KeyReleaseEvent {
-			add {
-				this.AddSignalHandler ("key-release-event", value, typeof (Gtk.KeyReleaseEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("key-release-event", value);
+				this.RemoveSignalHandler ("window-state-event", value);
 			}
 		}
 
@@ -972,13 +892,163 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("drag-data-delete")]
-		public event Gtk.DragDataDeleteHandler DragDataDelete {
+		[GLib.Signal("can-activate-accel")]
+		public event Gtk.AccelCanActivateHandler AccelCanActivate {
 			add {
-				this.AddSignalHandler ("drag-data-delete", value, typeof (Gtk.DragDataDeleteArgs));
+				this.AddSignalHandler ("can-activate-accel", value, typeof (Gtk.AccelCanActivateArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("drag-data-delete", value);
+				this.RemoveSignalHandler ("can-activate-accel", value);
+			}
+		}
+
+		[GLib.Signal("show-help")]
+		public event Gtk.HelpShownHandler HelpShown {
+			add {
+				this.AddSignalHandler ("show-help", value, typeof (Gtk.HelpShownArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("show-help", value);
+			}
+		}
+
+		[GLib.Signal("selection-received")]
+		public event Gtk.SelectionReceivedHandler SelectionReceived {
+			add {
+				this.AddSignalHandler ("selection-received", value, typeof (Gtk.SelectionReceivedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("selection-received", value);
+			}
+		}
+
+		[GLib.Signal("drag-begin")]
+		public event Gtk.DragBeginHandler DragBegin {
+			add {
+				this.AddSignalHandler ("drag-begin", value, typeof (Gtk.DragBeginArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-begin", value);
+			}
+		}
+
+		[GLib.Signal("parent-set")]
+		public event Gtk.ParentSetHandler ParentSet {
+			add {
+				this.AddSignalHandler ("parent-set", value, typeof (Gtk.ParentSetArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("parent-set", value);
+			}
+		}
+
+		[GLib.Signal("key-release-event")]
+		public event Gtk.KeyReleaseEventHandler KeyReleaseEvent {
+			add {
+				this.AddSignalHandler ("key-release-event", value, typeof (Gtk.KeyReleaseEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("key-release-event", value);
+			}
+		}
+
+		[GLib.Signal("motion-notify-event")]
+		public event Gtk.MotionNotifyEventHandler MotionNotifyEvent {
+			add {
+				this.AddSignalHandler ("motion-notify-event", value, typeof (Gtk.MotionNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("motion-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("button-press-event")]
+		public event Gtk.ButtonPressEventHandler ButtonPressEvent {
+			add {
+				this.AddSignalHandler ("button-press-event", value, typeof (Gtk.ButtonPressEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("button-press-event", value);
+			}
+		}
+
+		[GLib.Signal("query-tooltip")]
+		public event Gtk.QueryTooltipHandler QueryTooltip {
+			add {
+				this.AddSignalHandler ("query-tooltip", value, typeof (Gtk.QueryTooltipArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("query-tooltip", value);
+			}
+		}
+
+		[GLib.Signal("focus")]
+		public event Gtk.FocusedHandler Focused {
+			add {
+				this.AddSignalHandler ("focus", value, typeof (Gtk.FocusedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("focus", value);
+			}
+		}
+
+		[GLib.Signal("drag-motion")]
+		public event Gtk.DragMotionHandler DragMotion {
+			add {
+				this.AddSignalHandler ("drag-motion", value, typeof (Gtk.DragMotionArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-motion", value);
+			}
+		}
+
+		[GLib.Signal("hide")]
+		public event System.EventHandler Hidden {
+			add {
+				this.AddSignalHandler ("hide", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("hide", value);
+			}
+		}
+
+		[GLib.Signal("drag-data-get")]
+		public event Gtk.DragDataGetHandler DragDataGet {
+			add {
+				this.AddSignalHandler ("drag-data-get", value, typeof (Gtk.DragDataGetArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-data-get", value);
+			}
+		}
+
+		[GLib.Signal("unmap-event")]
+		public event Gtk.UnmapEventHandler UnmapEvent {
+			add {
+				this.AddSignalHandler ("unmap-event", value, typeof (Gtk.UnmapEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("unmap-event", value);
+			}
+		}
+
+		[GLib.Signal("realize")]
+		public event System.EventHandler Realized {
+			add {
+				this.AddSignalHandler ("realize", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("realize", value);
+			}
+		}
+
+		[GLib.Signal("map")]
+		public event System.EventHandler Mapped {
+			add {
+				this.AddSignalHandler ("map", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("map", value);
 			}
 		}
 
@@ -992,13 +1062,23 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("button-release-event")]
-		public event Gtk.ButtonReleaseEventHandler ButtonReleaseEvent {
+		[GLib.Signal("selection-request-event")]
+		public event Gtk.SelectionRequestEventHandler SelectionRequestEvent {
 			add {
-				this.AddSignalHandler ("button-release-event", value, typeof (Gtk.ButtonReleaseEventArgs));
+				this.AddSignalHandler ("selection-request-event", value, typeof (Gtk.SelectionRequestEventArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("button-release-event", value);
+				this.RemoveSignalHandler ("selection-request-event", value);
+			}
+		}
+
+		[GLib.Signal("unmap")]
+		public event System.EventHandler Unmapped {
+			add {
+				this.AddSignalHandler ("unmap", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("unmap", value);
 			}
 		}
 
@@ -1012,6 +1092,316 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("drag-drop")]
+		public event Gtk.DragDropHandler DragDrop {
+			add {
+				this.AddSignalHandler ("drag-drop", value, typeof (Gtk.DragDropArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-drop", value);
+			}
+		}
+
+		[GLib.Signal("visibility-notify-event")]
+		public event Gtk.VisibilityNotifyEventHandler VisibilityNotifyEvent {
+			add {
+				this.AddSignalHandler ("visibility-notify-event", value, typeof (Gtk.VisibilityNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("visibility-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("drag-leave")]
+		public event Gtk.DragLeaveHandler DragLeave {
+			add {
+				this.AddSignalHandler ("drag-leave", value, typeof (Gtk.DragLeaveArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-leave", value);
+			}
+		}
+
+		[GLib.Signal("leave-notify-event")]
+		public event Gtk.LeaveNotifyEventHandler LeaveNotifyEvent {
+			add {
+				this.AddSignalHandler ("leave-notify-event", value, typeof (Gtk.LeaveNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("leave-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("size-allocate")]
+		public event Gtk.SizeAllocatedHandler SizeAllocated {
+			add {
+				this.AddSignalHandler ("size-allocate", value, typeof (Gtk.SizeAllocatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("size-allocate", value);
+			}
+		}
+
+		[GLib.Signal("configure-event")]
+		public event Gtk.ConfigureEventHandler ConfigureEvent {
+			add {
+				this.AddSignalHandler ("configure-event", value, typeof (Gtk.ConfigureEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("configure-event", value);
+			}
+		}
+
+		[GLib.Signal("drag-end")]
+		public event Gtk.DragEndHandler DragEnd {
+			add {
+				this.AddSignalHandler ("drag-end", value, typeof (Gtk.DragEndArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-end", value);
+			}
+		}
+
+		[GLib.Signal("map-event")]
+		public event Gtk.MapEventHandler MapEvent {
+			add {
+				this.AddSignalHandler ("map-event", value, typeof (Gtk.MapEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("map-event", value);
+			}
+		}
+
+		[GLib.Signal("style-updated")]
+		public event System.EventHandler StyleUpdated {
+			add {
+				this.AddSignalHandler ("style-updated", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("style-updated", value);
+			}
+		}
+
+		[GLib.Signal("show")]
+		public event System.EventHandler Shown {
+			add {
+				this.AddSignalHandler ("show", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("show", value);
+			}
+		}
+
+		[GLib.Signal("move-focus")]
+		public event Gtk.MoveFocusHandler MoveFocus {
+			add {
+				this.AddSignalHandler ("move-focus", value, typeof (Gtk.MoveFocusArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-focus", value);
+			}
+		}
+
+		[GLib.Signal("button-release-event")]
+		public event Gtk.ButtonReleaseEventHandler ButtonReleaseEvent {
+			add {
+				this.AddSignalHandler ("button-release-event", value, typeof (Gtk.ButtonReleaseEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("button-release-event", value);
+			}
+		}
+
+		[GLib.Signal("damage-event")]
+		public event Gtk.DamageEventHandler DamageEvent {
+			add {
+				this.AddSignalHandler ("damage-event", value, typeof (Gtk.DamageEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("damage-event", value);
+			}
+		}
+
+		[GLib.Signal("direction-changed")]
+		public event Gtk.DirectionChangedHandler DirectionChanged {
+			add {
+				this.AddSignalHandler ("direction-changed", value, typeof (Gtk.DirectionChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("direction-changed", value);
+			}
+		}
+
+		[GLib.Signal("hierarchy-changed")]
+		public event Gtk.HierarchyChangedHandler HierarchyChanged {
+			add {
+				this.AddSignalHandler ("hierarchy-changed", value, typeof (Gtk.HierarchyChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("hierarchy-changed", value);
+			}
+		}
+
+		[GLib.Signal("event-after")]
+		public event Gtk.WidgetEventAfterHandler WidgetEventAfter {
+			add {
+				this.AddSignalHandler ("event-after", value, typeof (Gtk.WidgetEventAfterArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("event-after", value);
+			}
+		}
+
+		[GLib.Signal("key-press-event")]
+		public event Gtk.KeyPressEventHandler KeyPressEvent {
+			add {
+				this.AddSignalHandler ("key-press-event", value, typeof (Gtk.KeyPressEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("key-press-event", value);
+			}
+		}
+
+		[GLib.Signal("scroll-event")]
+		public event Gtk.ScrollEventHandler ScrollEvent {
+			add {
+				this.AddSignalHandler ("scroll-event", value, typeof (Gtk.ScrollEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("scroll-event", value);
+			}
+		}
+
+		[GLib.Signal("drag-data-received")]
+		public event Gtk.DragDataReceivedHandler DragDataReceived {
+			add {
+				this.AddSignalHandler ("drag-data-received", value, typeof (Gtk.DragDataReceivedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-data-received", value);
+			}
+		}
+
+		[GLib.Signal("property-notify-event")]
+		public event Gtk.PropertyNotifyEventHandler PropertyNotifyEvent {
+			add {
+				this.AddSignalHandler ("property-notify-event", value, typeof (Gtk.PropertyNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("property-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("state-changed")]
+		public event Gtk.StateChangedHandler StateChanged {
+			add {
+				this.AddSignalHandler ("state-changed", value, typeof (Gtk.StateChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("state-changed", value);
+			}
+		}
+
+		[GLib.Signal("drag-failed")]
+		public event Gtk.DragFailedHandler DragFailed {
+			add {
+				this.AddSignalHandler ("drag-failed", value, typeof (Gtk.DragFailedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-failed", value);
+			}
+		}
+
+		[GLib.Signal("mnemonic-activate")]
+		public event Gtk.MnemonicActivatedHandler MnemonicActivated {
+			add {
+				this.AddSignalHandler ("mnemonic-activate", value, typeof (Gtk.MnemonicActivatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("mnemonic-activate", value);
+			}
+		}
+
+		[GLib.Signal("selection-get")]
+		public event Gtk.SelectionGetHandler SelectionGet {
+			add {
+				this.AddSignalHandler ("selection-get", value, typeof (Gtk.SelectionGetArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("selection-get", value);
+			}
+		}
+
+		[GLib.Signal("drag-data-delete")]
+		public event Gtk.DragDataDeleteHandler DragDataDelete {
+			add {
+				this.AddSignalHandler ("drag-data-delete", value, typeof (Gtk.DragDataDeleteArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("drag-data-delete", value);
+			}
+		}
+
+		[GLib.Signal("screen-changed")]
+		public event Gtk.ScreenChangedHandler ScreenChanged {
+			add {
+				this.AddSignalHandler ("screen-changed", value, typeof (Gtk.ScreenChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("screen-changed", value);
+			}
+		}
+
+		[GLib.Signal("enter-notify-event")]
+		public event Gtk.EnterNotifyEventHandler EnterNotifyEvent {
+			add {
+				this.AddSignalHandler ("enter-notify-event", value, typeof (Gtk.EnterNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("enter-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("delete-event")]
+		public event Gtk.DeleteEventHandler DeleteEvent {
+			add {
+				this.AddSignalHandler ("delete-event", value, typeof (Gtk.DeleteEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("delete-event", value);
+			}
+		}
+
+		[GLib.Signal("selection-notify-event")]
+		public event Gtk.SelectionNotifyEventHandler SelectionNotifyEvent {
+			add {
+				this.AddSignalHandler ("selection-notify-event", value, typeof (Gtk.SelectionNotifyEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("selection-notify-event", value);
+			}
+		}
+
+		[GLib.Signal("focus-out-event")]
+		public event Gtk.FocusOutEventHandler FocusOutEvent {
+			add {
+				this.AddSignalHandler ("focus-out-event", value, typeof (Gtk.FocusOutEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("focus-out-event", value);
+			}
+		}
+
+		[GLib.Signal("proximity-out-event")]
+		public event Gtk.ProximityOutEventHandler ProximityOutEvent {
+			add {
+				this.AddSignalHandler ("proximity-out-event", value, typeof (Gtk.ProximityOutEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("proximity-out-event", value);
+			}
+		}
+
 		[GLib.Signal("destroy-event")]
 		public event Gtk.DestroyEventHandler DestroyEvent {
 			add {
@@ -1019,6 +1409,86 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("destroy-event", value);
+			}
+		}
+
+		[GLib.Signal("focus-in-event")]
+		public event Gtk.FocusInEventHandler FocusInEvent {
+			add {
+				this.AddSignalHandler ("focus-in-event", value, typeof (Gtk.FocusInEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("focus-in-event", value);
+			}
+		}
+
+		[GLib.Signal("accel-closures-changed")]
+		public event System.EventHandler AccelClosuresChanged {
+			add {
+				this.AddSignalHandler ("accel-closures-changed", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("accel-closures-changed", value);
+			}
+		}
+
+		[GLib.Signal("popup-menu")]
+		public event Gtk.PopupMenuHandler PopupMenu {
+			add {
+				this.AddSignalHandler ("popup-menu", value, typeof (Gtk.PopupMenuArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("popup-menu", value);
+			}
+		}
+
+		[GLib.Signal("selection-clear-event")]
+		public event Gtk.SelectionClearEventHandler SelectionClearEvent {
+			add {
+				this.AddSignalHandler ("selection-clear-event", value, typeof (Gtk.SelectionClearEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("selection-clear-event", value);
+			}
+		}
+
+		[GLib.Signal("state-flags-changed")]
+		public event Gtk.StateFlagsChangedHandler StateFlagsChanged {
+			add {
+				this.AddSignalHandler ("state-flags-changed", value, typeof (Gtk.StateFlagsChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("state-flags-changed", value);
+			}
+		}
+
+		[GLib.Signal("grab-notify")]
+		public event Gtk.GrabNotifyHandler GrabNotify {
+			add {
+				this.AddSignalHandler ("grab-notify", value, typeof (Gtk.GrabNotifyArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("grab-notify", value);
+			}
+		}
+
+		[GLib.Signal("style-set")]
+		public event Gtk.StyleSetHandler StyleSet {
+			add {
+				this.AddSignalHandler ("style-set", value, typeof (Gtk.StyleSetArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("style-set", value);
+			}
+		}
+
+		[GLib.Signal("event")]
+		public event Gtk.WidgetEventHandler WidgetEvent {
+			add {
+				this.AddSignalHandler ("event", value, typeof (Gtk.WidgetEventArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("event", value);
 			}
 		}
 
@@ -1069,343 +1539,23 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("show-help")]
-		public event Gtk.HelpShownHandler HelpShown {
+		[GLib.Signal("child-notify")]
+		public event Gtk.ChildNotifiedHandler ChildNotified {
 			add {
-				this.AddSignalHandler ("show-help", value, typeof (Gtk.HelpShownArgs));
+				this.AddSignalHandler ("child-notify", value, typeof (Gtk.ChildNotifiedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("show-help", value);
+				this.RemoveSignalHandler ("child-notify", value);
 			}
 		}
 
-		[GLib.Signal("focus-out-event")]
-		public event Gtk.FocusOutEventHandler FocusOutEvent {
+		[GLib.Signal("composited-changed")]
+		public event System.EventHandler CompositedChanged {
 			add {
-				this.AddSignalHandler ("focus-out-event", value, typeof (Gtk.FocusOutEventArgs));
+				this.AddSignalHandler ("composited-changed", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("focus-out-event", value);
-			}
-		}
-
-		[GLib.Signal("selection-clear-event")]
-		public event Gtk.SelectionClearEventHandler SelectionClearEvent {
-			add {
-				this.AddSignalHandler ("selection-clear-event", value, typeof (Gtk.SelectionClearEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("selection-clear-event", value);
-			}
-		}
-
-		[GLib.Signal("can-activate-accel")]
-		public event Gtk.AccelCanActivateHandler AccelCanActivate {
-			add {
-				this.AddSignalHandler ("can-activate-accel", value, typeof (Gtk.AccelCanActivateArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("can-activate-accel", value);
-			}
-		}
-
-		[GLib.Signal("drag-end")]
-		public event Gtk.DragEndHandler DragEnd {
-			add {
-				this.AddSignalHandler ("drag-end", value, typeof (Gtk.DragEndArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-end", value);
-			}
-		}
-
-		[GLib.Signal("leave-notify-event")]
-		public event Gtk.LeaveNotifyEventHandler LeaveNotifyEvent {
-			add {
-				this.AddSignalHandler ("leave-notify-event", value, typeof (Gtk.LeaveNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("leave-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("state-flags-changed")]
-		public event Gtk.StateFlagsChangedHandler StateFlagsChanged {
-			add {
-				this.AddSignalHandler ("state-flags-changed", value, typeof (Gtk.StateFlagsChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("state-flags-changed", value);
-			}
-		}
-
-		[GLib.Signal("style-set")]
-		public event Gtk.StyleSetHandler StyleSet {
-			add {
-				this.AddSignalHandler ("style-set", value, typeof (Gtk.StyleSetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("style-set", value);
-			}
-		}
-
-		[GLib.Signal("drag-leave")]
-		public event Gtk.DragLeaveHandler DragLeave {
-			add {
-				this.AddSignalHandler ("drag-leave", value, typeof (Gtk.DragLeaveArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-leave", value);
-			}
-		}
-
-		[GLib.Signal("property-notify-event")]
-		public event Gtk.PropertyNotifyEventHandler PropertyNotifyEvent {
-			add {
-				this.AddSignalHandler ("property-notify-event", value, typeof (Gtk.PropertyNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("property-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("scroll-event")]
-		public event Gtk.ScrollEventHandler ScrollEvent {
-			add {
-				this.AddSignalHandler ("scroll-event", value, typeof (Gtk.ScrollEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("scroll-event", value);
-			}
-		}
-
-		[GLib.Signal("map")]
-		public event System.EventHandler Mapped {
-			add {
-				this.AddSignalHandler ("map", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("map", value);
-			}
-		}
-
-		[GLib.Signal("visibility-notify-event")]
-		public event Gtk.VisibilityNotifyEventHandler VisibilityNotifyEvent {
-			add {
-				this.AddSignalHandler ("visibility-notify-event", value, typeof (Gtk.VisibilityNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("visibility-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("screen-changed")]
-		public event Gtk.ScreenChangedHandler ScreenChanged {
-			add {
-				this.AddSignalHandler ("screen-changed", value, typeof (Gtk.ScreenChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("screen-changed", value);
-			}
-		}
-
-		[GLib.Signal("drag-begin")]
-		public event Gtk.DragBeginHandler DragBegin {
-			add {
-				this.AddSignalHandler ("drag-begin", value, typeof (Gtk.DragBeginArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-begin", value);
-			}
-		}
-
-		[GLib.Signal("damage-event")]
-		public event Gtk.DamageEventHandler DamageEvent {
-			add {
-				this.AddSignalHandler ("damage-event", value, typeof (Gtk.DamageEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("damage-event", value);
-			}
-		}
-
-		[GLib.Signal("selection-received")]
-		public event Gtk.SelectionReceivedHandler SelectionReceived {
-			add {
-				this.AddSignalHandler ("selection-received", value, typeof (Gtk.SelectionReceivedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("selection-received", value);
-			}
-		}
-
-		[GLib.Signal("popup-menu")]
-		public event Gtk.PopupMenuHandler PopupMenu {
-			add {
-				this.AddSignalHandler ("popup-menu", value, typeof (Gtk.PopupMenuArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("popup-menu", value);
-			}
-		}
-
-		[GLib.Signal("event-after")]
-		public event Gtk.WidgetEventAfterHandler WidgetEventAfter {
-			add {
-				this.AddSignalHandler ("event-after", value, typeof (Gtk.WidgetEventAfterArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("event-after", value);
-			}
-		}
-
-		[GLib.Signal("show")]
-		public event System.EventHandler Shown {
-			add {
-				this.AddSignalHandler ("show", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("show", value);
-			}
-		}
-
-		[GLib.Signal("configure-event")]
-		public event Gtk.ConfigureEventHandler ConfigureEvent {
-			add {
-				this.AddSignalHandler ("configure-event", value, typeof (Gtk.ConfigureEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("configure-event", value);
-			}
-		}
-
-		[GLib.Signal("size-allocate")]
-		public event Gtk.SizeAllocatedHandler SizeAllocated {
-			add {
-				this.AddSignalHandler ("size-allocate", value, typeof (Gtk.SizeAllocatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("size-allocate", value);
-			}
-		}
-
-		[GLib.Signal("drag-motion")]
-		public event Gtk.DragMotionHandler DragMotion {
-			add {
-				this.AddSignalHandler ("drag-motion", value, typeof (Gtk.DragMotionArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-motion", value);
-			}
-		}
-
-		[GLib.Signal("unmap-event")]
-		public event Gtk.UnmapEventHandler UnmapEvent {
-			add {
-				this.AddSignalHandler ("unmap-event", value, typeof (Gtk.UnmapEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("unmap-event", value);
-			}
-		}
-
-		[GLib.Signal("selection-get")]
-		public event Gtk.SelectionGetHandler SelectionGet {
-			add {
-				this.AddSignalHandler ("selection-get", value, typeof (Gtk.SelectionGetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("selection-get", value);
-			}
-		}
-
-		[GLib.Signal("map-event")]
-		public event Gtk.MapEventHandler MapEvent {
-			add {
-				this.AddSignalHandler ("map-event", value, typeof (Gtk.MapEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("map-event", value);
-			}
-		}
-
-		[GLib.Signal("mnemonic-activate")]
-		public event Gtk.MnemonicActivatedHandler MnemonicActivated {
-			add {
-				this.AddSignalHandler ("mnemonic-activate", value, typeof (Gtk.MnemonicActivatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("mnemonic-activate", value);
-			}
-		}
-
-		[GLib.Signal("hierarchy-changed")]
-		public event Gtk.HierarchyChangedHandler HierarchyChanged {
-			add {
-				this.AddSignalHandler ("hierarchy-changed", value, typeof (Gtk.HierarchyChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("hierarchy-changed", value);
-			}
-		}
-
-		[GLib.Signal("enter-notify-event")]
-		public event Gtk.EnterNotifyEventHandler EnterNotifyEvent {
-			add {
-				this.AddSignalHandler ("enter-notify-event", value, typeof (Gtk.EnterNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("enter-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("window-state-event")]
-		public event Gtk.WindowStateEventHandler WindowStateEvent {
-			add {
-				this.AddSignalHandler ("window-state-event", value, typeof (Gtk.WindowStateEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("window-state-event", value);
-			}
-		}
-
-		[GLib.Signal("drag-data-get")]
-		public event Gtk.DragDataGetHandler DragDataGet {
-			add {
-				this.AddSignalHandler ("drag-data-get", value, typeof (Gtk.DragDataGetArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-data-get", value);
-			}
-		}
-
-		[GLib.Signal("button-press-event")]
-		public event Gtk.ButtonPressEventHandler ButtonPressEvent {
-			add {
-				this.AddSignalHandler ("button-press-event", value, typeof (Gtk.ButtonPressEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("button-press-event", value);
-			}
-		}
-
-		[GLib.Signal("query-tooltip")]
-		public event Gtk.QueryTooltipHandler QueryTooltip {
-			add {
-				this.AddSignalHandler ("query-tooltip", value, typeof (Gtk.QueryTooltipArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("query-tooltip", value);
-			}
-		}
-
-		[GLib.Signal("drag-failed")]
-		public event Gtk.DragFailedHandler DragFailed {
-			add {
-				this.AddSignalHandler ("drag-failed", value, typeof (Gtk.DragFailedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("drag-failed", value);
+				this.RemoveSignalHandler ("composited-changed", value);
 			}
 		}
 
@@ -1426,156 +1576,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("unrealize", value);
-			}
-		}
-
-		[GLib.Signal("focus-in-event")]
-		public event Gtk.FocusInEventHandler FocusInEvent {
-			add {
-				this.AddSignalHandler ("focus-in-event", value, typeof (Gtk.FocusInEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("focus-in-event", value);
-			}
-		}
-
-		[GLib.Signal("grab-notify")]
-		public event Gtk.GrabNotifyHandler GrabNotify {
-			add {
-				this.AddSignalHandler ("grab-notify", value, typeof (Gtk.GrabNotifyArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("grab-notify", value);
-			}
-		}
-
-		[GLib.Signal("focus")]
-		public event Gtk.FocusedHandler Focused {
-			add {
-				this.AddSignalHandler ("focus", value, typeof (Gtk.FocusedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("focus", value);
-			}
-		}
-
-		[GLib.Signal("selection-notify-event")]
-		public event Gtk.SelectionNotifyEventHandler SelectionNotifyEvent {
-			add {
-				this.AddSignalHandler ("selection-notify-event", value, typeof (Gtk.SelectionNotifyEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("selection-notify-event", value);
-			}
-		}
-
-		[GLib.Signal("state-changed")]
-		public event Gtk.StateChangedHandler StateChanged {
-			add {
-				this.AddSignalHandler ("state-changed", value, typeof (Gtk.StateChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("state-changed", value);
-			}
-		}
-
-		[GLib.Signal("direction-changed")]
-		public event Gtk.DirectionChangedHandler DirectionChanged {
-			add {
-				this.AddSignalHandler ("direction-changed", value, typeof (Gtk.DirectionChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("direction-changed", value);
-			}
-		}
-
-		[GLib.Signal("realize")]
-		public event System.EventHandler Realized {
-			add {
-				this.AddSignalHandler ("realize", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("realize", value);
-			}
-		}
-
-		[GLib.Signal("move-focus")]
-		public event Gtk.MoveFocusHandler MoveFocus {
-			add {
-				this.AddSignalHandler ("move-focus", value, typeof (Gtk.MoveFocusArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("move-focus", value);
-			}
-		}
-
-		[GLib.Signal("delete-event")]
-		public event Gtk.DeleteEventHandler DeleteEvent {
-			add {
-				this.AddSignalHandler ("delete-event", value, typeof (Gtk.DeleteEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("delete-event", value);
-			}
-		}
-
-		[GLib.Signal("selection-request-event")]
-		public event Gtk.SelectionRequestEventHandler SelectionRequestEvent {
-			add {
-				this.AddSignalHandler ("selection-request-event", value, typeof (Gtk.SelectionRequestEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("selection-request-event", value);
-			}
-		}
-
-		[GLib.Signal("style-updated")]
-		public event System.EventHandler StyleUpdated {
-			add {
-				this.AddSignalHandler ("style-updated", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("style-updated", value);
-			}
-		}
-
-		[GLib.Signal("child-notify")]
-		public event Gtk.ChildNotifiedHandler ChildNotified {
-			add {
-				this.AddSignalHandler ("child-notify", value, typeof (Gtk.ChildNotifiedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("child-notify", value);
-			}
-		}
-
-		[GLib.Signal("proximity-out-event")]
-		public event Gtk.ProximityOutEventHandler ProximityOutEvent {
-			add {
-				this.AddSignalHandler ("proximity-out-event", value, typeof (Gtk.ProximityOutEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("proximity-out-event", value);
-			}
-		}
-
-		[GLib.Signal("composited-changed")]
-		public event System.EventHandler CompositedChanged {
-			add {
-				this.AddSignalHandler ("composited-changed", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("composited-changed", value);
-			}
-		}
-
-		[GLib.Signal("key-press-event")]
-		public event Gtk.KeyPressEventHandler KeyPressEvent {
-			add {
-				this.AddSignalHandler ("key-press-event", value, typeof (Gtk.KeyPressEventArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("key-press-event", value);
 			}
 		}
 

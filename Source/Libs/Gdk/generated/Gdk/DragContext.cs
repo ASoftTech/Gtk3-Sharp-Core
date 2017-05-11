@@ -18,16 +18,6 @@ namespace Gdk {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[GLib.Signal("action-changed")]
-		public event Gdk.ActionChangedHandler ActionChanged {
-			add {
-				this.AddSignalHandler ("action-changed", value, typeof (Gdk.ActionChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("action-changed", value);
-			}
-		}
-
 		[GLib.Signal("dnd-finished")]
 		public event System.EventHandler DndFinished {
 			add {
@@ -35,6 +25,16 @@ namespace Gdk {
 			}
 			remove {
 				this.RemoveSignalHandler ("dnd-finished", value);
+			}
+		}
+
+		[GLib.Signal("action-changed")]
+		public event Gdk.ActionChangedHandler ActionChanged {
+			add {
+				this.AddSignalHandler ("action-changed", value, typeof (Gdk.ActionChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("action-changed", value);
 			}
 		}
 

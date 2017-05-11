@@ -61,36 +61,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("move-cursor")]
-		public event Gtk.MoveCursorHandler MoveCursor {
-			add {
-				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("move-cursor", value);
-			}
-		}
-
-		[GLib.Signal("unselect-all")]
-		public event System.EventHandler UnselectedAll {
-			add {
-				this.AddSignalHandler ("unselect-all", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("unselect-all", value);
-			}
-		}
-
-		[GLib.Signal("toggle-cursor-row")]
-		public event System.EventHandler ToggleCursorRow {
-			add {
-				this.AddSignalHandler ("toggle-cursor-row", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("toggle-cursor-row", value);
-			}
-		}
-
 		[GLib.Signal("row-selected")]
 		public event Gtk.RowSelectedHandler RowSelected {
 			add {
@@ -98,26 +68,6 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("row-selected", value);
-			}
-		}
-
-		[GLib.Signal("row-activated")]
-		public event Gtk.ListRowActivatedHandler ListRowActivated {
-			add {
-				this.AddSignalHandler ("row-activated", value, typeof (Gtk.ListRowActivatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("row-activated", value);
-			}
-		}
-
-		[GLib.Signal("select-all")]
-		public event System.EventHandler SelectedAll {
-			add {
-				this.AddSignalHandler ("select-all", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("select-all", value);
 			}
 		}
 
@@ -131,6 +81,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("unselect-all")]
+		public event System.EventHandler UnselectedAll {
+			add {
+				this.AddSignalHandler ("unselect-all", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("unselect-all", value);
+			}
+		}
+
 		[GLib.Signal("activate-cursor-row")]
 		public event System.EventHandler ActivateCursorRow {
 			add {
@@ -138,6 +98,46 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("activate-cursor-row", value);
+			}
+		}
+
+		[GLib.Signal("row-activated")]
+		public event Gtk.ListRowActivatedHandler ListRowActivated {
+			add {
+				this.AddSignalHandler ("row-activated", value, typeof (Gtk.ListRowActivatedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("row-activated", value);
+			}
+		}
+
+		[GLib.Signal("move-cursor")]
+		public event Gtk.MoveCursorHandler MoveCursor {
+			add {
+				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("move-cursor", value);
+			}
+		}
+
+		[GLib.Signal("toggle-cursor-row")]
+		public event System.EventHandler ToggleCursorRow {
+			add {
+				this.AddSignalHandler ("toggle-cursor-row", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("toggle-cursor-row", value);
+			}
+		}
+
+		[GLib.Signal("select-all")]
+		public event System.EventHandler SelectedAll {
+			add {
+				this.AddSignalHandler ("select-all", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("select-all", value);
 			}
 		}
 

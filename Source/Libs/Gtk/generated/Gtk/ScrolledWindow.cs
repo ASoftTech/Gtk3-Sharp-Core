@@ -313,16 +313,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("edge-reached")]
-		public event Gtk.EdgeReachedHandler EdgeReached {
-			add {
-				this.AddSignalHandler ("edge-reached", value, typeof (Gtk.EdgeReachedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("edge-reached", value);
-			}
-		}
-
 		[GLib.Signal("move-focus-out")]
 		public event Gtk.MoveFocusOutHandler MoveFocusOut {
 			add {
@@ -330,6 +320,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("move-focus-out", value);
+			}
+		}
+
+		[GLib.Signal("edge-reached")]
+		public event Gtk.EdgeReachedHandler EdgeReached {
+			add {
+				this.AddSignalHandler ("edge-reached", value, typeof (Gtk.EdgeReachedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("edge-reached", value);
 			}
 		}
 

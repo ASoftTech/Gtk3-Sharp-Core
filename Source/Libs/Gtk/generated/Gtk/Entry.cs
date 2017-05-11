@@ -819,63 +819,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("copy-clipboard")]
-		public event System.EventHandler ClipboardCopied {
+		[GLib.Signal("move-cursor")]
+		public event Gtk.MoveCursorHandler MoveCursor {
 			add {
-				this.AddSignalHandler ("copy-clipboard", value);
+				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("copy-clipboard", value);
-			}
-		}
-
-		[GLib.Signal("paste-clipboard")]
-		public event System.EventHandler ClipboardPasted {
-			add {
-				this.AddSignalHandler ("paste-clipboard", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("paste-clipboard", value);
-			}
-		}
-
-		[GLib.Signal("activate")]
-		public event System.EventHandler Activated {
-			add {
-				this.AddSignalHandler ("activate", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("activate", value);
-			}
-		}
-
-		[GLib.Signal("preedit-changed")]
-		public event Gtk.PreeditChangedHandler PreeditChanged {
-			add {
-				this.AddSignalHandler ("preedit-changed", value, typeof (Gtk.PreeditChangedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("preedit-changed", value);
-			}
-		}
-
-		[GLib.Signal("insert-at-cursor")]
-		public event Gtk.InsertAtCursorHandler InsertAtCursor {
-			add {
-				this.AddSignalHandler ("insert-at-cursor", value, typeof (Gtk.InsertAtCursorArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("insert-at-cursor", value);
-			}
-		}
-
-		[GLib.Signal("toggle-overwrite")]
-		public event System.EventHandler ToggleOverwrite {
-			add {
-				this.AddSignalHandler ("toggle-overwrite", value);
-			}
-			remove {
-				this.RemoveSignalHandler ("toggle-overwrite", value);
+				this.RemoveSignalHandler ("move-cursor", value);
 			}
 		}
 
@@ -899,6 +849,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("delete-from-cursor")]
+		public event Gtk.DeleteFromCursorHandler DeleteFromCursor {
+			add {
+				this.AddSignalHandler ("delete-from-cursor", value, typeof (Gtk.DeleteFromCursorArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("delete-from-cursor", value);
+			}
+		}
+
 		[GLib.Signal("icon-release")]
 		public event Gtk.IconReleaseHandler IconRelease {
 			add {
@@ -909,13 +869,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("move-cursor")]
-		public event Gtk.MoveCursorHandler MoveCursor {
+		[GLib.Signal("copy-clipboard")]
+		public event System.EventHandler ClipboardCopied {
 			add {
-				this.AddSignalHandler ("move-cursor", value, typeof (Gtk.MoveCursorArgs));
+				this.AddSignalHandler ("copy-clipboard", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("move-cursor", value);
+				this.RemoveSignalHandler ("copy-clipboard", value);
+			}
+		}
+
+		[GLib.Signal("paste-clipboard")]
+		public event System.EventHandler ClipboardPasted {
+			add {
+				this.AddSignalHandler ("paste-clipboard", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("paste-clipboard", value);
+			}
+		}
+
+		[GLib.Signal("preedit-changed")]
+		public event Gtk.PreeditChangedHandler PreeditChanged {
+			add {
+				this.AddSignalHandler ("preedit-changed", value, typeof (Gtk.PreeditChangedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("preedit-changed", value);
 			}
 		}
 
@@ -929,13 +909,33 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("delete-from-cursor")]
-		public event Gtk.DeleteFromCursorHandler DeleteFromCursor {
+		[GLib.Signal("toggle-overwrite")]
+		public event System.EventHandler ToggleOverwrite {
 			add {
-				this.AddSignalHandler ("delete-from-cursor", value, typeof (Gtk.DeleteFromCursorArgs));
+				this.AddSignalHandler ("toggle-overwrite", value);
 			}
 			remove {
-				this.RemoveSignalHandler ("delete-from-cursor", value);
+				this.RemoveSignalHandler ("toggle-overwrite", value);
+			}
+		}
+
+		[GLib.Signal("insert-at-cursor")]
+		public event Gtk.InsertAtCursorHandler InsertAtCursor {
+			add {
+				this.AddSignalHandler ("insert-at-cursor", value, typeof (Gtk.InsertAtCursorArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("insert-at-cursor", value);
+			}
+		}
+
+		[GLib.Signal("activate")]
+		public event System.EventHandler Activated {
+			add {
+				this.AddSignalHandler ("activate", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("activate", value);
 			}
 		}
 
@@ -2149,16 +2149,6 @@ namespace Gtk {
 			gtk_editable_select_region(Handle, start_pos, end_pos);
 		}
 
-		[GLib.Signal("delete-text")]
-		public event Gtk.TextDeletedHandler TextDeleted {
-			add {
-				this.AddSignalHandler ("delete-text", value, typeof (Gtk.TextDeletedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("delete-text", value);
-			}
-		}
-
 		[UnmanagedFunctionPointer (CallingConvention.Cdecl)]
 		delegate void TextInsertedSignalDelegate (IntPtr inst, IntPtr arg0, int arg1, ref int arg2, IntPtr gch);
 
@@ -2197,6 +2187,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("insert-text", value);
+			}
+		}
+
+		[GLib.Signal("delete-text")]
+		public event Gtk.TextDeletedHandler TextDeleted {
+			add {
+				this.AddSignalHandler ("delete-text", value, typeof (Gtk.TextDeletedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("delete-text", value);
 			}
 		}
 

@@ -35,16 +35,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("text-pushed")]
-		public event Gtk.TextPushedHandler TextPushed {
-			add {
-				this.AddSignalHandler ("text-pushed", value, typeof (Gtk.TextPushedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("text-pushed", value);
-			}
-		}
-
 		[GLib.Signal("text-popped")]
 		public event Gtk.TextPoppedHandler TextPopped {
 			add {
@@ -52,6 +42,16 @@ namespace Gtk {
 			}
 			remove {
 				this.RemoveSignalHandler ("text-popped", value);
+			}
+		}
+
+		[GLib.Signal("text-pushed")]
+		public event Gtk.TextPushedHandler TextPushed {
+			add {
+				this.AddSignalHandler ("text-pushed", value, typeof (Gtk.TextPushedArgs));
+			}
+			remove {
+				this.RemoveSignalHandler ("text-pushed", value);
 			}
 		}
 

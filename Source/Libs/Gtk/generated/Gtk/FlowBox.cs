@@ -161,6 +161,16 @@ namespace Gtk {
 			}
 		}
 
+		[GLib.Signal("select-all")]
+		public event System.EventHandler SelectedAll {
+			add {
+				this.AddSignalHandler ("select-all", value);
+			}
+			remove {
+				this.RemoveSignalHandler ("select-all", value);
+			}
+		}
+
 		[GLib.Signal("activate-cursor-child")]
 		public event System.EventHandler ActivateCursorChild {
 			add {
@@ -181,16 +191,6 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("child-activated")]
-		public event Gtk.ChildActivatedHandler ChildActivated {
-			add {
-				this.AddSignalHandler ("child-activated", value, typeof (Gtk.ChildActivatedArgs));
-			}
-			remove {
-				this.RemoveSignalHandler ("child-activated", value);
-			}
-		}
-
 		[GLib.Signal("toggle-cursor-child")]
 		public event System.EventHandler ToggleCursorChild {
 			add {
@@ -201,13 +201,13 @@ namespace Gtk {
 			}
 		}
 
-		[GLib.Signal("select-all")]
-		public event System.EventHandler SelectedAll {
+		[GLib.Signal("child-activated")]
+		public event Gtk.ChildActivatedHandler ChildActivated {
 			add {
-				this.AddSignalHandler ("select-all", value);
+				this.AddSignalHandler ("child-activated", value, typeof (Gtk.ChildActivatedArgs));
 			}
 			remove {
-				this.RemoveSignalHandler ("select-all", value);
+				this.RemoveSignalHandler ("child-activated", value);
 			}
 		}
 
