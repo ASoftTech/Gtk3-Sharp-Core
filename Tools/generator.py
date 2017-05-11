@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 import os, sys, subprocess, shutil, json
 import wget, tarfile, glob, patch, logging, shutil 
 import os.path as path

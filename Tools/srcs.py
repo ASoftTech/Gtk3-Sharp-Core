@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 import os, sys, json, wget, tarfile, glob, patch, logging
 import os.path as path
 from lib.common import Common
