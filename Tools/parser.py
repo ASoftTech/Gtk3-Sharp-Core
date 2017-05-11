@@ -32,7 +32,7 @@ class Parser(object):
         glob1 = glob.glob(path.join(self.SrcsDir, "gtk+-*"))
         for item in glob1:
             if os.path.isdir(item): src_dir = item
-        srcfile = path.join(src_dir, "gdk\gdkkeysyms.h")
+        srcfile = path.join(src_dir, "gdk", "gdkkeysyms.h")
         destfile = path.join(self.ParserDir, "Key.cs")
         if not path.exists(self.ParserDir):
             os.makedirs(self.ParserDir)
