@@ -1,0 +1,28 @@
+<Type Name="PasteDoneHandler" FullName="Gtk.PasteDoneHandler">
+  <TypeSignature Language="C#" Value="public delegate void PasteDoneHandler(object o, PasteDoneArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PasteDoneHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gtk.PasteDoneArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.TextBuffer.PasteDone" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:Gtk.PasteDoneArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:Gtk.PasteDoneHandler" /> to an event, add the PasteDoneHandler instance to the event.  The methods referenced by the PasteDoneHandler instance are invoked whenever the event is raised, until the PasteDoneHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

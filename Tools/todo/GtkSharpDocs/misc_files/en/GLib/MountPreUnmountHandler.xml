@@ -1,0 +1,28 @@
+<Type Name="MountPreUnmountHandler" FullName="GLib.MountPreUnmountHandler">
+  <TypeSignature Language="C#" Value="public delegate void MountPreUnmountHandler(object o, MountPreUnmountArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MountPreUnmountHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="GLib.MountPreUnmountArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.VolumeMonitor.MountPreUnmount" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:GLib.MountPreUnmountArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:GLib.MountPreUnmountHandler" /> to an event, add the MountPreUnmountHandler instance to the event.  The methods referenced by the MountPreUnmountHandler instance are invoked whenever the event is raised, until the MountPreUnmountHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+</Type>

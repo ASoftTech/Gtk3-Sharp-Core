@@ -1,0 +1,180 @@
+<Type Name="AppChooserDialog" FullName="Gtk.AppChooserDialog">
+  <TypeSignature Language="C#" Value="public class AppChooserDialog : Gtk.Dialog, Gtk.IAppChooser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AppChooserDialog extends Gtk.Dialog implements class GLib.IWrapper, class Gtk.IAppChooser" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Gtk.Dialog</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Gtk.IAppChooser</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppChooserDialog (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppChooserDialog (Gtk.Window parent, Gtk.DialogFlags flags, GLib.IFile file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Gtk.Window parent, valuetype Gtk.DialogFlags flags, class GLib.IFile file) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="parent" Type="Gtk.Window" />
+        <Parameter Name="flags" Type="Gtk.DialogFlags" />
+        <Parameter Name="file" Type="GLib.IFile" />
+      </Parameters>
+      <Docs>
+        <param name="parent">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="file">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppChooserDialog (Gtk.Window parent, Gtk.DialogFlags flags, string content_type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Gtk.Window parent, valuetype Gtk.DialogFlags flags, string content_type) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="parent" Type="Gtk.Window" />
+        <Parameter Name="flags" Type="Gtk.DialogFlags" />
+        <Parameter Name="content_type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parent">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="content_type">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="AppInfo">
+      <MemberSignature Language="C#" Value="public GLib.IAppInfo AppInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.IAppInfo AppInfo" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IAppInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public string ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Gfile">
+      <MemberSignature Language="C#" Value="public GLib.IFile Gfile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.IFile Gfile" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("gfile")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.IFile</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:Gtk.AppChooserDialog" />.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Heading">
+      <MemberSignature Language="C#" Value="public string Heading { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Heading" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("heading")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Widget">
+      <MemberSignature Language="C#" Value="public Gtk.Widget Widget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gtk.Widget Widget" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.Widget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

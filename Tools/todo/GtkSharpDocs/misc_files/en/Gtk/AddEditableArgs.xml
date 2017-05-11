@@ -1,0 +1,87 @@
+<Type Name="AddEditableArgs" FullName="Gtk.AddEditableArgs">
+  <TypeSignature Language="C#" Value="public class AddEditableArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AddEditableArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.CellArea.AddEditable" /> event invokes <see cref="T:Gtk.AddEditableHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AddEditableArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:Gtk.AddEditableArgs" /> instance with this constructor if you need to invoke a <see cref="T:Gtk.AddEditableHandler" /> delegate.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="P0">
+      <MemberSignature Language="C#" Value="public Gtk.CellRenderer P0 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gtk.CellRenderer P0" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CellRenderer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="P1">
+      <MemberSignature Language="C#" Value="public Gtk.ICellEditable P1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gtk.ICellEditable P1" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.ICellEditable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="P2">
+      <MemberSignature Language="C#" Value="public Gdk.Rectangle P2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Gdk.Rectangle P2" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.Rectangle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="P3">
+      <MemberSignature Language="C#" Value="public string P3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string P3" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

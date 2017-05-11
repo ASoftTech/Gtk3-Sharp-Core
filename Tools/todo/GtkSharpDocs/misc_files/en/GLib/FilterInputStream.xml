@@ -1,0 +1,95 @@
+<Type Name="FilterInputStream" FullName="GLib.FilterInputStream">
+  <TypeSignature Language="C#" Value="public class FilterInputStream : GLib.InputStream" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterInputStream extends GLib.InputStream" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.InputStream</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FilterInputStream ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterInputStream (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStream">
+      <MemberSignature Language="C#" Value="public GLib.InputStream BaseStream { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.InputStream BaseStream" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("base-stream")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.InputStream</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="CloseBaseStream">
+      <MemberSignature Language="C#" Value="public bool CloseBaseStream { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CloseBaseStream" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("close-base-stream")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:GLib.FilterInputStream" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

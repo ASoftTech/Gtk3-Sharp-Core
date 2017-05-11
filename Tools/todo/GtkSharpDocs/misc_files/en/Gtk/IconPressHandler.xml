@@ -1,0 +1,28 @@
+<Type Name="IconPressHandler" FullName="Gtk.IconPressHandler">
+  <TypeSignature Language="C#" Value="public delegate void IconPressHandler(object o, IconPressArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IconPressHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gtk.IconPressArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.Entry.IconPress" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:Gtk.IconPressArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:Gtk.IconPressHandler" /> to an event, add the IconPressHandler instance to the event.  The methods referenced by the IconPressHandler instance are invoked whenever the event is raised, until the IconPressHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

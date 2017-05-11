@@ -1,0 +1,28 @@
+<Type Name="DriveConnectedHandler" FullName="GLib.DriveConnectedHandler">
+  <TypeSignature Language="C#" Value="public delegate void DriveConnectedHandler(object o, DriveConnectedArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DriveConnectedHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="GLib.DriveConnectedArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.VolumeMonitor.DriveConnected" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:GLib.DriveConnectedArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:GLib.DriveConnectedHandler" /> to an event, add the DriveConnectedHandler instance to the event.  The methods referenced by the DriveConnectedHandler instance are invoked whenever the event is raised, until the DriveConnectedHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+</Type>

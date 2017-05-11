@@ -1,0 +1,77 @@
+<Type Name="Priority" FullName="GLib.Priority">
+  <TypeSignature Language="C#" Value="public enum Priority" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Priority extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>glib-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.Priority Default = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.Priority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIdle">
+      <MemberSignature Language="C#" Value="DefaultIdle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.Priority DefaultIdle = int32(200)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.Priority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="High">
+      <MemberSignature Language="C#" Value="High" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.Priority High = int32(-100)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.Priority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="HighIdle">
+      <MemberSignature Language="C#" Value="HighIdle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.Priority HighIdle = int32(100)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.Priority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Low">
+      <MemberSignature Language="C#" Value="Low" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.Priority Low = int32(300)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.Priority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

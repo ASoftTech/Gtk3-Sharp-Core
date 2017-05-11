@@ -1,0 +1,138 @@
+<Type Name="IOModule" FullName="GLib.IOModule">
+  <TypeSignature Language="C#" Value="public class IOModule : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IOModule extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IOModule (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IOModule (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:GLib.IOModule" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="LoadAllInDirectory">
+      <MemberSignature Language="C#" Value="public static GLib.IOModule[] LoadAllInDirectory (string dirname);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IOModule[] LoadAllInDirectory(string dirname) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOModule[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dirname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dirname">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public static string Query ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string Query() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="ScanAllInDirectory">
+      <MemberSignature Language="C#" Value="public static void ScanAllInDirectory (string dirname);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ScanAllInDirectory(string dirname) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dirname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dirname">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Unload">
+      <MemberSignature Language="C#" Value="public void Unload ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Unload() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

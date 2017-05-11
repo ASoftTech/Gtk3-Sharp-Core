@@ -1,0 +1,28 @@
+<Type Name="CreateSurfaceHandler" FullName="Gdk.CreateSurfaceHandler">
+  <TypeSignature Language="C#" Value="public delegate void CreateSurfaceHandler(object o, CreateSurfaceArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CreateSurfaceHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gdk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gdk.CreateSurfaceArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:Gdk.Window.CreateSurface" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:Gdk.CreateSurfaceArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:Gdk.CreateSurfaceHandler" /> to an event, add the CreateSurfaceHandler instance to the event.  The methods referenced by the CreateSurfaceHandler instance are invoked whenever the event is raised, until the CreateSurfaceHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

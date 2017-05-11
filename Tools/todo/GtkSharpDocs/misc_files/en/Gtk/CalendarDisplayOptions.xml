@@ -1,0 +1,95 @@
+<Type Name="CalendarDisplayOptions" FullName="Gtk.CalendarDisplayOptions">
+  <TypeSignature Language="C#" Maintainer="Lee Mallabone" Value="public enum CalendarDisplayOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CalendarDisplayOptions extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>GLib.GType(typeof(Gtk.CalendarDisplayOptionsGType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Represents different styles and display options for a <see cref="T:Gtk.Calendar" />.</summary>
+    <remarks />
+  </Docs>
+  <Members>
+    <Member MemberName="NoMonthChange">
+      <MemberSignature Language="C#" Value="NoMonthChange" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Gtk.CalendarDisplayOptions NoMonthChange = int32(4)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CalendarDisplayOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Prevents the user from switching months with the calendar.</summary>
+        <remarks>
+          <para>If retrieving a date from the user, this restricts them to only select a date from the displayed month.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDayNames">
+      <MemberSignature Language="C#" Value="ShowDayNames" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Gtk.CalendarDisplayOptions ShowDayNames = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CalendarDisplayOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Specifies that three letter day descriptions should be present.</summary>
+        <remarks>
+          <para>In English these are, 'Mon', 'Tue', etc...</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowDetails">
+      <MemberSignature Language="C#" Value="ShowDetails" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Gtk.CalendarDisplayOptions ShowDetails = int32(32)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CalendarDisplayOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="ShowHeading">
+      <MemberSignature Language="C#" Value="ShowHeading" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Gtk.CalendarDisplayOptions ShowHeading = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CalendarDisplayOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Specifies that the month and year should be displayed.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="ShowWeekNumbers">
+      <MemberSignature Language="C#" Value="ShowWeekNumbers" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Gtk.CalendarDisplayOptions ShowWeekNumbers = int32(8)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.CalendarDisplayOptions</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Displays each week numbers of the current year, down the left side of the calendar.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,45 @@
+<Type Name="VolumeChangedArgs" FullName="GLib.VolumeChangedArgs">
+  <TypeSignature Language="C#" Value="public class VolumeChangedArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VolumeChangedArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.VolumeMonitor.VolumeChanged" /> event invokes <see cref="T:GLib.VolumeChangedHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VolumeChangedArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:GLib.VolumeChangedArgs" /> instance with this constructor if you need to invoke a <see cref="T:GLib.VolumeChangedHandler" /> delegate.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public GLib.IVolume Volume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.IVolume Volume" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IVolume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

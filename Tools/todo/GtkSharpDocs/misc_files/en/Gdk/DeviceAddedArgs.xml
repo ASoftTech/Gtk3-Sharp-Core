@@ -1,0 +1,45 @@
+<Type Name="DeviceAddedArgs" FullName="Gdk.DeviceAddedArgs">
+  <TypeSignature Language="C#" Value="public class DeviceAddedArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeviceAddedArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gdk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:Gdk.DeviceManager.DeviceAdded" /> event invokes <see cref="T:Gdk.DeviceAddedHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DeviceAddedArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:Gdk.DeviceAddedArgs" /> instance with this constructor if you need to invoke a <see cref="T:Gdk.DeviceAddedHandler" /> delegate.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="public Gdk.Device Device { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gdk.Device Device" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.Device</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

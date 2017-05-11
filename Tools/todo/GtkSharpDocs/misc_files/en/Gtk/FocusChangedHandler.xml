@@ -1,0 +1,28 @@
+<Type Name="FocusChangedHandler" FullName="Gtk.FocusChangedHandler">
+  <TypeSignature Language="C#" Value="public delegate void FocusChangedHandler(object o, FocusChangedArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FocusChangedHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gtk.FocusChangedArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.CellArea.FocusChanged" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:Gtk.FocusChangedArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:Gtk.FocusChangedHandler" /> to an event, add the FocusChangedHandler instance to the event.  The methods referenced by the FocusChangedHandler instance are invoked whenever the event is raised, until the FocusChangedHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

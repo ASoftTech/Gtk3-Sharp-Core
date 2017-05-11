@@ -1,0 +1,101 @@
+<Type Name="FileFactory" FullName="GLib.FileFactory">
+  <TypeSignature Language="C#" Value="public class FileFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileFactory extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="NewForPath">
+      <MemberSignature Language="C#" Value="public static GLib.IFile NewForPath (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IFile NewForPath(string path) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="NewForUri">
+      <MemberSignature Language="C#" Value="public static GLib.IFile NewForUri (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IFile NewForUri(string uri) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="NewForUri">
+      <MemberSignature Language="C#" Value="public static GLib.IFile NewForUri (Uri uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IFile NewForUri(class System.Uri uri) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.Uri" />
+      </Parameters>
+      <Docs>
+        <param name="uri">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromCommandlineArg">
+      <MemberSignature Language="C#" Value="public static GLib.IFile NewFromCommandlineArg (string arg);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IFile NewFromCommandlineArg(string arg) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IFile</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arg" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="arg">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

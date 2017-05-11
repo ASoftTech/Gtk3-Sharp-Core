@@ -1,0 +1,72 @@
+<Type Name="InitiallyUnowned" FullName="GLib.InitiallyUnowned">
+  <TypeSignature Language="C#" Value="public class InitiallyUnowned : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InitiallyUnowned extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>glib-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Floating reference base class.</summary>
+    <remarks>Subclasses of this type instantiate with an unowned native GObject reference.</remarks>
+    <since version="Gtk# 2.10" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected InitiallyUnowned (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>Internal constructor.</summary>
+        <remarks>Do not use in application code.  Exposed for language binding use.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Native type identifier.</summary>
+        <value>the GInitiallyUnowned native GType.</value>
+        <remarks>For internal use.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFloating">
+      <MemberSignature Language="C#" Value="public bool IsFloating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFloating" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Raw">
+      <MemberSignature Language="C#" Value="protected override IntPtr Raw { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int Raw" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

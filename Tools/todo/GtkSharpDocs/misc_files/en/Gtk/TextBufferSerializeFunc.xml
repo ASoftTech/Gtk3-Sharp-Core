@@ -1,0 +1,29 @@
+<Type Name="TextBufferSerializeFunc" FullName="Gtk.TextBufferSerializeFunc">
+  <TypeSignature Language="C#" Value="public delegate byte[] TextBufferSerializeFunc(TextBuffer register_buffer, TextBuffer content_buffer, TextIter start, TextIter end);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextBufferSerializeFunc extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="register_buffer" Type="Gtk.TextBuffer" />
+    <Parameter Name="content_buffer" Type="Gtk.TextBuffer" />
+    <Parameter Name="start" Type="Gtk.TextIter" />
+    <Parameter Name="end" Type="Gtk.TextIter" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Byte[]</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="register_buffer">To be added.</param>
+    <param name="content_buffer">To be added.</param>
+    <param name="start">To be added.</param>
+    <param name="end">To be added.</param>
+    <summary>To be added.</summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.10" />
+  </Docs>
+</Type>

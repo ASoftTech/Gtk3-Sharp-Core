@@ -1,0 +1,186 @@
+<Type Name="AppLaunchContext" FullName="GLib.AppLaunchContext">
+  <TypeSignature Language="C#" Value="public class AppLaunchContext : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AppLaunchContext extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Integrating the launch with the launching application. This is used to handle for instance startup notification and launching the new application on the same screen as the launching window.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppLaunchContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Creates a new application launch context.</summary>
+        <remarks>This is not normally used, instead you instantiate a subclass of this, such as <see cref="T:Gdk.AppLaunchContext" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AppLaunchContext (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDisplay">
+      <MemberSignature Language="C#" Value="public string GetDisplay (GLib.IAppInfo info, GLib.List files);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetDisplay(class GLib.IAppInfo info, class GLib.List files) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="GLib.IAppInfo" />
+        <Parameter Name="files" Type="GLib.List" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="files">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetStartupNotifyId">
+      <MemberSignature Language="C#" Value="public string GetStartupNotifyId (GLib.IAppInfo info, GLib.List files);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetStartupNotifyId(class GLib.IAppInfo info, class GLib.List files) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="GLib.IAppInfo" />
+        <Parameter Name="files" Type="GLib.List" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="files">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:GLib.AppLaunchContext" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="LaunchFailed">
+      <MemberSignature Language="C#" Value="public void LaunchFailed (string startup_notify_id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LaunchFailed(string startup_notify_id) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startup_notify_id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="startup_notify_id">The startup notification id that was returned by <see cref="M:GLib.AppLaunchContext.GetStartupNotifyId" />.</param>
+        <summary>Called when an application has failed to launch.</summary>
+        <remarks>Called when an application has failed to launch, so that it can cancel the application startup notification started in <see cref="M:AppLaunchContext.GetStartupNotifyId" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetDisplay">
+      <MemberSignature Language="C#" Value="protected virtual string OnGetDisplay (GLib.IAppInfo info, GLib.List files);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string OnGetDisplay(class GLib.IAppInfo info, class GLib.List files) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideGetDisplay", Type=typeof(GLib.AppLaunchContext))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="GLib.IAppInfo" />
+        <Parameter Name="files" Type="GLib.List" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="files">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetStartupNotifyId">
+      <MemberSignature Language="C#" Value="protected virtual string OnGetStartupNotifyId (GLib.IAppInfo info, GLib.List files);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string OnGetStartupNotifyId(class GLib.IAppInfo info, class GLib.List files) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideGetStartupNotifyId", Type=typeof(GLib.AppLaunchContext))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="info" Type="GLib.IAppInfo" />
+        <Parameter Name="files" Type="GLib.List" />
+      </Parameters>
+      <Docs>
+        <param name="info">To be added.</param>
+        <param name="files">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnLaunchFailed">
+      <MemberSignature Language="C#" Value="protected virtual void OnLaunchFailed (string startup_notify_id);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnLaunchFailed(string startup_notify_id) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideLaunchFailed", Type=typeof(GLib.AppLaunchContext))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startup_notify_id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="startup_notify_id">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

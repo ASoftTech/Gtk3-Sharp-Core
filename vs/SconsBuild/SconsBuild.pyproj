@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>764df767-bae5-46f9-b2ac-548a22d02e0c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>..\..\Tools\virtualenv\gtksharp_build_py2\Scripts\scons.py</StartupFile>
+    <SearchPath>..\..\;..\..\Tools\virtualenv\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\</SearchPath>
+    <WorkingDirectory>..\..\</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Glue.SconsBuild</Name>
+    <RootNamespace>Glue.SconsBuild</RootNamespace>
+    <InterpreterId>MSBuild|{92f3b5c2-4eb9-45ba-a424-e494f585d163}|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SConstruct.py">
+      <Link>SConstruct.py</Link>
+    </Compile>
+    <Compile Include="..\..\site_scons\site_tools\dotnetcore.py">
+      <Link>site_scons\site_tools\dotnetcore.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs-Glue\Atk.Glue\SConstruct.py">
+      <Link>Source\Libs-Glue\Atk.Glue\SConstruct.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs-Glue\SConstruct.py">
+      <Link>Source\Libs-Glue\SConstruct.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\SConstruct.py">
+      <Link>Source\Libs\SConstruct.py</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\SConstruct">
+      <Link>SConstruct</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="site_scons\" />
+    <Folder Include="site_scons\site_tools\" />
+    <Folder Include="Source\" />
+    <Folder Include="Source\Libs-Glue\" />
+    <Folder Include="Source\Libs-Glue\Atk.Glue\" />
+    <Folder Include="Source\Libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\..\Tools\virtualenv\gtksharp_build_py2\">
+      <Id>{825c3a48-de8d-4d67-a331-1502adef8d44}</Id>
+      <Version>2.7</Version>
+      <Description>gtksharp_build_py2 (Python 64-bit 2.7)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
+    <Interpreter Include="..\..\Tools\virtualenv\gtksharp_build_py3\">
+      <Id>{92f3b5c2-4eb9-45ba-a424-e494f585d163}</Id>
+      <Version>3.5</Version>
+      <Description>gtksharp_build_py3 (Python 64-bit 3.5)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

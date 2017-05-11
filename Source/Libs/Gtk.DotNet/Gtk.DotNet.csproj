@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RuntimeFrameworkVersion>2.0.0-preview1-002111-00</RuntimeFrameworkVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\Build\LibBuild\dotnet</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\Build\LibBuild\dotnet</OutputPath>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cairo\Cairo.csproj" />
+    <ProjectReference Include="..\Gdk\Gdk.csproj" />
+    <ProjectReference Include="..\Gio\Gio.csproj" />
+    <ProjectReference Include="..\GLib\GLib.csproj" />
+    <ProjectReference Include="..\Gtk\Gtk.csproj" />
+    <ProjectReference Include="..\Pango\Pango.csproj" />
+  </ItemGroup>
+
+</Project>

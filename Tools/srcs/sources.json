@@ -1,0 +1,9 @@
+{
+  "downloads": {
+    "GLib": "http://ftp.gnome.org/pub/GNOME/sources/glib/2.52/glib-2.52.0.tar.xz",
+    "Pango": "http://ftp.gnome.org/pub/GNOME/sources/pango/1.40/pango-1.40.5.tar.xz",
+    "Atk": "http://ftp.gnome.org/pub/GNOME/sources/atk/2.24/atk-2.24.0.tar.xz",
+    "Gdk-Pixbuf": "http://ftp.gnome.org/pub/GNOME/sources/gdk-pixbuf/2.36/gdk-pixbuf-2.36.6.tar.xz",
+    "Gtk": "http://ftp.gnome.org/pub/GNOME/sources/gtk+/3.22/gtk+-3.22.10.tar.xz"
+  }
+}

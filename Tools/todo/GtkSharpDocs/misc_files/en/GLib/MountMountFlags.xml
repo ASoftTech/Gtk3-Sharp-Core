@@ -1,0 +1,34 @@
+<Type Name="MountMountFlags" FullName="GLib.MountMountFlags">
+  <TypeSignature Language="C#" Value="public enum MountMountFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MountMountFlags extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>GLib.GType(typeof(GLib.MountMountFlagsGType))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.MountMountFlags None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.MountMountFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

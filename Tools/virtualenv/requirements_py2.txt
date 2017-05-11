@@ -1,0 +1,8 @@
+appdirs==1.4.3
+lxml==3.7.3
+packaging==16.8
+patch==1.16
+pyparsing==2.2.0
+scons==2.5.1
+six==1.10.0
+wget==3.2

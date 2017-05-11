@@ -1,0 +1,57 @@
+<Type Name="AskQuestionArgs" FullName="GLib.AskQuestionArgs">
+  <TypeSignature Language="C#" Value="public class AskQuestionArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AskQuestionArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>The <see cref="M:GLib.MountOperation.AskQuestion" /> event invokes <see cref="T:GLib.AskQuestionHandler" /> delegates which pass event data via this class.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AskQuestionArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:GLib.AskQuestionArgs" /> instance with this constructor if you need to invoke a <see cref="T:GLib.AskQuestionHandler" /> delegate.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Choices">
+      <MemberSignature Language="C#" Value="public string[] Choices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string[] Choices" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Possible choices.</summary>
+        <value>An array of strings for each possible choice. </value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A message to display to the user. </summary>
+        <value>A string containing a message to display to the user. </value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

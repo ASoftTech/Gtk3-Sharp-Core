@@ -1,0 +1,178 @@
+<Type Name="TextAppearance" FullName="Gtk.TextAppearance">
+  <TypeSignature Language="C#" Maintainer="auto" Value="public struct TextAppearance : IEquatable&lt;Gtk.TextAppearance&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit TextAppearance extends System.ValueType implements class System.IEquatable`1&lt;valuetype Gtk.TextAppearance&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Gtk.TextAppearance&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>This is used by <see cref="T:Gtk.TextAttributes" /> for color and position details about text.</summary>
+    <remarks />
+  </Docs>
+  <Members>
+    <Member MemberName="BgColor">
+      <MemberSignature Language="C#" Value="public Gdk.Color BgColor;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype Gdk.Color BgColor" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>The background color of this text.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Gtk.TextAppearance other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Gtk.TextAppearance other) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Gtk.TextAppearance" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object other) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="FgColor">
+      <MemberSignature Language="C#" Value="public Gdk.Color FgColor;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype Gdk.Color FgColor" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>The foreground color of this text.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public static Gtk.TextAppearance New (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Gtk.TextAppearance New(native int raw) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.TextAppearance</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">an <see cref="T:IntPtr" />, pointer to the underlying C object</param>
+        <summary>Internal constructor; not for developer use.</summary>
+        <returns>a new <see cref="T:Gtk.TextAppearance" /></returns>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="Rise">
+      <MemberSignature Language="C#" Value="public int Rise;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Rise" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>Offset of text in pixels above the baseline (if positive) or below the baseline (if negative).</summary>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="Strikethrough">
+      <MemberSignature Language="C#" Value="public bool Strikethrough { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Strikethrough" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Whether or not the text should be struck-through.</summary>
+        <value>a <see cref="T:System.Boolean" /></value>
+        <remarks />
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="Underline">
+      <MemberSignature Language="C#" Value="public Pango.Underline Underline { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Pango.Underline Underline" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Pango.Underline</ReturnType>
+      </ReturnValue>
+      <Parameters>
+      </Parameters>
+      <Docs>
+        <summary>Style of underlining for this text.</summary>
+        <value>To be added.</value>
+        <remarks />
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="Zero">
+      <MemberSignature Language="C#" Value="public static Gtk.TextAppearance Zero;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Gtk.TextAppearance Zero" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.TextAppearance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>A default/empty TextAppearance.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

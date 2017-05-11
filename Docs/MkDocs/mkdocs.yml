@@ -1,0 +1,41 @@
+site_name: Gtk3-Sharp-Core
+site_url: http://ASoftTech.github.io/Gtk3-Sharp-Core
+repo_url: https://github.com/ASoftTech/Gtk3-Sharp-Core
+site_description: GtkSharp3 Core - Gtk3 bindings for C# .Net Core
+edit_uri: edit/master/Docs/MkDocs/Docs
+
+pages:
+- Home: index.md
+
+- Download:
+    - Setup of Gtk: Download\Setup-Gtk.md
+    - Downloading GtkSharp Core: Download\Downloading-GtkSharp.md
+
+- Build:
+    - Setup of Python Enviro: Build\Setup-Python.md
+    - Setup of .Net Core SDK: Build\Setup-NetCore.md
+    - Building GtkSharp: Build\Building-GtkSharp.md
+
+- Generate Sources:
+    - Overview: GenerateSources\Overview.md
+    - Download of API Sources: GenerateSources\DownloadAPISources.md
+    - Generating Code: GenerateSources\GeneratingCode.md
+    - Perl Parser: GenerateSources\PerlParser.md
+
+#theme: cosmo
+theme: cyborg
+#theme: alabaster
+#theme: readthedocs
+#theme: mkdocs
+#theme: material
+
+# Overrides content within the selected theme
+theme_dir: theme
+
+markdown_extensions:
+    - smarty
+
+extra_css:
+    - css/highlight-fix.css
+    - css/highlight-custom.css
+    - css/navbarfix.css

@@ -1,0 +1,28 @@
+<Type Name="VolumeRemovedHandler" FullName="GLib.VolumeRemovedHandler">
+  <TypeSignature Language="C#" Value="public delegate void VolumeRemovedHandler(object o, VolumeRemovedArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VolumeRemovedHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="GLib.VolumeRemovedArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.VolumeMonitor.VolumeRemoved" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:GLib.VolumeRemovedArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:GLib.VolumeRemovedHandler" /> to an event, add the VolumeRemovedHandler instance to the event.  The methods referenced by the VolumeRemovedHandler instance are invoked whenever the event is raised, until the VolumeRemovedHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+</Type>

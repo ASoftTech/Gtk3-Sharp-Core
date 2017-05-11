@@ -1,0 +1,61 @@
+<Type Name="FileAttributeInfoFlags" FullName="GLib.FileAttributeInfoFlags">
+  <TypeSignature Language="C#" Value="public enum FileAttributeInfoFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FileAttributeInfoFlags extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>GLib.GType(typeof(GLib.FileAttributeInfoFlagsGType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName="CopyWhenMoved">
+      <MemberSignature Language="C#" Value="CopyWhenMoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.FileAttributeInfoFlags CopyWhenMoved = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileAttributeInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyWithFile">
+      <MemberSignature Language="C#" Value="CopyWithFile" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.FileAttributeInfoFlags CopyWithFile = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileAttributeInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.FileAttributeInfoFlags None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileAttributeInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

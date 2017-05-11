@@ -1,0 +1,114 @@
+<Type Name="PangoHelper" FullName="Gdk.PangoHelper">
+  <TypeSignature Language="C#" Value="public class PangoHelper" Maintainer="auto" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PangoHelper extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gdk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added</summary>
+    <remarks>To be added</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PangoHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextGet">
+      <MemberSignature Language="C#" Value="public static Pango.Context ContextGet ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Pango.Context ContextGet() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Pango.Context</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Pango.Context" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextGetForScreen">
+      <MemberSignature Language="C#" Value="public static Pango.Context ContextGetForScreen (Gdk.Screen screen);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Pango.Context ContextGetForScreen(class Gdk.Screen screen) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Pango.Context</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="screen" Type="Gdk.Screen" />
+      </Parameters>
+      <Docs>
+        <param name="screen">a <see cref="T:Gdk.Screen" /></param>
+        <summary>To be added</summary>
+        <returns>a <see cref="T:Pango.Context" /></returns>
+        <remarks>To be added</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutGetClipRegion">
+      <MemberSignature Language="C#" Value="public static Cairo.Region LayoutGetClipRegion (Pango.Layout layout, int x_origin, int y_origin, out int index_ranges, int n_ranges);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Cairo.Region LayoutGetClipRegion(class Pango.Layout layout, int32 x_origin, int32 y_origin, int32 index_ranges, int32 n_ranges) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Cairo.Region</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="layout" Type="Pango.Layout" />
+        <Parameter Name="x_origin" Type="System.Int32" />
+        <Parameter Name="y_origin" Type="System.Int32" />
+        <Parameter Name="index_ranges" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="n_ranges" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="layout">To be added.</param>
+        <param name="x_origin">To be added.</param>
+        <param name="y_origin">To be added.</param>
+        <param name="index_ranges">To be added.</param>
+        <param name="n_ranges">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="LayoutLineGetClipRegion">
+      <MemberSignature Language="C#" Value="public static Cairo.Region LayoutLineGetClipRegion (Pango.LayoutLine line, int x_origin, int y_origin, out int index_ranges, int n_ranges);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Cairo.Region LayoutLineGetClipRegion(class Pango.LayoutLine line, int32 x_origin, int32 y_origin, int32 index_ranges, int32 n_ranges) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Cairo.Region</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="line" Type="Pango.LayoutLine" />
+        <Parameter Name="x_origin" Type="System.Int32" />
+        <Parameter Name="y_origin" Type="System.Int32" />
+        <Parameter Name="index_ranges" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="n_ranges" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="line">To be added.</param>
+        <param name="x_origin">To be added.</param>
+        <param name="y_origin">To be added.</param>
+        <param name="index_ranges">To be added.</param>
+        <param name="n_ranges">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

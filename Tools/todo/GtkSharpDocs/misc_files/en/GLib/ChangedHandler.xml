@@ -1,0 +1,42 @@
+<Type Name="ChangedHandler" FullName="GLib.ChangedHandler">
+  <TypeSignature Language="C#" Value="public delegate void ChangedHandler(object o, ChangedArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChangedHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="GLib.ChangedArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The following events utilize this delegate:</para>
+      <para>
+        <list type="bullet">
+          <item>
+            <term>
+              <see cref="M:GLib.FileMonitor.Changed" />
+            </term>
+          </item>
+          <item>
+            <term>
+              <see cref="M:GLib.Settings.Changed" />
+            </term>
+          </item>
+        </list>
+      </para>
+      <para>Event data is passed via the <see cref="T:GLib.ChangedArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:GLib.ChangedHandler" /> to an event, add the ChangedHandler instance to the event.  The methods referenced by the ChangedHandler instance are invoked whenever the event is raised, until the ChangedHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+</Type>

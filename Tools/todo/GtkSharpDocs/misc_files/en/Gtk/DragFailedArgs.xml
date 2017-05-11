@@ -1,0 +1,58 @@
+<Type Name="DragFailedArgs" FullName="Gtk.DragFailedArgs">
+  <TypeSignature Language="C#" Value="public class DragFailedArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DragFailedArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.Widget.DragFailed" /> event invokes <see cref="T:Gtk.DragFailedHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+    <since version="Gtk# 2.12" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DragFailedArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:Gtk.DragFailedArgs" /> instance with this constructor if you need to invoke a <see cref="T:Gtk.DragFailedHandler" /> delegate.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Gdk.DragContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gdk.DragContext Context" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.DragContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Result">
+      <MemberSignature Language="C#" Value="public Gtk.DragResult Result { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Gtk.DragResult Result" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.DragResult</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

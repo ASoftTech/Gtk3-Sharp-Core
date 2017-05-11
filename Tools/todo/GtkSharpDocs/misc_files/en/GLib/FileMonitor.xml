@@ -1,0 +1,253 @@
+<Type Name="FileMonitor" FullName="GLib.FileMonitor">
+  <TypeSignature Language="C#" Value="public class FileMonitor : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileMonitor extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileMonitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileMonitor (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public bool Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Cancel() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Cancelled">
+      <MemberSignature Language="C#" Value="public bool Cancelled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Cancelled" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("cancelled")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public event GLib.ChangedHandler Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class GLib.ChangedHandler Changed" />
+      <MemberType>Event</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Signal("changed")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.ChangedHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Directory">
+      <MemberSignature Language="C#" Value="public static GLib.FileMonitor Directory (GLib.IFile file, GLib.FileMonitorFlags flags, GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.FileMonitor Directory(class GLib.IFile file, valuetype GLib.FileMonitorFlags flags, class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileMonitor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="GLib.IFile" />
+        <Parameter Name="flags" Type="GLib.FileMonitorFlags" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="file">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="EmitEvent">
+      <MemberSignature Language="C#" Value="public void EmitEvent (GLib.IFile child, GLib.IFile other_file, GLib.FileMonitorEvent event_type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EmitEvent(class GLib.IFile child, class GLib.IFile other_file, valuetype GLib.FileMonitorEvent event_type) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="child" Type="GLib.IFile" />
+        <Parameter Name="other_file" Type="GLib.IFile" />
+        <Parameter Name="event_type" Type="GLib.FileMonitorEvent" />
+      </Parameters>
+      <Docs>
+        <param name="child">To be added.</param>
+        <param name="other_file">To be added.</param>
+        <param name="event_type">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="File">
+      <MemberSignature Language="C#" Value="public static GLib.FileMonitor File (GLib.IFile file, GLib.FileMonitorFlags flags, GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.FileMonitor File(class GLib.IFile file, valuetype GLib.FileMonitorFlags flags, class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileMonitor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="GLib.IFile" />
+        <Parameter Name="flags" Type="GLib.FileMonitorFlags" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="file">To be added.</param>
+        <param name="flags">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:GLib.FileMonitor" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsCancelled">
+      <MemberSignature Language="C#" Value="public bool IsCancelled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsCancelled" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCancel">
+      <MemberSignature Language="C#" Value="protected virtual bool OnCancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnCancel() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCancel", Type=typeof(GLib.FileMonitor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnChanged (GLib.IFile file, GLib.IFile other_file, GLib.FileMonitorEvent event_type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnChanged(class GLib.IFile file, class GLib.IFile other_file, valuetype GLib.FileMonitorEvent event_type) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideChanged", Type=typeof(GLib.FileMonitor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="GLib.IFile" />
+        <Parameter Name="other_file" Type="GLib.IFile" />
+        <Parameter Name="event_type" Type="GLib.FileMonitorEvent" />
+      </Parameters>
+      <Docs>
+        <param name="file">To be added.</param>
+        <param name="other_file">To be added.</param>
+        <param name="event_type">To be added.</param>
+        <summary>Default handler for the <see cref="M:GLib.FileMonitor.Changed" /> event.</summary>
+        <remarks>Override this method in a subclass to provide a default handler for the <see cref="M:GLib.FileMonitor.Changed" /> event.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="RateLimit">
+      <MemberSignature Language="C#" Value="public int RateLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RateLimit" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("rate-limit")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

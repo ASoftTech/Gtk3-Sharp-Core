@@ -1,0 +1,10 @@
+# Todo
+
+## Tasks
+
+Tasks open for Gtk# 3.0, feel free to edit this file:
+
+  * Generated API audit
+  * Write a "Migrating from GTK# 2.x to GTK# 3" guide
+  * New API documentation
+  * Improvement to external Builder binding

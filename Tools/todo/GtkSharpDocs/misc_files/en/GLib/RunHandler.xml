@@ -1,0 +1,28 @@
+<Type Name="RunHandler" FullName="GLib.RunHandler">
+  <TypeSignature Language="C#" Value="public delegate void RunHandler(object o, RunArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RunHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="GLib.RunArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.ThreadedSocketService.Run" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:GLib.RunArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:GLib.RunHandler" /> to an event, add the RunHandler instance to the event.  The methods referenced by the RunHandler instance are invoked whenever the event is raised, until the RunHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

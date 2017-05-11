@@ -1,0 +1,143 @@
+<Type Name="WindowGroup" FullName="Gtk.WindowGroup">
+  <TypeSignature Language="C#" Maintainer="auto" Value="public class WindowGroup : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindowGroup extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>Limit the effect of grabs</summary>
+    <remarks>
+      Grabs added with gtk_grab_add() only affect <see cref="T:Gtk.Window" />s within the same <see cref="T:Gtk.WindowGroup" />.
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>Creates an instance of <see cref="T:Gtk.WindowGroup" />.</summary>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindowGroup (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Pointer to the C object.</param>
+        <summary>Internal constructor</summary>
+        <remarks>
+          <para>This is an internal constructor, and should not be used by user code.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddWindow">
+      <MemberSignature Language="C#" Value="public void AddWindow (Gtk.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddWindow(class Gtk.Window window) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="Gtk.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">an object of type <see cref="T:Gtk.Window" /></param>
+        <summary>Adds a <see cref="T:Gtk.Window" /> to the <see cref="T:Gtk.WindowGroup" /></summary>
+        <remarks>Adds a <see cref="T:Gtk.Window" /> to the <see cref="T:Gtk.WindowGroup" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentGrab">
+      <MemberSignature Language="C#" Value="public Gtk.Widget CurrentGrab { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gtk.Widget CurrentGrab" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.Widget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentDeviceGrab">
+      <MemberSignature Language="C#" Value="public Gtk.Widget GetCurrentDeviceGrab (Gdk.Device device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Gtk.Widget GetCurrentDeviceGrab(class Gdk.Device device) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.Widget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="device" Type="Gdk.Device" />
+      </Parameters>
+      <Docs>
+        <param name="device">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>a <see cref="T:GLib.GType" /></value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:Gtk.WindowGroup" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListWindows">
+      <MemberSignature Language="C#" Value="public Gtk.Window[] ListWindows ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Gtk.Window[] ListWindows() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.Window[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveWindow">
+      <MemberSignature Language="C#" Value="public void RemoveWindow (Gtk.Window window);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveWindow(class Gtk.Window window) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="window" Type="Gtk.Window" />
+      </Parameters>
+      <Docs>
+        <param name="window">an object of type <see cref="T:Gtk.Window" /></param>
+        <summary>Removes a <see cref="T:Gtk.Window" /> from the <see cref="T:Gtk.WindowGroup" /></summary>
+        <remarks>Removes a <see cref="T:Gtk.Window" /> from the <see cref="T:Gtk.WindowGroup" /></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

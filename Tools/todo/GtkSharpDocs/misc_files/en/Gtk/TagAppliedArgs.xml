@@ -1,0 +1,76 @@
+<Type Name="TagAppliedArgs" FullName="Gtk.TagAppliedArgs">
+  <TypeSignature Language="C#" Value="public class TagAppliedArgs : GLib.SignalArgs" Maintainer="auto" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TagAppliedArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.TextBuffer.TagApplied" /> event invokes <see cref="T:Gtk.TagAppliedHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TagAppliedArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:Gtk.TagAppliedArgs" /> instance with this constructor if you need to invoke a <see cref="T:Gtk.TagAppliedHandler" /> delegate.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="public Gtk.TextIter End { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Gtk.TextIter End" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.TextIter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public Gtk.TextIter Start { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Gtk.TextIter Start" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.TextIter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public Gtk.TextTag Tag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gtk.TextTag Tag" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gtk.TextTag</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the tag that was applied to the text.</summary>
+        <value>
+          <see cref="T:Gtk.TextTag" />
+        </value>
+        <remarks />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

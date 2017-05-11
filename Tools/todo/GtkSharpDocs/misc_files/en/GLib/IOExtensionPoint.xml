@@ -1,0 +1,138 @@
+<Type Name="IOExtensionPoint" FullName="GLib.IOExtensionPoint">
+  <TypeSignature Language="C#" Value="public class IOExtensionPoint : GLib.Opaque" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IOExtensionPoint extends GLib.Opaque" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Opaque</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IOExtensionPoint (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Extensions">
+      <MemberSignature Language="C#" Value="public GLib.IOExtension[] Extensions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.IOExtension[] Extensions" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOExtension[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetExtensionByName">
+      <MemberSignature Language="C#" Value="public GLib.IOExtension GetExtensionByName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GLib.IOExtension GetExtensionByName(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOExtension</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Implement">
+      <MemberSignature Language="C#" Value="public static GLib.IOExtension Implement (string extension_point_name, GLib.GType type, string extension_name, int priority);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IOExtension Implement(string extension_point_name, valuetype GLib.GType type, string extension_name, int32 priority) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOExtension</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension_point_name" Type="System.String" />
+        <Parameter Name="type" Type="GLib.GType" />
+        <Parameter Name="extension_name" Type="System.String" />
+        <Parameter Name="priority" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="extension_point_name">To be added.</param>
+        <param name="type">To be added.</param>
+        <param name="extension_name">To be added.</param>
+        <param name="priority">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Lookup">
+      <MemberSignature Language="C#" Value="public static GLib.IOExtensionPoint Lookup (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IOExtensionPoint Lookup(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOExtensionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public static GLib.IOExtensionPoint Register (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GLib.IOExtensionPoint Register(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IOExtensionPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="RequiredType">
+      <MemberSignature Language="C#" Value="public GLib.GType RequiredType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GLib.GType RequiredType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

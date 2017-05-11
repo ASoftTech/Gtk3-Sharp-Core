@@ -1,0 +1,189 @@
+<Type Name="Cursor" FullName="Gdk.Cursor">
+  <TypeSignature Language="C#" Maintainer="auto" Value="public class Cursor : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Cursor extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gdk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Standard and pixmap cursors</summary>
+    <remarks>The <see cref="T:Gdk.Cursor" /> represents cursors.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor (Gdk.CursorType cursor_type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Gdk.CursorType cursor_type) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="cursor_type" Type="Gdk.CursorType" />
+      </Parameters>
+      <Docs>
+        <param name="cursor_type">The cursor type.</param>
+        <summary>Creates a cursor from standard definitions.</summary>
+        <remarks>Creates a new cursor from the set of builtin cursors for the default display. See gdk_cursor_new_for_display().
+<para>
+To make the cursor invisible, use gdk_cursor_new_from_pixmap() to create a cursor with no pixels in it.
+</para></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">raw managed pointer.</param>
+        <summary>Internal constructor.</summary>
+        <remarks>This is an internal constructor, do not use it.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor (Gdk.Display display, Gdk.CursorType cursor_type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Gdk.Display display, valuetype Gdk.CursorType cursor_type) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="display" Type="Gdk.Display" />
+        <Parameter Name="cursor_type" Type="Gdk.CursorType" />
+      </Parameters>
+      <Docs>
+        <param name="display">The <see cref="T:Gdk.Display" /> for which the cursor will be created.</param>
+        <param name="cursor_type">Cursor to create.</param>
+        <summary>Creates a new cursor from the set of builtin cursors.</summary>
+        <remarks>None.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor (Gdk.Display display, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Gdk.Display display, string name) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="display" Type="Gdk.Display" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="display">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cursor (Gdk.Display display, Gdk.Pixbuf pixbuf, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Gdk.Display display, class Gdk.Pixbuf pixbuf, int32 x, int32 y) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="display" Type="Gdk.Display" />
+        <Parameter Name="pixbuf" Type="Gdk.Pixbuf" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="display">a <see cref="T:Gdk.Display" /></param>
+        <param name="pixbuf">a <see cref="T:Gdk.Pixbuf" /></param>
+        <param name="x">a <see cref="T:System.Int32" /></param>
+        <param name="y">a <see cref="T:System.Int32" /></param>
+        <summary>To be added</summary>
+        <remarks>To be added</remarks>
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="CursorType">
+      <MemberSignature Language="C#" Value="public Gdk.CursorType CursorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Gdk.CursorType CursorType" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("cursor-type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gdk.CursorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public Gdk.Display Display { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gdk.Display Display" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.Property("display")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gdk.Display</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Returns the display on which the <see cref="T:Gdk.Cursor" /> is defined.</summary>
+        <value>The <see cref="T:Gdk.Display" /> where the cursor is defined.</value>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>a <see cref="T:GLib.GType" /></value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:Gdk.Cursor" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="public Gdk.Pixbuf Image { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Gdk.Pixbuf Image" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Gdk.Pixbuf</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A Pixbuf containing the Cursor's image.</summary>
+        <value>a <see cref="T:Gdk.Pixbuf" /> of the cursor image.</value>
+        <remarks />
+        <since version="Gtk# 2.8" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnGetImage">
+      <MemberSignature Language="C#" Value="protected virtual Gdk.Pixbuf OnGetImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Gdk.Pixbuf OnGetImage() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideGetImage", Type=typeof(Gdk.Cursor))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gdk.Pixbuf</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

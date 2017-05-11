@@ -1,0 +1,49 @@
+<Type Name="FileQueryInfoFlags" FullName="GLib.FileQueryInfoFlags">
+  <TypeSignature Language="C#" Value="public enum FileQueryInfoFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FileQueryInfoFlags extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>GLib.GType(typeof(GLib.FileQueryInfoFlagsGType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName="NofollowSymlinks">
+      <MemberSignature Language="C#" Value="NofollowSymlinks" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.FileQueryInfoFlags NofollowSymlinks = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileQueryInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.FileQueryInfoFlags None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileQueryInfoFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

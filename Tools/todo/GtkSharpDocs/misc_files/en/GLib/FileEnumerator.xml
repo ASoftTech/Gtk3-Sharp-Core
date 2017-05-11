@@ -1,0 +1,410 @@
+<Type Name="FileEnumerator" FullName="GLib.FileEnumerator">
+  <TypeSignature Language="C#" Value="public class FileEnumerator : GLib.Object, System.Collections.Generic.IEnumerable&lt;GLib.FileInfo&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FileEnumerator extends GLib.Object implements class System.Collections.Generic.IEnumerable`1&lt;class GLib.FileInfo&gt;, class System.Collections.IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;GLib.FileInfo&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FileEnumerator (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Native object pointer.</param>
+        <summary>Internal constructor</summary>
+        <remarks>This is not typically used by C# code.  Exposed primarily for use by language bindings to wrap native object instances.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public bool Close (GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Close(class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="CloseAsync">
+      <MemberSignature Language="C#" Value="public void CloseAsync (int io_priority, GLib.Cancellable cancellable, GLib.AsyncReadyCallback cb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CloseAsync(int32 io_priority, class GLib.Cancellable cancellable, class GLib.AsyncReadyCallback cb) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="io_priority" Type="System.Int32" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+        <Parameter Name="cb" Type="GLib.AsyncReadyCallback" />
+      </Parameters>
+      <Docs>
+        <param name="io_priority">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <param name="cb">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="CloseFinish">
+      <MemberSignature Language="C#" Value="public bool CloseFinish (GLib.IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool CloseFinish(class GLib.IAsyncResult result) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="GLib.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;GLib.FileInfo&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class GLib.FileInfo&gt; GetEnumerator() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;GLib.FileInfo&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>The native <see cref="T:GLib.GType" /> value.</value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:GLib.FileEnumerator" />.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="HasPending">
+      <MemberSignature Language="C#" Value="public bool HasPending { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPending" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="IsClosed">
+      <MemberSignature Language="C#" Value="public bool IsClosed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsClosed" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="NextFile">
+      <MemberSignature Language="C#" Value="public GLib.FileInfo NextFile ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GLib.FileInfo NextFile() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="NextFile">
+      <MemberSignature Language="C#" Value="public GLib.FileInfo NextFile (GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GLib.FileInfo NextFile(class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="NextFilesAsync">
+      <MemberSignature Language="C#" Value="public void NextFilesAsync (int num_files, int io_priority, GLib.Cancellable cancellable, GLib.AsyncReadyCallback cb);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void NextFilesAsync(int32 num_files, int32 io_priority, class GLib.Cancellable cancellable, class GLib.AsyncReadyCallback cb) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="num_files" Type="System.Int32" />
+        <Parameter Name="io_priority" Type="System.Int32" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+        <Parameter Name="cb" Type="GLib.AsyncReadyCallback" />
+      </Parameters>
+      <Docs>
+        <param name="num_files">To be added.</param>
+        <param name="io_priority">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <param name="cb">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="NextFilesFinish">
+      <MemberSignature Language="C#" Value="public GLib.FileInfo[] NextFilesFinish (GLib.IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GLib.FileInfo[] NextFilesFinish(class GLib.IAsyncResult result) cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.FileInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="GLib.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCloseAsync">
+      <MemberSignature Language="C#" Value="protected virtual void OnCloseAsync (int io_priority, GLib.Cancellable cancellable, GLib.AsyncReadyCallback cb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCloseAsync(int32 io_priority, class GLib.Cancellable cancellable, class GLib.AsyncReadyCallback cb) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCloseAsync", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="io_priority" Type="System.Int32" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+        <Parameter Name="cb" Type="GLib.AsyncReadyCallback" />
+      </Parameters>
+      <Docs>
+        <param name="io_priority">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <param name="cb">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCloseFinish">
+      <MemberSignature Language="C#" Value="protected virtual bool OnCloseFinish (GLib.IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnCloseFinish(class GLib.IAsyncResult result) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCloseFinish", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="GLib.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCloseFn">
+      <MemberSignature Language="C#" Value="protected virtual bool OnCloseFn (GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool OnCloseFn(class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCloseFn", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextFile">
+      <MemberSignature Language="C#" Value="protected virtual GLib.FileInfo OnNextFile (GLib.Cancellable cancellable);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class GLib.FileInfo OnNextFile(class GLib.Cancellable cancellable) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideNextFile", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.FileInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+      </Parameters>
+      <Docs>
+        <param name="cancellable">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextFilesAsync">
+      <MemberSignature Language="C#" Value="protected virtual void OnNextFilesAsync (int num_files, int io_priority, GLib.Cancellable cancellable, GLib.AsyncReadyCallback cb);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnNextFilesAsync(int32 num_files, int32 io_priority, class GLib.Cancellable cancellable, class GLib.AsyncReadyCallback cb) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideNextFilesAsync", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="num_files" Type="System.Int32" />
+        <Parameter Name="io_priority" Type="System.Int32" />
+        <Parameter Name="cancellable" Type="GLib.Cancellable" />
+        <Parameter Name="cb" Type="GLib.AsyncReadyCallback" />
+      </Parameters>
+      <Docs>
+        <param name="num_files">To be added.</param>
+        <param name="io_priority">To be added.</param>
+        <param name="cancellable">To be added.</param>
+        <param name="cb">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnNextFilesFinish">
+      <MemberSignature Language="C#" Value="protected virtual GLib.FileInfo[] OnNextFilesFinish (GLib.IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class GLib.FileInfo[] OnNextFilesFinish(class GLib.IAsyncResult result) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideNextFilesFinish", Type=typeof(GLib.FileEnumerator))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.FileInfo[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="GLib.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Pending">
+      <MemberSignature Language="C#" Value="public bool Pending { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Pending" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberType>Method</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

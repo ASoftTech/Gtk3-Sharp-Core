@@ -1,0 +1,61 @@
+<Type Name="OutputStreamSpliceFlags" FullName="GLib.OutputStreamSpliceFlags">
+  <TypeSignature Language="C#" Value="public enum OutputStreamSpliceFlags" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OutputStreamSpliceFlags extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>GLib.GType(typeof(GLib.OutputStreamSpliceFlagsGType))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+    <since version="Gtk# 2.14" />
+  </Docs>
+  <Members>
+    <Member MemberName="CloseSource">
+      <MemberSignature Language="C#" Value="CloseSource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.OutputStreamSpliceFlags CloseSource = int32(1)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.OutputStreamSpliceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="CloseTarget">
+      <MemberSignature Language="C#" Value="CloseTarget" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.OutputStreamSpliceFlags CloseTarget = int32(2)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.OutputStreamSpliceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GLib.OutputStreamSpliceFlags None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.OutputStreamSpliceFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <since version="Gtk# 2.14" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

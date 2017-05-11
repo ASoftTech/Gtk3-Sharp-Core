@@ -1,0 +1,28 @@
+<Type Name="StateFlagsChangedHandler" FullName="Gtk.StateFlagsChangedHandler">
+  <TypeSignature Language="C#" Value="public delegate void StateFlagsChangedHandler(object o, StateFlagsChangedArgs args);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed StateFlagsChangedHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="o" Type="System.Object" />
+    <Parameter Name="args" Type="Gtk.StateFlagsChangedArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="o">Event sender.</param>
+    <param name="args">Event arguments.</param>
+    <summary>Event handler.</summary>
+    <remarks>
+      <para>The <see cref="M:Gtk.Widget.StateFlagsChanged" /> event utilizes this delegate:</para>
+      <para>Event data is passed via the <see cref="T:Gtk.StateFlagsChangedArgs" /> parameter.</para>
+      <para>To attach a <see cref="T:Gtk.StateFlagsChangedHandler" /> to an event, add the StateFlagsChangedHandler instance to the event.  The methods referenced by the StateFlagsChangedHandler instance are invoked whenever the event is raised, until the StateFlagsChangedHandler is removed from the event.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+</Type>

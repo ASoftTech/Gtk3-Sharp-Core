@@ -1,0 +1,45 @@
+<Type Name="DriveStopButtonArgs" FullName="GLib.DriveStopButtonArgs">
+  <TypeSignature Language="C#" Value="public class DriveStopButtonArgs : GLib.SignalArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DriveStopButtonArgs extends GLib.SignalArgs" />
+  <AssemblyInfo>
+    <AssemblyName>gio-sharp</AssemblyName>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GLib.SignalArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event data.</summary>
+    <remarks>
+      <para>The <see cref="M:GLib.VolumeMonitor.DriveStopButton" /> event invokes <see cref="T:GLib.DriveStopButtonHandler" /> delegates which pass event data via this class.</para>
+    </remarks>
+    <since version="Gtk# 3.0" />
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DriveStopButtonArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>Public Constructor.</summary>
+        <remarks>Create a new <see cref="T:GLib.DriveStopButtonArgs" /> instance with this constructor if you need to invoke a <see cref="T:GLib.DriveStopButtonHandler" /> delegate.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Drive">
+      <MemberSignature Language="C#" Value="public GLib.IDrive Drive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GLib.IDrive Drive" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>GLib.IDrive</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

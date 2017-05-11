@@ -1,0 +1,210 @@
+<Type Name="RcStyle" FullName="Gtk.RcStyle">
+  <TypeSignature Language="C#" Maintainer="auto" Value="public class RcStyle : GLib.Object" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RcStyle extends GLib.Object" />
+  <AssemblyInfo>
+    <AssemblyName>gtk-sharp</AssemblyName>
+    <AssemblyPublicKey>
+    </AssemblyPublicKey>
+  </AssemblyInfo>
+  <ThreadSafetyStatement>Gtk# is thread aware, but not thread safe; See the <link location="node:gtk-sharp/programming/threads">Gtk# Thread Programming</link> for details.</ThreadSafetyStatement>
+  <Base>
+    <BaseTypeName>GLib.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+  </Interfaces>
+  <Docs>
+    <summary>An object for handling a <see cref="T:Gtk.Style" /> and representing it in the context of an RC file. </summary>
+    <remarks>This class is used most obviously in <see cref="M:Gtk.Widget.ModifyStyle" />, where it's a parameter.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RcStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters />
+      <Docs>
+        <summary>Public constructor</summary>
+        <remarks>The object returned has no fields set and a refcount of 1.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RcStyle (IntPtr raw);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(native int raw) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <ReturnValue />
+      <Parameters>
+        <Parameter Name="raw" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="raw">Pointer to the C object.</param>
+        <summary>Internal constructor</summary>
+        <remarks>
+          <para>This is an internal constructor, and should not be used by user code.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public Gtk.RcStyle Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Gtk.RcStyle Copy() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gtk.RcStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Copies this RcStyle object to another new RcStyle object.</summary>
+        <returns>an <see cref="T:Gtk.RcStyle" /> object, a duplicate of this obkect.</returns>
+        <remarks />
+      </Docs>
+    </Member>
+    <Member MemberName="FontDesc">
+      <MemberSignature Language="C#" Value="public Pango.FontDescription FontDesc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Pango.FontDescription FontDesc" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>Pango.FontDescription</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The <see cref="T:Pango.FontDescription" /> value parsed from the RC style's "font_name" property.</summary>
+        <value>a <see cref="T:Pango.FontDescription" /></value>
+        <remarks>
+        </remarks>
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="GType">
+      <MemberSignature Language="C#" Value="public static GLib.GType GType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype GLib.GType GType" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>GLib.GType</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>GType Property.</summary>
+        <value>a <see cref="T:GLib.GType" /></value>
+        <remarks>Returns the native <see cref="T:GLib.GType" /> value for <see cref="T:Gtk.RcStyle" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The name of the RC style.</summary>
+        <value>a <see cref="T:System.String" /></value>
+        <remarks>
+        </remarks>
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateRcStyle">
+      <MemberSignature Language="C#" Value="protected virtual Gtk.RcStyle OnCreateRcStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Gtk.RcStyle OnCreateRcStyle() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCreateRcStyle", Type=typeof(Gtk.RcStyle))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gtk.RcStyle</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnCreateStyle">
+      <MemberSignature Language="C#" Value="protected virtual Gtk.Style OnCreateStyle ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Gtk.Style OnCreateStyle() cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideCreateStyle", Type=typeof(Gtk.RcStyle))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Gtk.Style</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="OnMerge">
+      <MemberSignature Language="C#" Value="protected virtual void OnMerge (Gtk.RcStyle src);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMerge(class Gtk.RcStyle src) cil managed" />
+      <MemberType>Method</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>GLib.DefaultSignalHandler(ConnectionMethod="OverrideMerge", Type=typeof(Gtk.RcStyle))</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="src" Type="Gtk.RcStyle" />
+      </Parameters>
+      <Docs>
+        <param name="src">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <since version="Gtk# 3.0" />
+      </Docs>
+    </Member>
+    <Member MemberName="Xthickness">
+      <MemberSignature Language="C#" Value="public int Xthickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Xthickness" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The "xthickness" value of the RC style.</summary>
+        <value>a <see cref="T:System.Int32" /></value>
+        <remarks>This value is used for various horizontal padding values in Gtk.</remarks>
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+    <Member MemberName="Ythickness">
+      <MemberSignature Language="C#" Value="public int Ythickness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Ythickness" />
+      <MemberType>Property</MemberType>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The "ythickness" value of the RC style.</summary>
+        <value>a <see cref="T:System.Int32" /></value>
+        <remarks>This value is used for various vertical padding values in Gtk.</remarks>
+        <since version="Gtk# 2.4" />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
