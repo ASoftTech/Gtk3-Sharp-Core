@@ -6,15 +6,17 @@
     <ProjectGuid>764df767-bae5-46f9-b2ac-548a22d02e0c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>..\..\Build\PythonVirtual\gtksharp_build_py2\Scripts\scons.py</StartupFile>
-    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\</SearchPath>
-    <WorkingDirectory>..\..\</WorkingDirectory>
+    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs;..\..\Source\Libs-Glue;..\..\Source\Libs-Glue\Atk.Glue;..\..\..\Gtk3-Sharp-Core</SearchPath>
+    <WorkingDirectory>..\..\Source\Libs-Glue\</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Glue.SconsBuild</Name>
     <RootNamespace>Glue.SconsBuild</RootNamespace>
-    <InterpreterId>MSBuild|{92f3b5c2-4eb9-45ba-a424-e494f585d163}|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|{825c3a48-de8d-4d67-a331-1502adef8d44}|$(MSBuildProjectFullPath)</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <CommandLineArguments>
+    </CommandLineArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,17 +33,29 @@
     <Compile Include="..\..\SConstruct.py">
       <Link>SConstruct.py</Link>
     </Compile>
+    <Compile Include="..\..\site_scons\debug_temp.py">
+      <Link>site_scons\debug_temp.py</Link>
+    </Compile>
+    <Compile Include="..\..\site_scons\glue_common.py">
+      <Link>site_scons\glue_common.py</Link>
+    </Compile>
     <Compile Include="..\..\site_scons\site_tools\dotnetcore.py">
       <Link>site_scons\site_tools\dotnetcore.py</Link>
     </Compile>
-    <Compile Include="..\..\Source\Libs-Glue\Atk.Glue\SConstruct.py">
-      <Link>Source\Libs-Glue\Atk.Glue\SConstruct.py</Link>
+    <Compile Include="..\..\site_scons\site_tools\__init__.py">
+      <Link>site_scons\site_tools\__init__.py</Link>
     </Compile>
-    <Compile Include="..\..\Source\Libs-Glue\SConstruct.py">
-      <Link>Source\Libs-Glue\SConstruct.py</Link>
+    <Compile Include="..\..\site_scons\__init__.py">
+      <Link>site_scons\__init__.py</Link>
     </Compile>
-    <Compile Include="..\..\Source\Libs\SConstruct.py">
-      <Link>Source\Libs\SConstruct.py</Link>
+    <Compile Include="..\..\Source\Libs-Glue\Atk.Glue\SConscript.py">
+      <Link>Source\Libs-Glue\Atk.Glue\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs-Glue\SConscript.py">
+      <Link>Source\Libs-Glue\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\SConscript.py">
+      <Link>Source\Libs\SConscript.py</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

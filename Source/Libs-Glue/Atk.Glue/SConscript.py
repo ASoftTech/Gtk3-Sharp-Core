@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python2
 
 # These import lines are not really needed, but it helps intellisense within VS when editing the script
 import SCons.Script
@@ -7,7 +7,15 @@ from SCons.Environment import Environment
 import os
 import os.path as path
 
-env = Environment(ENV = os.environ, tools = ['default'], toolpath = ['../../../site_scons/site_tools'])
+#from ......site_tools.glue_common import GlueCommon
+
+
+env = Environment(ENV = os.environ, tools = ['default'], toolpath = ['../../../site_scons'])
+
+from glue_common import GlueCommon
+
+x1 = GlueCommon()
+print(x1.Test1)
 
 
 #object_list = Object('test1/hello1.cpp')
@@ -34,4 +42,5 @@ env = Environment(ENV = os.environ, tools = ['default'], toolpath = ['../../../s
 
 # TODO
 srcs = ['generated.c', 'misc.c', 'util.c', 'win32dll.c']
-SharedLibrary('atksharpglue', srcs, SHLIBVERSION=3)
+gluelib = SharedLibrary('atksharpglue', srcs, SHLIBVERSION=3)
+Default(gluelib)

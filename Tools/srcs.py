@@ -56,10 +56,6 @@ class Srcs(object):
             if os.path.isdir(item) == True:
                 glibdir = item
 
-
-        #gtkdir = glob.glob(path.join(self.BuildDir, "gtk+-*"))[0]
-        #glibdir = glob.glob(path.join(self.BuildDir, "glib-*"))[0]
-
         patch.logger.setLevel(logging.DEBUG)
         streamhandler = logging.StreamHandler()
         if streamhandler not in patch.logger.handlers:

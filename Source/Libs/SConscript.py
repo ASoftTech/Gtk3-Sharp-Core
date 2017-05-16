@@ -19,7 +19,7 @@ projs = [
 'Gtk.DotNet/Gtk.DotNet.csproj',
 'Pango/Pango.csproj']
 
-builddir = '../../Build/LibBuild/dotnet/netcoreapp2.0'
+builddir = '../../Build/LibBuild/dotnet/netstandard2.0'
 builddir = path.abspath(builddir)
 basedir = os.getcwd()
 

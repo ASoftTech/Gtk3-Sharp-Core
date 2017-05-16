@@ -1,0 +1,116 @@
+# Compile notes
+
+## Notes
+
+It looks like most of the gcc CFLAGS are set within configure.ac at the root
+
+
+## SCons
+
+### Flags from Scons
+
+  * -fPIC - emit position-independent code, normally used for dll's
+
+### Compile lines
+
+gcc -o Build/LibBuild/glue/generated.os -c -fPIC Source/Libs-Glue/Atk.Glue/generated.c
+
+
+
+## Linux
+
+### Include Dirs
+
+.
+../..
+/usr/include/atk-1.0
+/usr/include/glib-2.0
+/usr/lib/x86_64-linux-gnu/glib-2.0/include
+
+### Flags from automake
+
+  * -DHAVE_CONFIG_H - sets HAVE_CONFIG_H macro to 1
+  * -g - Produce debugging information in the operating system's native format, used for gdb
+  * -O2 - code optimisation
+
+  * -Wall - Turns on all optional warnings which are desirable for normal code.
+  * -Wunused - Turns on all unused related warnings
+  * -Wmissing-prototypes - Warn if a global function is defined without a previous prototype declaration.
+  * -Wmissing-declarations - Warn if a global function is defined without a previous declaration
+  * -Wstrict-prototypes - Warn if a function is declared or defined without specifying the argument types
+  * -Wnested-externs - Warn if an "extern" declaration is encountered within a function.
+  * -Wshadow - Warn whenever a local variable or type declaration shadows another variable
+  * -Wpointer-arith - Warn about anything that depends on the "size of" a function type or of "void"
+  * -Wno-cast-qual - Disable warning for whenever a pointer is cast so as to remove a type qualifier
+  * -Wcast-align - Warn whenever a pointer is cast such that the required alignment of the target is increased.
+  * -Wwrite-strings - Issue warnings where compile time code tries to write into a string constant
+
+  * -MD - equivalent to -M -MF file
+  * -MP - instructs CPP to add a phony target for each dependency other than the main file, works around make errors
+  * -MT <name>.lo - Change the target of the rule emitted by dependency generation.
+  * -MF .deps/<name>.Tpo - specifies a file to write the dependencies to.
+
+### Compile lines
+
+gcc -c misc.c  -fPIC -DPIC -o .libs/misc.o
+gcc -c misc.c -o misc.o
+mv -f .deps/misc.Tpo .deps/misc.Plo
+
+gcc -c util.c  -fPIC -DPIC -o .libs/util.o
+gcc -c util.c -o util.o
+mv -f .deps/util.Tpo .deps/util.Plo
+
+gcc -c generated.c  -fPIC -DPIC -o .libs/generated.o
+gcc -c generated.c -o generated.o
+mv -f .deps/generated.Tpo .deps/generated.Plo
+
+Linkage:
+gcc -shared  -fPIC -DPIC  .libs/misc.o .libs/util.o .libs/generated.o   -latk-1.0 -lgobject-2.0 -lglib-2.0 -O2  -Wl,-soname -Wl,libatksharpglue-3.so -o .libs/libatksharpglue-3.so
+ar cru .libs/libatksharpglue-3.a  misc.o util.o generated.o
+ranlib .libs/libatksharpglue-3.a
+( cd ".libs" && rm -f "libatksharpglue-3.la" && ln -s "../libatksharpglue-3.la" "libatksharpglue-3.la" )
+
+
+## MSYS2
+
+### Include Dirs
+
+.
+../..
+/mingw32/include/atk-1.0
+/mingw32/include/glib-2.0
+/mingw32/lib/glib-2.0/include
+/mingw32/include
+
+
+### Flags from automake
+
+  * -mms-bitfields - Enable/disable bit-field layout compatible with the native Microsoft Windows compiler.
+
+below is same as ubuntu
+
+  * -DHAVE_CONFIG_H
+  * -g
+  * -O2
+
+  * -Wall
+  * -Wunused
+  * -Wmissing-prototypes
+  * -Wmissing-declarations
+  * -Wstrict-prototypes
+  * -Wnested-externs
+  * -Wshadow
+  * -Wpointer-arith
+  * -Wno-cast-qual
+  * -Wcast-align
+  * -Wwrite-strings
+
+  * -MD
+  * -MP
+  * -MT <name>.lo
+  * -MF .deps/<name>.Tpo
+
+### Compile lines
+
+gcc -c -o misc.lo misc.c
+

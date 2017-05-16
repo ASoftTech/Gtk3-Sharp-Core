@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python2
 
 # Tool helper script for building .Net Core projects using the .Net Core cli tool
 
