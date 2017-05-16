@@ -10,7 +10,7 @@ import os.path as path
 env = Environment(ENV = os.environ)
 
 # Build C# Libs
-SConscript('Source/Libs/SConscript.py')
+#SConscript('Source/Libs/SConscript.py')
 
 # Build Glue Libs
-#SConscript('Source/Libs-Glue/SConscript.py')
+SConscript('Source/Libs-Glue/SConscript.py')

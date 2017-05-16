@@ -6,16 +6,16 @@ from SCons.Environment import Environment
 
 import os
 import os.path as path
+from cppsetup import CPPSetup
 
-#from ......site_tools.glue_common import GlueCommon
 
 
 env = Environment(ENV = os.environ, tools = ['default'], toolpath = ['../../../site_scons'])
 
-from glue_common import GlueCommon
 
-x1 = GlueCommon()
-print(x1.Test1)
+
+x1 = CPPSetup(env)
+x1.get_includedirs()
 
 
 #object_list = Object('test1/hello1.cpp')
@@ -42,5 +42,5 @@ print(x1.Test1)
 
 # TODO
 srcs = ['generated.c', 'misc.c', 'util.c', 'win32dll.c']
-gluelib = SharedLibrary('atksharpglue', srcs, SHLIBVERSION=3)
-Default(gluelib)
+#gluelib = SharedLibrary('atksharpglue', srcs, SHLIBVERSION=3)
+#Default(gluelib)
