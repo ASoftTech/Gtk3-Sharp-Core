@@ -6,8 +6,8 @@
     <ProjectGuid>764df767-bae5-46f9-b2ac-548a22d02e0c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>..\..\Build\PythonVirtual\gtksharp_build_py2\Scripts\scons.py</StartupFile>
-    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs;..\..\Source\Libs-Glue;..\..\Source\Libs-Glue\Atk.Glue;..\..\..\Gtk3-Sharp-Core</SearchPath>
-    <WorkingDirectory>..\..\Source\Libs-Glue\</WorkingDirectory>
+    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs;..\..\Source\Libs-Glue;..\..\Source\Libs-Glue\Atk.Glue;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Atk;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Cairo;..\..\Source\Libs\Gdk;..\..\Source\Libs\Gio;..\..\Source\Libs\GLib;..\..\Source\Libs\Gtk;..\..\Source\Libs\Gtk.DotNet;..\..\Source\Libs\Pango</SearchPath>
+    <WorkingDirectory>..\..\</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Glue.SconsBuild</Name>
     <RootNamespace>Glue.SconsBuild</RootNamespace>
@@ -33,8 +33,8 @@
     <Compile Include="..\..\SConstruct.py">
       <Link>SConstruct.py</Link>
     </Compile>
-    <Compile Include="..\..\site_scons\debug_temp.py">
-      <Link>site_scons\debug_temp.py</Link>
+    <Compile Include="..\..\site_scons\dotnetcore_helper.py">
+      <Link>site_scons\dotnetcore_helper.py</Link>
     </Compile>
     <Compile Include="..\..\site_scons\glue_common.py">
       <Link>site_scons\glue_common.py</Link>
@@ -54,6 +54,30 @@
     <Compile Include="..\..\Source\Libs-Glue\SConscript.py">
       <Link>Source\Libs-Glue\SConscript.py</Link>
     </Compile>
+    <Compile Include="..\..\Source\Libs\Atk\SConscript.py">
+      <Link>Source\Libs\Atk\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Cairo\SConscript.py">
+      <Link>Source\Libs\Cairo\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Gdk\SConscript.py">
+      <Link>Source\Libs\Gdk\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Gio\SConscript.py">
+      <Link>Source\Libs\Gio\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\GLib\SConscript.py">
+      <Link>Source\Libs\GLib\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Gtk.DotNet\SConscript.py">
+      <Link>Source\Libs\Gtk.DotNet\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Gtk\SConscript.py">
+      <Link>Source\Libs\Gtk\SConscript.py</Link>
+    </Compile>
+    <Compile Include="..\..\Source\Libs\Pango\SConscript.py">
+      <Link>Source\Libs\Pango\SConscript.py</Link>
+    </Compile>
     <Compile Include="..\..\Source\Libs\SConscript.py">
       <Link>Source\Libs\SConscript.py</Link>
     </Compile>
@@ -70,6 +94,14 @@
     <Folder Include="Source\Libs-Glue\" />
     <Folder Include="Source\Libs-Glue\Atk.Glue\" />
     <Folder Include="Source\Libs\" />
+    <Folder Include="Source\Libs\Atk\" />
+    <Folder Include="Source\Libs\Cairo\" />
+    <Folder Include="Source\Libs\Gdk\" />
+    <Folder Include="Source\Libs\Gio\" />
+    <Folder Include="Source\Libs\GLib\" />
+    <Folder Include="Source\Libs\Gtk\" />
+    <Folder Include="Source\Libs\Gtk.DotNet\" />
+    <Folder Include="Source\Libs\Pango\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="..\..\Build\PythonVirtual\gtksharp_build_py2\">

@@ -12,38 +12,26 @@ def exists(env): return True
 # Called when the tool is loaded into the environment at startup of script
 def generate(env):
     assert(exists(env))
-    # Default dotnet builder
-    # 1. target = list filepath's expected to be created  
-    # 2. source = path to project file
+    # dotnet builder
+    # 1. target = list of targets, e.g. .dll, .pdb, .deps.json
+    # 2. source = list of sources including the .csproj file which is actually used
     bld = Builder(action = dotnetcore_build)
     env.Append(BUILDERS = {'DotNetCore' : bld})
-    # Dll dotnet builder
-    # 1. target[0] = build directory  
-    # 2. source = path to project file
-    bld = Builder(action = dotnetcore_build, emitter = dotnetcore_dll_targets)
-    env.Append(BUILDERS = {'DotNetCore_Dll' : bld})
 
 # Called during the build of the target
 def dotnetcore_build(target, source, env):
-    workingdir = os.getcwd()
-    for item in source:
-        srcpath = item.abspath
-        run_cmd(['dotnet', 'restore', srcpath], workingdir)
-        run_cmd(['dotnet', 'build', srcpath], workingdir)
-    return None
+    # scons root directory
+    workingdir = Dir('#').abspath
 
-# Assume target[0] is the build directory
-# The returned targets assumes a dll is being built
-def dotnetcore_dll_targets(target, source, env):
-    builddir = target[0].abspath
+    # Find the .csproj file
     for item in source:
-        projname = path.basename(item.abspath)
-        projname = os.path.splitext(projname)[0]
-        tgts = []
-        tgts.append(File(path.join(builddir, projname + '.dll')))
-        tgts.append(File(path.join(builddir, projname + '.deps.json')))
-        tgts.append(File(path.join(builddir, projname + '.pdb')))
-    return tgts, source
+        if path.splitext(item.abspath)[1] == '.csproj':
+            projfile = item.abspath
+            break
+
+    run_cmd(['dotnet', 'restore', projfile], workingdir)
+    run_cmd(['dotnet', 'build', projfile], workingdir)
+    return None
 
 # Used to run a command
 def run_cmd(cmdarray, workingdir, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=None, printresult=True):
