@@ -9,7 +9,7 @@ import os.path as path
 # Helper code for .NEt Core projects
 class DotNetCoreHelper(object):
 
-        # Class Init
+    # Class Init
     def __init__(self, projfile = None, projdir = '.', builddir = '.'):
         self.ProjectFile = projfile
         self.ProjectDir = projdir

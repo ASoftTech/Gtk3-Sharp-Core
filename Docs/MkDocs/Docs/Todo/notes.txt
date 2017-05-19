@@ -4,6 +4,12 @@
 
 It looks like most of the gcc CFLAGS are set within configure.ac at the root
 
+For windows
+Due to linkage with other libraries, we need a .lib file for each dll
+http://stackoverflow.com/questions/9360280/how-to-make-a-lib-file-when-have-a-dll-file-and-a-header-file
+the .lib will call the functions in the dll's and will act as a link target
+
+
 
 ## SCons
 

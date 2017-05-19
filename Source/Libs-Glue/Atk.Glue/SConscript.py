@@ -7,15 +7,25 @@ from SCons.Environment import Environment
 import os
 import os.path as path
 from cppsetup import CPPSetup
+#from config.FindATK import FindATK
+
+env = Environment(ENV = os.environ, tools = ['default', 'dll2lib'])
+
+conf = Configure(env)
+
+# Create finder
+#finder = FindATK(conf)
+
+# Run finder
+#results = conf.FindATK()
+
+# Test
+lib1 = env.Dll2Lib(['D:\\Temp\\17\\test1.lib'], ['C:\\Program Files\\GTK3-Runtime Win64\\bin\\libatk-1.0-0.dll'])
+Default(lib1)
 
 
-
-env = Environment(ENV = os.environ, tools = ['default'], toolpath = ['../../../site_scons'])
-
-
-
-x1 = CPPSetup(env)
-x1.get_includedirs()
+#1 = CPPSetup(env)
+#x1.get_includedirs()
 
 
 #object_list = Object('test1/hello1.cpp')
@@ -41,6 +51,6 @@ x1.get_includedirs()
 #print "Building: " + variant
 
 # TODO
-srcs = ['generated.c', 'misc.c', 'util.c', 'win32dll.c']
+#srcs = ['generated.c', 'misc.c', 'util.c', 'win32dll.c']
 #gluelib = SharedLibrary('atksharpglue', srcs, SHLIBVERSION=3)
 #Default(gluelib)
