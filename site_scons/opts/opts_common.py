@@ -27,11 +27,11 @@ Common Options:
     AddOption('--builddir', dest='builddir', default=Dir('#/Build').abspath, 
         type='string', nargs='?', action='store', metavar='DIR', help='Specify the Build Directory')
     builddir = GetOption('builddir')
-    env.Replace(BuildDir = builddir)
+    env.Replace(common_builddir = builddir)
     if not path.exists(builddir):
         os.makedirs(builddir)
 
-    cfgpath = path.join(env['BuildDir'], 'config.py')
+    cfgpath = path.join(env['common_builddir'], 'config.py')
 
     # List configuration variables that have been set
     AddOption('--config-list', dest='config-list', action="store_true", help='List the saved build variables')
@@ -51,11 +51,16 @@ Common Options:
             os.remove(cfgpath)
         Exit(0)
 
+def setup_vars(env, vars):
+    vars.Add('common_buildversion', 'version to use for build', '3.22.10')
+    vars.Update(env)
+    return vars
+
 def check_save(env, vars):
     """
     Check if we need to save the configuration build variables, variable=value
     """
-    cfgpath = path.join(env['BuildDir'], 'config.py')
+    cfgpath = path.join(env['common_builddir'], 'config.py')
     AddOption('--config-save', dest='config-save', action="store_true", help='Save the specified build variables to config.py within the build directory')
     if GetOption('config-save'):
         print('Saving Configuration: ' + cfgpath)

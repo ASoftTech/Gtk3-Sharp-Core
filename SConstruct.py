@@ -7,18 +7,24 @@ from SCons.Environment import Environment
 import os
 import os.path as path
 import opts.opts_common
+import opts.opts_dotnet
 
+# Setup environment
 env = Environment(ENV = os.environ)
 
 # Check version of scons
 EnsureSConsVersion(2,5,1)
 
-# Setup common options
+# Setup options
 opts.opts_common.setup_opts(env)
 
-# Create a variables class for any additional option=value on the command line
-vars = Variables(path.join(env['BuildDir'], 'config.py'), ARGUMENTS)
-Export('env', 'vars')
+# Setup variables
+vars = Variables(path.join(env['common_builddir'], 'config.py'), ARGUMENTS)
+vars = opts.opts_common.setup_vars(env, vars)
+vars = opts.opts_dotnet.setup_vars(env, vars)
+Help(vars.GenerateHelpText(env))
+
+Export('env')
 
 # Build C# Libs
 SConscript('Source/Libs/SConscript.py')
