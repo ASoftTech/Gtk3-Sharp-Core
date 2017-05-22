@@ -6,22 +6,25 @@ from SCons.Environment import Environment
 
 import os
 import os.path as path
-
-#TODO
-# option for gtk directory
-
-# 3 build modes
-#vars = Variables()
-#vars.Add(EnumVariable('mode', 'Building mode', 'debug', allowed_values=('debug', 'profile', 'release')))
+import opts.opts_common
 
 env = Environment(ENV = os.environ)
 
-
 # Check version of scons
 EnsureSConsVersion(2,5,1)
+
+# Setup common options
+opts.opts_common.setup_opts(env)
+
+# Create a variables class for any additional option=value on the command line
+vars = Variables(path.join(env['BuildDir'], 'config.py'), ARGUMENTS)
+Export('env', 'vars')
 
 # Build C# Libs
 SConscript('Source/Libs/SConscript.py')
 
 # Build Glue Libs
-SConscript('Source/Libs-Glue/SConscript.py')
+#SConscript('Source/Libs-Glue/SConscript.py')
+
+# Check if we need to save the build variables
+opts.opts_common.check_save(env, vars)

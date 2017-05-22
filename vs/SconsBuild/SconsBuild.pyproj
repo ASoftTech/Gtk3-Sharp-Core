@@ -6,7 +6,7 @@
     <ProjectGuid>764df767-bae5-46f9-b2ac-548a22d02e0c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>..\..\Build\PythonVirtual\gtksharp_build_py2\Scripts\scons.py</StartupFile>
-    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs;..\..\Source\Libs-Glue;..\..\Source\Libs-Glue\Atk.Glue;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Atk;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Cairo;..\..\Source\Libs\Gdk;..\..\Source\Libs\Gio;..\..\Source\Libs\GLib;..\..\Source\Libs\Gtk;..\..\Source\Libs\Gtk.DotNet;..\..\Source\Libs\Pango;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\site_scons\config;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core</SearchPath>
+    <SearchPath>..\..\;..\..\Build\PythonVirtual\gtksharp_build_py2\Lib\site-packages\scons-2.5.1;..\..\Source\Libs-Glue\;..\..\Source\Libs-Glue\Atk.Glue\;..\..\Source\Libs\;..\..\site_scons\site_tools\;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs;..\..\Source\Libs-Glue;..\..\Source\Libs-Glue\Atk.Glue;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Atk;..\..\..\Gtk3-Sharp-Core;..\..\Source\Libs\Cairo;..\..\Source\Libs\Gdk;..\..\Source\Libs\Gio;..\..\Source\Libs\GLib;..\..\Source\Libs\Gtk;..\..\Source\Libs\Gtk.DotNet;..\..\Source\Libs\Pango;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\site_scons\config;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\..\Gtk3-Sharp-Core;..\..\site_scons\opts;..\..\..\Gtk3-Sharp-Core</SearchPath>
     <WorkingDirectory>..\..\</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Glue.SconsBuild</Name>
@@ -45,6 +45,12 @@
     <Compile Include="..\..\site_scons\dotnetcore_helper.py">
       <Link>site_scons\dotnetcore_helper.py</Link>
     </Compile>
+    <Compile Include="..\..\site_scons\opts\opts_common.py">
+      <Link>site_scons\opts\opts_common.py</Link>
+    </Compile>
+    <Compile Include="..\..\site_scons\opts\__init__.py">
+      <Link>site_scons\opts\__init__.py</Link>
+    </Compile>
     <Compile Include="..\..\site_scons\site_tools\dll2lib.py">
       <Link>site_scons\site_tools\dll2lib.py</Link>
     </Compile>
@@ -75,6 +81,7 @@
   <ItemGroup>
     <Folder Include="site_scons\" />
     <Folder Include="site_scons\config\" />
+    <Folder Include="site_scons\opts\" />
     <Folder Include="site_scons\site_tools\" />
     <Folder Include="Source\" />
     <Folder Include="Source\Libs-Glue\" />
