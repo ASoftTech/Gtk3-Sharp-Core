@@ -12,6 +12,15 @@ Import('env')
 parentenv = env
 env = parentenv.Clone(tools = ['default', 'dotnetcore'])
 
+
+
+
+
+
+
+
+
+
 builddir = path.join(Dir('#').abspath, 'Build/LibBuild/dotnet/netstandard2.0')
 builddir = path.abspath(builddir)
 print(".Net Build Directory: " + builddir)
